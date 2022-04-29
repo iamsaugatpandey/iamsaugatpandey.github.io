@@ -57,7 +57,7 @@ body{
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--second-color);
-  background-color: #252627;
+  background-color: #bad4ee;
 }
 h1,h2,p{
   margin: 0;
@@ -241,7 +241,7 @@ img{
 }
 
 .about_text{
-  color: aliceblue;
+  color: rgb(9, 11, 14);
 }
 .about__subtitle{
   margin-bottom: var(--mb-2);
