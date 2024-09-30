@@ -22,6 +22,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.querySelector('.pronunciation-icon').addEventListener('click', function() {
+    const audio = new Audio('pronouce.m4a');
+    audio.play();
+  });
+
 
 document.addEventListener('DOMContentLoaded', function() {
     const newsBox = document.querySelector('.news-box');
