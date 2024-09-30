@@ -1,0 +1,316 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+}
+.profile-pic {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+.sidebar {
+    width: 300px;
+    position: fixed;
+    height: 100vh;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.content {
+    /* margin-left: 300px; */
+    margin-left: 350px;
+    padding: 20px;
+    width: calc(100% - 300px);
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+.social-links {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  
+  .social-links a {
+    color: #333;
+    font-size: 24px;
+    transition: color 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    color: #007bff;
+  }
+  
+  .pronunciation-icon {
+    cursor: pointer;
+    margin-left: 5px;
+  }
+
+  #publication-filters {
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 10px 15px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.filter-btn.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.publication {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.publication h3 {
+    margin-top: 0;
+}
+body {
+    font-size: 16px;
+  }
+  h1 { font-size: 2em; }
+  h2 { font-size: 1.5em; }
+  p { font-size: 1em; }
+
+  section {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #333;
+    position: relative;
+}
+
+.sidebar nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10"><path fill="none" stroke="black" d="M0,5 Q25,0 50,5 T100,5"/></svg>');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.sidebar nav ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+.news-box {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.news-box::-webkit-scrollbar {
+    width: 8px;
+}
+
+.news-box::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+.news-box::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+#publication-filters button {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 10px 15px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+#publication-filters button:hover,
+#publication-filters button.active {
+    background-color: #007bff;
+    color: white;
+    box-shadow: 0 0 10px #007bff;
+}
+
+.section {
+    margin-bottom: 50px; /* Adjust this value to increase or decrease the space */
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Remove the bottom border from the last section */
+.section:last-child {
+    border-bottom: none;
+}
+/* Increase space between sidebar items */
+.sidebar nav ul li {
+    margin-bottom: 20px; /* Adjust this value as needed */
+}
+
+/* Increase length of curly hover */
+.sidebar nav ul li a::after {
+    width: 120%; /* Increase this value to make the underline longer */
+    left: -10%; /* Center the longer underline */
+}
+
+/* Style for the trophy icon */
+.trophy {
+    color: gold;
+    font-size: 1.2em;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+/* Style for publication links */
+.publication h3 a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.publication h3 a:hover {
+    text-decoration: underline;
+}
+
+.publication p a {
+    color: #28a745;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.publication p a:hover {
+    text-decoration: underline;
+}
+.news-box {
+    height: 300px;
+    overflow-y: hidden;
+    position: relative;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 15px;
+}
+
+.news-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    transition: transform 0.5s linear;
+}
+
+.news-list li {
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.news-list li:last-child {
+    border-bottom: none;
+}
+
+.news-box:hover {
+    overflow-y: auto;
+}
+
+.news-box:hover .news-list {
+    transform: translateY(0) !important;
+    transition: none;
+}
+
+/* Scrollbar styling remains the same */
+
+/* Scrollbar styling remains the same */
+
+/* Scrollbar styling */
+.news-box::-webkit-scrollbar {
+    width: 6px;
+}
+
+.news-box::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.news-box::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.news-box::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+#contact {
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+/* #contact h2 {
+    color: #007bff;
+} */
+
+#contact a {
+    color: #28a745;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+.current-projects {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.current-projects h3 {
+    margin-top: 0;
+    color: #007bff;
+}
+
+.current-projects ul {
+    padding-left: 20px;
+}
