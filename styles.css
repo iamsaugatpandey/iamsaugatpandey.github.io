@@ -8,17 +8,24 @@ body, html {
     display: flex;
 }
 .profile-pic {
-    border-radius: 50%;
     width: 200px;
     height: 200px;
+    border-radius: 50%;
     object-fit: cover;
+    margin-bottom: 20px;
+
   }
 .sidebar {
     width: 300px;
     position: fixed;
     height: 100vh;
-    background-color: #f0f0f0;
+    background-color: #f8f9fa;
     padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .content {
@@ -313,4 +320,67 @@ body {
 
 .current-projects ul {
     padding-left: 20px;
+}
+.sidebar h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.sidebar p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.social-links a {
+    color: #333;
+    font-size: 18px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar nav ul li a {
+    color: #6c757d;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.sidebar nav ul li a:hover {
+    color: #007bff;
+}
+.content {
+    margin-left: 320px;
+    padding: 20px;
+}
+
+.section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.section p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #007bff;
 }
