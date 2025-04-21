@@ -384,3 +384,92 @@ body {
     font-weight: bold;
     color: #007bff;
 }
+
+/* ---------------  MOBILE FIRST LAYOUT --------------- */
+:root{
+    /* scale text smoothly between 14–18 px across 320‑1200 px screens */
+    font-size: clamp(0.875rem, 0.75rem + 0.3vw, 1.125rem);
+  }
+  
+  body,html{overflow-x:hidden}
+  
+  /* stack everything vertically by default */
+  .container{display:flex; flex-direction:column;}
+  
+  /* sidebar becomes a top “hero” section on phones */
+  .sidebar{
+    width:100%;
+    position:static;
+    height:auto;
+    padding:1.5rem 1rem;
+  }
+  
+  .profile-pic{
+    width:35vw; max-width:140px; height:auto;
+  }
+  
+  /* main content follows normally */
+  .content{margin:0; padding:1.25rem; width:100%;}
+  
+  /* navigation pills wrap nicely */
+  .sidebar nav ul{display:flex; flex-wrap:wrap; justify-content:center}
+  .sidebar nav ul li{margin:0 0.75rem 0.75rem 0}
+  
+  /* make publication cards full‑width and tappable */
+  .publication{padding:1rem; border-radius:8px}
+  
+  /* filters: full row on very small screens */
+  #publication-filters{display:flex; flex-wrap:wrap; gap:0.5rem}
+  .filter-btn{flex:1 1 calc(50% - .5rem)}   /* two‑per‑row */
+  
+  /* ---------------  TABLET ⩾ 768 px --------------- */
+  @media (min-width:768px){
+    .container{flex-direction:row;}
+    .sidebar{
+      width:260px;               /* a bit narrower */
+      position:fixed;
+      left:0; top:0; height:100vh;
+      overflow-y:auto;
+    }
+    .content{
+      margin-left:260px;
+      width:calc(100% - 260px);
+    }
+    .profile-pic{width:160px}
+    .filter-btn{flex:unset}
+  }
+  
+  /* ---------------  DESKTOP ⩾ 1200 px --------------- */
+  @media (min-width:1200px){
+    .sidebar{width:300px;}
+    .content{margin-left:300px; width:calc(100% - 300px);}
+  }
+  /* ---------- EXTRA‑SMALL SCREENS ≤ 480 px ---------- */
+@media (max-width:480px){
+
+    /* make every element obey its declared width (helps kill phantom h‑scroll) */
+    *,*:before,*:after{box-sizing:border-box}
+  
+    /* FILTER BUTTONS  ‑‑ two per row, shorter padding & text */
+    #publication-filters{display:flex;flex-wrap:wrap;gap:.25rem}
+    .filter-btn{
+        flex:1 1 calc(50% - .25rem);   /* two across */
+        padding:.5rem .25rem;          /* ~8 px top/bottom */
+        font-size:.8rem;
+        border-radius:12px;
+    }
+  
+    /* PUBLICATION CARDS  ‑‑ tighter box + smaller type */
+    .publication{
+        padding:12px;
+        margin:12px 0;
+    }
+    .publication h3{font-size:1rem; line-height:1.25}
+    .publication p {font-size:.9rem}
+  }
+  
+  /* ---------- TINY BUTTONS ON WATCH‑SIZED SCREENS ≤ 360 px ---------- */
+  @media (max-width:360px){
+    .filter-btn{flex:1 1 100%}          /* one per row */
+  }
+  
