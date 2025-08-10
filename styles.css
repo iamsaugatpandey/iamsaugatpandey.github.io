@@ -58,12 +58,19 @@ body {
     transition: opacity 0.3s ease;
 }
 
+/* Enhanced visibility for brain icon */
+.icon-brain {
+    opacity: 0.25 !important; /* Much higher opacity for brain */
+    filter: saturate(150%) brightness(1.2) contrast(1.3) !important; /* Enhanced filters */
+    box-shadow: 0 0 15px rgba(167, 139, 250, 0.3); /* Subtle purple glow */
+}
+
 /* Initial positions for icons (will be overridden by JS animation) */
-.icon-ai { top: 12%; left: 8%; }
-.icon-brain { bottom: 10%; left: 14%; }
-.icon-chart { top: 18%; right: 12%; }
-.icon-eyes { bottom: 16%; right: 10%; }
-.icon-human { top: 46%; left: 50%; transform: translateX(-50%); }
+.icon-ai { top: 12%; left: 50px; } /* Start with left margin */
+.icon-brain { bottom: 10%; left: 50px; } /* Start with left margin */
+.icon-chart { top: 18%; right: 50px; } /* Start with right margin */
+.icon-eyes { bottom: 16%; right: 50px; } /* Start with right margin */
+.icon-human { top: 46%; left: 50%; transform: translateX(-50%); } /* Center behind content */
 
 /* ================ HEADER SECTION ================ */
 .header {

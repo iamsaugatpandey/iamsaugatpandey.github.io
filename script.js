@@ -325,6 +325,58 @@ document.addEventListener('DOMContentLoaded', function() {
     const icons = document.querySelectorAll('.bg-icon');
     if (icons.length) {
         let time = 0;
+        let isUserActive = false;
+        let lastScrollTime = 0;
+        let lastMouseMoveTime = 0;
+        let animationPaused = false;
+        
+        // Track user activity
+        let scrollTimeout;
+        let mouseMoveTimeout;
+        
+        // Detect scrolling
+        window.addEventListener('scroll', () => {
+            isUserActive = true;
+            lastScrollTime = Date.now();
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                if (Date.now() - lastScrollTime >= 2000 && Date.now() - lastMouseMoveTime >= 2000) {
+                    isUserActive = false;
+                }
+            }, 2000); // Resume animation 2 seconds after scrolling stops
+        });
+        
+        // Detect mouse movement
+        document.addEventListener('mousemove', () => {
+            isUserActive = true;
+            lastMouseMoveTime = Date.now();
+            clearTimeout(mouseMoveTimeout);
+            mouseMoveTimeout = setTimeout(() => {
+                if (Date.now() - lastScrollTime >= 2000 && Date.now() - lastMouseMoveTime >= 2000) {
+                    isUserActive = false;
+                }
+            }, 2000); // Resume animation 2 seconds after mouse stops moving
+        });
+        
+        // Detect touch events for mobile
+        document.addEventListener('touchstart', () => {
+            isUserActive = true;
+            lastMouseMoveTime = Date.now();
+        });
+        
+        document.addEventListener('touchmove', () => {
+            isUserActive = true;
+            lastMouseMoveTime = Date.now();
+        });
+        
+        document.addEventListener('touchend', () => {
+            clearTimeout(mouseMoveTimeout);
+            mouseMoveTimeout = setTimeout(() => {
+                if (Date.now() - lastScrollTime >= 2000 && Date.now() - lastMouseMoveTime >= 2000) {
+                    isUserActive = false;
+                }
+            }, 2000);
+        });
         
         // Give each icon its own random motion parameters for full-screen movement
         icons.forEach((el, index) => {
@@ -354,21 +406,42 @@ document.addEventListener('DOMContentLoaded', function() {
                 initialTop = window.innerHeight - initialBottom - 110; // Approximate icon height
             }
             
+            // Override with custom starting positions - icons start with proper margins
+            if (el.classList.contains('icon-ai')) {
+                initialTop = 0.12 * window.innerHeight;
+                initialLeft = 50; // Start with 50px left margin
+            } else if (el.classList.contains('icon-brain')) {
+                initialTop = window.innerHeight - (0.10 * window.innerHeight) - 110;
+                initialLeft = 50; // Start with 50px left margin
+            } else if (el.classList.contains('icon-chart')) {
+                initialTop = 0.18 * window.innerHeight;
+                initialLeft = window.innerWidth - 160; // Start with 50px right margin (110px icon + 50px margin)
+            } else if (el.classList.contains('icon-eyes')) {
+                initialTop = window.innerHeight - (0.16 * window.innerHeight) - 110;
+                initialLeft = window.innerWidth - 160; // Start with 50px right margin (110px icon + 50px margin)
+            } else if (el.classList.contains('icon-human')) {
+                initialTop = 0.46 * window.innerHeight;
+                initialLeft = (window.innerWidth / 2) - 55; // Center horizontally behind content
+            }
+            
             el.dataset.startX = initialLeft;
             el.dataset.startY = initialTop;
             el.dataset.offsetX = Math.random() * Math.PI * 2;
             el.dataset.offsetY = Math.random() * Math.PI * 2;
-            el.dataset.speedX = 0.3 + Math.random() * 0.4; // Slower for full-screen movement
-            el.dataset.speedY = 0.2 + Math.random() * 0.3; // Different speeds for variety
-            el.dataset.rangeX = 150 + Math.random() * 300; // How far they can move horizontally
-            el.dataset.rangeY = 100 + Math.random() * 200; // How far they can move vertically
+            el.dataset.speedX = 0.15 + Math.random() * 0.2; // Increased speed (was 0.08-0.2)
+            el.dataset.speedY = 0.1 + Math.random() * 0.15; // Increased speed (was 0.05-0.13)
+            el.dataset.rangeX = 120 + Math.random() * 200; // Slightly larger movement range
+            el.dataset.rangeY = 90 + Math.random() * 150; // Slightly larger movement range
             
             // Set initial position to absolute for free movement
             el.style.position = 'fixed';
         });
 
         function animateIcons() {
-            time += 0.008; // Slower animation for smoother full-screen movement
+            // Only advance time if user is not active
+            if (!isUserActive) {
+                time += 0.004; // Increased time increment for faster movement (was 0.002)
+            }
             
             icons.forEach((el, index) => {
                 const startX = parseFloat(el.dataset.startX);
@@ -385,16 +458,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 const baseMovementX = Math.sin(time * speedX + offsetX) * rangeX;
                 const baseMovementY = Math.cos(time * speedY + offsetY) * rangeY;
                 
-                // Add secondary wave for more complex motion
-                const secondaryX = Math.sin(time * speedX * 1.3 + offsetX + Math.PI) * (rangeX * 0.3);
-                const secondaryY = Math.cos(time * speedY * 0.7 + offsetY + Math.PI) * (rangeY * 0.4);
+                // Add secondary wave for more complex motion (reduced intensity)
+                const secondaryX = Math.sin(time * speedX * 1.2 + offsetX + Math.PI) * (rangeX * 0.2);
+                const secondaryY = Math.cos(time * speedY * 0.8 + offsetY + Math.PI) * (rangeY * 0.25);
                 
                 // Combine movements
                 const totalX = startX + baseMovementX + secondaryX;
                 const totalY = startY + baseMovementY + secondaryY;
                 
-                // Add scroll-based parallax effect
-                const scrollOffset = window.scrollY * depth * 0.1;
+                // Add very subtle scroll-based parallax effect (reduced intensity)
+                const scrollOffset = window.scrollY * depth * 0.05;
                 
                 // Ensure icons stay within viewport bounds
                 const maxX = window.innerWidth - 110; // Icon width
@@ -406,13 +479,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 el.style.left = constrainedX + 'px';
                 el.style.top = constrainedY + 'px';
                 
-                // Add subtle rotation for more dynamic feel
-                const rotation = Math.sin(time * speedX * 0.5 + offsetX) * 5;
+                // Add very subtle rotation for more dynamic feel (reduced intensity)
+                const rotation = Math.sin(time * speedX * 0.3 + offsetX) * 2; // Reduced from 5 to 2 degrees
                 el.style.transform = `rotate(${rotation}deg)`;
                 
-                // Vary opacity slightly for depth effect
-                const opacityVariation = 0.05 + Math.sin(time * speedY * 0.3 + offsetY) * 0.02;
-                el.style.opacity = Math.max(0.08, Math.min(0.12, 0.1 + opacityVariation));
+                // Vary opacity slightly for depth effect (reduced variation)
+                const opacityVariation = 0.02 + Math.sin(time * speedY * 0.2 + offsetY) * 0.01; // Reduced variation
+                
+                // Special handling for brain icon - maintain higher visibility
+                if (el.classList.contains('icon-brain')) {
+                    el.style.opacity = Math.max(0.20, Math.min(0.30, 0.25 + opacityVariation));
+                } else {
+                    el.style.opacity = Math.max(0.08, Math.min(0.12, 0.1 + opacityVariation));
+                }
             });
             
             requestAnimationFrame(animateIcons);
@@ -422,26 +501,25 @@ document.addEventListener('DOMContentLoaded', function() {
         // Handle window resize to recalculate starting positions
         window.addEventListener('resize', () => {
             icons.forEach((el, index) => {
-                const computedStyle = getComputedStyle(el);
-                let initialTop = parseFloat(computedStyle.top) || 0;
-                let initialLeft = parseFloat(computedStyle.left) || 0;
+                let initialTop = 0;
+                let initialLeft = 0;
                 
-                // Recalculate based on new window size if using percentages
+                // Recalculate starting positions with proper margins based on new window size
                 if (el.classList.contains('icon-ai')) {
                     initialTop = 0.12 * window.innerHeight;
-                    initialLeft = 0.08 * window.innerWidth;
+                    initialLeft = 50; // Start with 50px left margin
                 } else if (el.classList.contains('icon-brain')) {
                     initialTop = window.innerHeight - (0.10 * window.innerHeight) - 110;
-                    initialLeft = 0.14 * window.innerWidth;
+                    initialLeft = 50; // Start with 50px left margin
                 } else if (el.classList.contains('icon-chart')) {
                     initialTop = 0.18 * window.innerHeight;
-                    initialLeft = window.innerWidth - (0.12 * window.innerWidth) - 110;
+                    initialLeft = window.innerWidth - 160; // Start with 50px right margin (110px icon + 50px margin)
                 } else if (el.classList.contains('icon-eyes')) {
                     initialTop = window.innerHeight - (0.16 * window.innerHeight) - 110;
-                    initialLeft = window.innerWidth - (0.10 * window.innerWidth) - 110;
+                    initialLeft = window.innerWidth - 160; // Start with 50px right margin (110px icon + 50px margin)
                 } else if (el.classList.contains('icon-human')) {
                     initialTop = 0.46 * window.innerHeight;
-                    initialLeft = (window.innerWidth / 2) - 55; // Center horizontally
+                    initialLeft = (window.innerWidth / 2) - 55; // Center horizontally behind content
                 }
                 
                 el.dataset.startX = initialLeft;
