@@ -47,7 +47,18 @@ body {
 .bg-perception { stroke: #f472b655; }
 
 /* PNG background icons */
-.bg-icon { position: absolute; opacity: 0.10; filter: saturate(110%); width: 110px; height: auto; }
+.bg-icon { 
+    position: fixed; 
+    opacity: 0.10; 
+    filter: saturate(110%); 
+    width: 110px; 
+    height: auto; 
+    z-index: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+/* Initial positions for icons (will be overridden by JS animation) */
 .icon-ai { top: 12%; left: 8%; }
 .icon-brain { bottom: 10%; left: 14%; }
 .icon-chart { top: 18%; right: 12%; }

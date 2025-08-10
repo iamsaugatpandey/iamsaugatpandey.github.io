@@ -6,7 +6,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const mangoEmoji = document.getElementById('mango-hover');
     const nameDisplay = document.getElementById('name-display');
     const inlineHeader = document.querySelector('.inline-header');
-    const originalName = nameDisplay.textContent;
+    
+    // Store original content (could be text or HTML with link)
+    const originalContent = nameDisplay.innerHTML;
+    const originalText = nameDisplay.textContent || nameDisplay.innerText;
+    const hasLink = nameDisplay.querySelector('a') !== null;
+    
     let hoverTimeout = null;
 
     if (mangoEmoji && nameDisplay && inlineHeader) {
@@ -20,9 +25,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     clearTimeout(hoverTimeout);
                 }
                 
-                if (nameDisplay.textContent === originalName) {
+                const currentText = nameDisplay.textContent || nameDisplay.innerText;
+                
+                if (currentText.trim() === originalText.trim()) {
                     // Show mango message
-                    nameDisplay.textContent = 'You can also call me Mango!';
+                    if (hasLink) {
+                        nameDisplay.innerHTML = '<a href="index.html" style="text-decoration: none; color: inherit; cursor: pointer;">You can also call me Mango!</a>';
+                    } else {
+                        nameDisplay.textContent = 'You can also call me Mango!';
+                    }
                     nameDisplay.style.fontSize = '1.8rem';
                     nameDisplay.style.color = '#FF6B35';
                     nameDisplay.style.transition = 'all 0.3s ease';
@@ -30,14 +41,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     // Auto revert after 3 seconds on mobile
                     hoverTimeout = setTimeout(() => {
-                        nameDisplay.textContent = originalName;
+                        nameDisplay.innerHTML = originalContent;
                         nameDisplay.style.fontSize = '';
                         nameDisplay.style.color = '';
                         inlineHeader.classList.remove('roomy');
                     }, 3000);
                 } else {
                     // Revert immediately if tapped again
-                    nameDisplay.textContent = originalName;
+                    nameDisplay.innerHTML = originalContent;
                     nameDisplay.style.fontSize = '';
                     nameDisplay.style.color = '';
                     inlineHeader.classList.remove('roomy');
@@ -52,7 +63,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 
                 // Show mango message immediately
-                nameDisplay.textContent = 'You can also call me Mango!';
+                if (hasLink) {
+                    nameDisplay.innerHTML = '<a href="index.html" style="text-decoration: none; color: inherit; cursor: pointer;">You can also call me Mango!</a>';
+                } else {
+                    nameDisplay.textContent = 'You can also call me Mango!';
+                }
                 nameDisplay.style.fontSize = '1.8rem';
                 nameDisplay.style.color = '#FF6B35';
                 nameDisplay.style.transition = 'all 0.3s ease';
@@ -63,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
             mangoEmoji.addEventListener('mouseleave', function() {
                 // Set a stable timeout to revert the text
                 hoverTimeout = setTimeout(() => {
-                    nameDisplay.textContent = originalName;
+                    nameDisplay.innerHTML = originalContent;
                     nameDisplay.style.fontSize = '';
                     nameDisplay.style.color = '';
                     inlineHeader.classList.remove('roomy');
@@ -72,7 +87,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Also handle the case when hovering over the changed text
             nameDisplay.addEventListener('mouseenter', function() {
-                if (nameDisplay.textContent === 'You can also call me Mango!') {
+                const currentText = nameDisplay.textContent || nameDisplay.innerText;
+                if (currentText.includes('Mango')) {
                     // Clear timeout if hovering over the text itself
                     if (hoverTimeout) {
                         clearTimeout(hoverTimeout);
@@ -83,10 +99,11 @@ document.addEventListener('DOMContentLoaded', function() {
             });
 
             nameDisplay.addEventListener('mouseleave', function() {
-                if (nameDisplay.textContent === 'You can also call me Mango!') {
+                const currentText = nameDisplay.textContent || nameDisplay.innerText;
+                if (currentText.includes('Mango')) {
                     // Set timeout to revert
                     hoverTimeout = setTimeout(() => {
-                        nameDisplay.textContent = originalName;
+                        nameDisplay.innerHTML = originalContent;
                         nameDisplay.style.fontSize = '';
                         nameDisplay.style.color = '';
                         inlineHeader.classList.remove('roomy');
@@ -137,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const headerOffset = 40;
                 const elementPosition = targetElement.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
+                
                 window.scrollTo({
                     top: offsetPosition,
                     behavior: 'smooth'
@@ -146,7 +163,40 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Pronunciation audio functionality (if audio file exists)
+    // Navigation highlighting based on scroll position
+    const sections = document.querySelectorAll('section[id]');
+    const navLinksAll = document.querySelectorAll('.nav-link');
+    
+    function updateActiveNavLink() {
+        let current = '';
+        
+        sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+            const sectionHeight = section.offsetHeight;
+            
+            // Check if section is in viewport (considering some offset)
+            if (sectionTop <= 100 && sectionTop + sectionHeight > 100) {
+                current = section.getAttribute('id');
+            }
+        });
+        
+        // Remove active class from all nav links
+        navLinksAll.forEach(link => {
+            link.classList.remove('active');
+        });
+        
+        // Add active class to current section's nav link
+        if (current) {
+            const activeLink = document.querySelector(`.nav-link[href="#${current}"]`);
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
+        }
+    }
+    
+    // Update active nav link on scroll
+    window.addEventListener('scroll', updateActiveNavLink);
+    window.addEventListener('load', updateActiveNavLink);    // Pronunciation audio functionality (if audio file exists)
     const pronunciationIcon = document.querySelector('.pronunciation-icon');
     if (pronunciationIcon) {
         pronunciationIcon.addEventListener('click', function() {
@@ -271,46 +321,132 @@ document.addEventListener('DOMContentLoaded', function() {
         oldShapes.forEach(s => s.style.display = 'none');
     }
 
-    // Background icons very slow motion
+    // Background icons dynamic full-screen movement
     const icons = document.querySelectorAll('.bg-icon');
     if (icons.length) {
-        icons.forEach(el => {
-            const base = getComputedStyle(el).transform;
-            el.dataset.baseTransform = base && base !== 'none' ? base : '';
-        });
-
-        const lerp = (a, b, t) => a + (b - a) * t;
         let time = 0;
         
-        // Give each icon its own random motion parameters
+        // Give each icon its own random motion parameters for full-screen movement
         icons.forEach((el, index) => {
+            // Store original position as starting point
+            const rect = el.getBoundingClientRect();
+            const computedStyle = getComputedStyle(el);
+            
+            // Get initial positions from CSS
+            let initialTop = parseFloat(computedStyle.top) || 0;
+            let initialLeft = parseFloat(computedStyle.left) || 0;
+            let initialRight = parseFloat(computedStyle.right) || 0;
+            let initialBottom = parseFloat(computedStyle.bottom) || 0;
+            
+            // Convert percentage positions to pixels if needed
+            if (computedStyle.top.includes('%')) {
+                initialTop = (parseFloat(computedStyle.top) / 100) * window.innerHeight;
+            }
+            if (computedStyle.left.includes('%')) {
+                initialLeft = (parseFloat(computedStyle.left) / 100) * window.innerWidth;
+            }
+            if (computedStyle.right.includes('%')) {
+                initialRight = (parseFloat(computedStyle.right) / 100) * window.innerWidth;
+                initialLeft = window.innerWidth - initialRight - 110; // 110px is icon width
+            }
+            if (computedStyle.bottom.includes('%')) {
+                initialBottom = (parseFloat(computedStyle.bottom) / 100) * window.innerHeight;
+                initialTop = window.innerHeight - initialBottom - 110; // Approximate icon height
+            }
+            
+            el.dataset.startX = initialLeft;
+            el.dataset.startY = initialTop;
             el.dataset.offsetX = Math.random() * Math.PI * 2;
             el.dataset.offsetY = Math.random() * Math.PI * 2;
-            el.dataset.speedX = 0.8 + Math.random() * 0.4; // Random speed between 0.8 and 1.2
-            el.dataset.speedY = 0.6 + Math.random() * 0.6; // Random speed between 0.6 and 1.2
+            el.dataset.speedX = 0.3 + Math.random() * 0.4; // Slower for full-screen movement
+            el.dataset.speedY = 0.2 + Math.random() * 0.3; // Different speeds for variety
+            el.dataset.rangeX = 150 + Math.random() * 300; // How far they can move horizontally
+            el.dataset.rangeY = 100 + Math.random() * 200; // How far they can move vertically
+            
+            // Set initial position to absolute for free movement
+            el.style.position = 'fixed';
         });
 
         function animateIcons() {
-            time += 0.012; // faster animation
+            time += 0.008; // Slower animation for smoother full-screen movement
+            
             icons.forEach((el, index) => {
-                const depth = parseFloat(el.getAttribute('data-depth') || '0.1');
+                const startX = parseFloat(el.dataset.startX);
+                const startY = parseFloat(el.dataset.startY);
                 const offsetX = parseFloat(el.dataset.offsetX);
                 const offsetY = parseFloat(el.dataset.offsetY);
                 const speedX = parseFloat(el.dataset.speedX);
                 const speedY = parseFloat(el.dataset.speedY);
+                const rangeX = parseFloat(el.dataset.rangeX);
+                const rangeY = parseFloat(el.dataset.rangeY);
+                const depth = parseFloat(el.getAttribute('data-depth') || '0.1');
                 
-                // Random circular/orbital motion for each icon
-                const px = Math.sin(time * speedX + offsetX) * 40 * depth;
-                const py = Math.cos(time * speedY + offsetY) * 35 * depth;
+                // Create smooth, large-scale movement patterns
+                const baseMovementX = Math.sin(time * speedX + offsetX) * rangeX;
+                const baseMovementY = Math.cos(time * speedY + offsetY) * rangeY;
                 
-                // Add some vertical drift based on scroll
-                const scrollDrift = window.scrollY * 0.02 * depth;
+                // Add secondary wave for more complex motion
+                const secondaryX = Math.sin(time * speedX * 1.3 + offsetX + Math.PI) * (rangeX * 0.3);
+                const secondaryY = Math.cos(time * speedY * 0.7 + offsetY + Math.PI) * (rangeY * 0.4);
                 
-                const base = el.dataset.baseTransform || '';
-                el.style.transform = `${base} translate(${px}px, ${py + scrollDrift}px)`;
+                // Combine movements
+                const totalX = startX + baseMovementX + secondaryX;
+                const totalY = startY + baseMovementY + secondaryY;
+                
+                // Add scroll-based parallax effect
+                const scrollOffset = window.scrollY * depth * 0.1;
+                
+                // Ensure icons stay within viewport bounds
+                const maxX = window.innerWidth - 110; // Icon width
+                const maxY = window.innerHeight - 110; // Icon height
+                const constrainedX = Math.max(0, Math.min(maxX, totalX));
+                const constrainedY = Math.max(0, Math.min(maxY, totalY + scrollOffset));
+                
+                // Apply the transformation
+                el.style.left = constrainedX + 'px';
+                el.style.top = constrainedY + 'px';
+                
+                // Add subtle rotation for more dynamic feel
+                const rotation = Math.sin(time * speedX * 0.5 + offsetX) * 5;
+                el.style.transform = `rotate(${rotation}deg)`;
+                
+                // Vary opacity slightly for depth effect
+                const opacityVariation = 0.05 + Math.sin(time * speedY * 0.3 + offsetY) * 0.02;
+                el.style.opacity = Math.max(0.08, Math.min(0.12, 0.1 + opacityVariation));
             });
+            
             requestAnimationFrame(animateIcons);
         }
         requestAnimationFrame(animateIcons);
+        
+        // Handle window resize to recalculate starting positions
+        window.addEventListener('resize', () => {
+            icons.forEach((el, index) => {
+                const computedStyle = getComputedStyle(el);
+                let initialTop = parseFloat(computedStyle.top) || 0;
+                let initialLeft = parseFloat(computedStyle.left) || 0;
+                
+                // Recalculate based on new window size if using percentages
+                if (el.classList.contains('icon-ai')) {
+                    initialTop = 0.12 * window.innerHeight;
+                    initialLeft = 0.08 * window.innerWidth;
+                } else if (el.classList.contains('icon-brain')) {
+                    initialTop = window.innerHeight - (0.10 * window.innerHeight) - 110;
+                    initialLeft = 0.14 * window.innerWidth;
+                } else if (el.classList.contains('icon-chart')) {
+                    initialTop = 0.18 * window.innerHeight;
+                    initialLeft = window.innerWidth - (0.12 * window.innerWidth) - 110;
+                } else if (el.classList.contains('icon-eyes')) {
+                    initialTop = window.innerHeight - (0.16 * window.innerHeight) - 110;
+                    initialLeft = window.innerWidth - (0.10 * window.innerWidth) - 110;
+                } else if (el.classList.contains('icon-human')) {
+                    initialTop = 0.46 * window.innerHeight;
+                    initialLeft = (window.innerWidth / 2) - 55; // Center horizontally
+                }
+                
+                el.dataset.startX = initialLeft;
+                el.dataset.startY = initialTop;
+            });
+        });
     }
 });
