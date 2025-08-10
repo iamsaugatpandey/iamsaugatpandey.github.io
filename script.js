@@ -1,7 +1,104 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Detect if device supports touch
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    
+    // Mango hover functionality - improved stability with touch support
+    const mangoEmoji = document.getElementById('mango-hover');
+    const nameDisplay = document.getElementById('name-display');
+    const inlineHeader = document.querySelector('.inline-header');
+    const originalName = nameDisplay.textContent;
+    let hoverTimeout = null;
+
+    if (mangoEmoji && nameDisplay && inlineHeader) {
+        if (isTouchDevice) {
+            // Touch device: use click/tap instead of hover
+            mangoEmoji.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Clear any existing timeout
+                if (hoverTimeout) {
+                    clearTimeout(hoverTimeout);
+                }
+                
+                if (nameDisplay.textContent === originalName) {
+                    // Show mango message
+                    nameDisplay.textContent = 'You can also call me Mango!';
+                    nameDisplay.style.fontSize = '1.8rem';
+                    nameDisplay.style.color = '#FF6B35';
+                    nameDisplay.style.transition = 'all 0.3s ease';
+                    inlineHeader.classList.add('roomy');
+                    
+                    // Auto revert after 3 seconds on mobile
+                    hoverTimeout = setTimeout(() => {
+                        nameDisplay.textContent = originalName;
+                        nameDisplay.style.fontSize = '';
+                        nameDisplay.style.color = '';
+                        inlineHeader.classList.remove('roomy');
+                    }, 3000);
+                } else {
+                    // Revert immediately if tapped again
+                    nameDisplay.textContent = originalName;
+                    nameDisplay.style.fontSize = '';
+                    nameDisplay.style.color = '';
+                    inlineHeader.classList.remove('roomy');
+                }
+            });
+        } else {
+            // Desktop: use hover
+            mangoEmoji.addEventListener('mouseenter', function() {
+                // Clear any existing timeout
+                if (hoverTimeout) {
+                    clearTimeout(hoverTimeout);
+                }
+                
+                // Show mango message immediately
+                nameDisplay.textContent = 'You can also call me Mango!';
+                nameDisplay.style.fontSize = '1.8rem';
+                nameDisplay.style.color = '#FF6B35';
+                nameDisplay.style.transition = 'all 0.3s ease';
+                // Make room by moving nav below
+                inlineHeader.classList.add('roomy');
+            });
+
+            mangoEmoji.addEventListener('mouseleave', function() {
+                // Set a stable timeout to revert the text
+                hoverTimeout = setTimeout(() => {
+                    nameDisplay.textContent = originalName;
+                    nameDisplay.style.fontSize = '';
+                    nameDisplay.style.color = '';
+                    inlineHeader.classList.remove('roomy');
+                }, 500);
+            });
+
+            // Also handle the case when hovering over the changed text
+            nameDisplay.addEventListener('mouseenter', function() {
+                if (nameDisplay.textContent === 'You can also call me Mango!') {
+                    // Clear timeout if hovering over the text itself
+                    if (hoverTimeout) {
+                        clearTimeout(hoverTimeout);
+                    }
+                    // Keep nav below while hovered
+                    inlineHeader.classList.add('roomy');
+                }
+            });
+
+            nameDisplay.addEventListener('mouseleave', function() {
+                if (nameDisplay.textContent === 'You can also call me Mango!') {
+                    // Set timeout to revert
+                    hoverTimeout = setTimeout(() => {
+                        nameDisplay.textContent = originalName;
+                        nameDisplay.style.fontSize = '';
+                        nameDisplay.style.color = '';
+                        inlineHeader.classList.remove('roomy');
+                    }, 500);
+                }
+            });
+        }
+    }
+
     // Publication filtering functionality
     const filterButtons = document.querySelectorAll('.filter-btn');
-    const publications = document.querySelectorAll('.publication');
+    const publications = document.querySelectorAll('.publication-item');
 
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
@@ -13,8 +110,14 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Show/hide publications based on filter
             publications.forEach(pub => {
-                if (filter === 'all' || pub.getAttribute('data-categories').includes(filter)) {
-                    pub.style.display = 'block';
+                const categories = pub.getAttribute('data-categories');
+                if (filter === 'all' || (categories && categories.includes(filter))) {
+                    pub.style.display = 'grid';
+                    // Add fade-in animation
+                    pub.style.opacity = '0';
+                    setTimeout(() => {
+                        pub.style.opacity = '1';
+                    }, 100);
                 } else {
                     pub.style.display = 'none';
                 }
@@ -22,17 +125,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Pronunciation audio functionality
-    const pronunciationIcon = document.querySelector('.pronunciation-icon');
-    if (pronunciationIcon) {
-        pronunciationIcon.addEventListener('click', function() {
-            const audio = new Audio('pronouce.m4a');
-            audio.play().catch(e => console.log('Audio playback failed:', e));
-        });
-    }
-
     // Smooth scrolling for navigation links
-    const navLinks = document.querySelectorAll('.sidebar nav a[href^="#"]');
+    const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
@@ -40,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetElement = document.querySelector(targetId);
             
             if (targetElement) {
-                const headerOffset = 80;
+                const headerOffset = 40;
                 const elementPosition = targetElement.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -52,10 +146,20 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Pronunciation audio functionality (if audio file exists)
+    const pronunciationIcon = document.querySelector('.pronunciation-icon');
+    if (pronunciationIcon) {
+        pronunciationIcon.addEventListener('click', function() {
+            const audio = new Audio('pronouce.m4a');
+            audio.play().catch(e => console.log('Audio playback failed:', e));
+        });
+    }
+
     // Add scroll-to-top functionality
-    const scrollToTop = document.createElement('button');
-    scrollToTop.innerHTML = '↑';
-    scrollToTop.style.cssText = `
+    let scrollToTopBtn = document.createElement('button');
+    scrollToTopBtn.innerHTML = '↑';
+    scrollToTopBtn.className = 'scroll-to-top';
+    scrollToTopBtn.style.cssText = `
         position: fixed;
         bottom: 30px;
         right: 30px;
@@ -68,15 +172,20 @@ document.addEventListener('DOMContentLoaded', function() {
         font-size: 20px;
         cursor: pointer;
         opacity: 0;
+        visibility: hidden;
         transition: all 0.3s ease;
         z-index: 1000;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-        display: none;
+        box-shadow: var(--shadow-medium);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
     `;
 
-    document.body.appendChild(scrollToTop);
+    document.body.appendChild(scrollToTopBtn);
 
-    scrollToTop.addEventListener('click', () => {
+    scrollToTopBtn.addEventListener('click', () => {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
@@ -85,90 +194,123 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Show/hide scroll to top button
     window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) {
-            scrollToTop.style.display = 'block';
-            scrollToTop.style.opacity = '1';
+        if (window.pageYOffset > 500) {
+            scrollToTopBtn.style.opacity = '1';
+            scrollToTopBtn.style.visibility = 'visible';
         } else {
-            scrollToTop.style.opacity = '0';
-            setTimeout(() => {
-                if (window.pageYOffset <= 300) {
-                    scrollToTop.style.display = 'none';
-                }
-            }, 300);
+            scrollToTopBtn.style.opacity = '0';
+            scrollToTopBtn.style.visibility = 'hidden';
         }
     });
 
-    // Research interests interactive functionality
-    const researchItems = document.querySelectorAll('.research-item');
-    researchItems.forEach(item => {
-        item.addEventListener('click', function() {
-            // Close all other items
-            researchItems.forEach(otherItem => {
-                if (otherItem !== this) {
-                    otherItem.classList.remove('active');
-                }
-            });
-            
-            // Toggle current item
-            this.classList.toggle('active');
+    // Add animation on scroll for publication items
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    // Observe publication items for scroll animation
+    publications.forEach(pub => {
+        pub.style.opacity = '0';
+        pub.style.transform = 'translateY(20px)';
+        pub.style.transition = 'all 0.6s ease';
+        observer.observe(pub);
+    });
+
+    // Add hover effect for social icons
+    const socialIcons = document.querySelectorAll('.social-icons a');
+    socialIcons.forEach(icon => {
+        icon.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-3px) scale(1.1)';
+        });
+        
+        icon.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
         });
     });
 
-    // Ecosystem diagram interactions
-    const ecosystemNodes = document.querySelectorAll('.ecosystem-node');
-    const connectionLines = document.querySelectorAll('.connection-line');
-    const ecosystemDescription = document.getElementById('ecosystem-description');
-    
-    // Store the original description
-    const originalDescription = ecosystemDescription.textContent;
-    
-    // Node descriptions
-    const nodeDescriptions = {
-        'researcher': 'My research bridges human cognition, AI technologies, and data visualization to create more effective and trustworthy visual communication tools.',
-        'human-vision': 'Understanding how humans perceive and process visual information is fundamental to creating effective data visualizations that align with cognitive capabilities.',
-        'ai-models': 'Leveraging cutting-edge AI and computer vision models to automatically analyze, understand, and enhance data visualizations for better human comprehension.',
-        'visualizations': 'Creating and studying data visualizations that effectively communicate complex information while maintaining accuracy and preventing misinterpretation.',
-        'culture': 'Investigating how cultural background influences visualization interpretation and designing inclusive visual representations that work across diverse populations.',
-        'literacy': 'Measuring and improving people\'s ability to read, understand, and critically evaluate data visualizations in our increasingly data-driven world.',
-        'trust': 'Studying the factors that build or erode user trust in data visualizations and developing frameworks to create more trustworthy visual representations.'
-    };
-    
-    ecosystemNodes.forEach(node => {
-        node.addEventListener('mouseenter', function() {
-            const nodeType = this.getAttribute('data-node');
-            
-            // Update description
-            if (nodeDescriptions[nodeType]) {
-                ecosystemDescription.textContent = nodeDescriptions[nodeType];
-            }
-            
-            // Highlight relevant connections
-            connectionLines.forEach(line => {
-                line.style.opacity = '0.2';
-            });
-            
-            // Add visual feedback
-            this.style.transform = this.style.transform.includes('scale') ? 
-                this.style.transform.replace(/scale\([^)]*\)/, 'scale(1.3)') : 
-                this.style.transform + ' scale(1.3)';
-        });
-        
-        node.addEventListener('mouseleave', function() {
-            // Reset description to original
-            ecosystemDescription.textContent = originalDescription;
-            
-            // Reset all connections
-            connectionLines.forEach(line => {
-                line.style.opacity = '';
-            });
-            
-            // Reset transform
-            const nodeType = this.getAttribute('data-node');
-            if (nodeType === 'researcher') {
-                this.style.transform = 'translate(-50%, -50%) scale(1.2)';
-            } else {
-                this.style.transform = this.style.transform.replace(/scale\([^)]*\)/, '');
+    // Active navigation highlighting based on scroll position
+    window.addEventListener('scroll', () => {
+        const sections = document.querySelectorAll('section[id]');
+        const scrollPos = window.pageYOffset + 150;
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            const sectionId = section.getAttribute('id');
+            const navLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
+
+            if (navLink && scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.remove('active');
+                });
+                navLink.classList.add('active');
             }
         });
     });
+
+    // Add loading animation
+    document.body.style.opacity = '0';
+    window.addEventListener('load', () => {
+        document.body.style.transition = 'opacity 0.5s ease';
+        document.body.style.opacity = '1';
+    });
+
+    // Remove old SVG parallax if present
+    const oldShapes = document.querySelectorAll('.bg-shape');
+    if (oldShapes.length) {
+        oldShapes.forEach(s => s.style.display = 'none');
+    }
+
+    // Background icons very slow motion
+    const icons = document.querySelectorAll('.bg-icon');
+    if (icons.length) {
+        icons.forEach(el => {
+            const base = getComputedStyle(el).transform;
+            el.dataset.baseTransform = base && base !== 'none' ? base : '';
+        });
+
+        const lerp = (a, b, t) => a + (b - a) * t;
+        let time = 0;
+        
+        // Give each icon its own random motion parameters
+        icons.forEach((el, index) => {
+            el.dataset.offsetX = Math.random() * Math.PI * 2;
+            el.dataset.offsetY = Math.random() * Math.PI * 2;
+            el.dataset.speedX = 0.8 + Math.random() * 0.4; // Random speed between 0.8 and 1.2
+            el.dataset.speedY = 0.6 + Math.random() * 0.6; // Random speed between 0.6 and 1.2
+        });
+
+        function animateIcons() {
+            time += 0.012; // faster animation
+            icons.forEach((el, index) => {
+                const depth = parseFloat(el.getAttribute('data-depth') || '0.1');
+                const offsetX = parseFloat(el.dataset.offsetX);
+                const offsetY = parseFloat(el.dataset.offsetY);
+                const speedX = parseFloat(el.dataset.speedX);
+                const speedY = parseFloat(el.dataset.speedY);
+                
+                // Random circular/orbital motion for each icon
+                const px = Math.sin(time * speedX + offsetX) * 40 * depth;
+                const py = Math.cos(time * speedY + offsetY) * 35 * depth;
+                
+                // Add some vertical drift based on scroll
+                const scrollDrift = window.scrollY * 0.02 * depth;
+                
+                const base = el.dataset.baseTransform || '';
+                el.style.transform = `${base} translate(${px}px, ${py + scrollDrift}px)`;
+            });
+            requestAnimationFrame(animateIcons);
+        }
+        requestAnimationFrame(animateIcons);
+    }
 });

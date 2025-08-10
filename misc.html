@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saugat</title>
+    <!-- Favicon: mango emoji -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='50%25' x='50%25' dominant-baseline='middle' text-anchor='middle' font-size='52'%3E%F0%9F%A5%AD%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="bg-canvas" aria-hidden="true">
+        <img src="ai.png" alt="" class="bg-icon icon-ai" data-depth="0.20"/>
+        <img src="brain.png" alt="" class="bg-icon icon-brain" data-depth="0.12"/>
+        <img src="chart.png" alt="" class="bg-icon icon-chart" data-depth="0.16"/>
+        <img src="eyes.png" alt="" class="bg-icon icon-eyes" data-depth="0.10"/>
+        <img src="human.png" alt="" class="bg-icon icon-human" data-depth="0.08"/>
+    </div>
+
+    <div class="container">
+        <main class="main-content">
+            <div class="inline-header">
+                <div class="header-left">
+                    <h1 class="name-main" id="name-display"><a href="index.html" style="text-decoration: none; color: inherit; cursor: pointer;">Saugat</a></h1>
+                    <span class="name-hindi">सौगात</span>
+                    <span class="mango-emoji" id="mango-hover">🥭</span>
+                </div>
+                <nav class="header-nav">
+                    <a href="cv.html" class="nav-link">CV</a>
+                    <a href="index.html#publications" class="nav-link">Publications</a>
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                    <a href="index.html#updates" class="nav-link">Updates</a>
+                    <a href="misc.html" class="nav-link active">Misc</a>
+                </nav>
+            </div>
+
+            <section class="misc-section">
+                <h2>Miscellaneous</h2>
+                <div class="misc-content">
+                    <div class="construction-notice">
+                        <i class="fas fa-hammer" style="font-size: 3rem; color: #007AFF; margin-bottom: 1rem;"></i>
+                        <h3>🚧 More Coming Soon</h3>
+                        <p>I will be adding more content and some are below! I'll be sharing my experience from PhD applications, my current research interests, my viewpoints on state-of-the-art models and their usage, my teaching experience, and my adventurous activities.</p>
+                        <p>Check back soon for updates!</p>
+                    </div>
+
+                    <!-- Filter Buttons -->
+                    <div class="misc-filter-section">
+                        <div class="misc-filter-buttons">
+                            <button class="misc-filter-btn active" data-filter="all">All</button>
+                            <button class="misc-filter-btn" data-filter="adventure">Adventure</button>
+                            <button class="misc-filter-btn" data-filter="teaching">Teaching</button>
+                            <button class="misc-filter-btn" data-filter="research">Research</button>
+                            <button class="misc-filter-btn" data-filter="phd">PhD</button>
+                        </div>
+                    </div>
+
+                    <!-- Skydiving Adventure -->
+                    <div class="adventure-box misc-item" data-category="adventure">
+                        <div class="adventure-header">
+                            <h3>🪂 Skydiving Journey</h3>
+                            <div class="adventure-meta">
+                                <span class="adventure-date">Aug 2025</span>
+                                <span class="adventure-location">📍 Snohomish, WA</span>
+                            </div>
+                        </div>
+                        <div class="adventure-content">
+                            <div class="adventure-text">
+                                <p><strong>The highlight of my year!</strong> This was a long dream, a true bucket list item. After experiencing paragliding and bungee jumping, I finally took the leap from 13,500 ft! I love to challenge myself from time to time with adventurous sports and activities.</p>
+                                <p>Highly recommend the jump if you're interested! The folks at <a href="https://www.skydivesnohomish.com/" target="_blank">Skydive Snohomish</a> are the best - highly trained, professional, and absolutely sweet. 🙌</p>
+                            </div>
+                            <div class="adventure-images">
+                                <img src="SkyDiving/GX019926_5165160_1754700111.jpg" alt="Skydiving Experience" class="adventure-thumb" onclick="openGallery('skydiving', 0)">
+                                <span class="image-count">+3 photos</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mt. Rainier Adventure -->
+                    <div class="adventure-box misc-item" data-category="adventure">
+                        <div class="adventure-header">
+                            <h3>🏔️ Mt. Rainier Adventure</h3>
+                            <div class="adventure-meta">
+                                <span class="adventure-date">July 2026</span>
+                                <span class="adventure-location">📍 Mt. Rainier, WA</span>
+                            </div>
+                        </div>
+                        <div class="adventure-content">
+                            <div class="adventure-text">
+                                <p>As a Community Intern Captain at Adobe, I had the amazing opportunity to take our interns on an unforgettable trip to Mt. Rainier. We conquered the Skyline Trail - the longest trail there - and made it all the way to the top!</p>
+                                <p>It was incredible to share this experience with such a talented group of people and see everyone push their limits together. 🚀</p>
+                            </div>
+                            <div class="adventure-images">
+                                <img src="Mt_Rainier/IMG_9852.PNG" alt="Mt. Rainier Trip" class="adventure-thumb" onclick="openGallery('rainier', 0)">
+                                <span class="image-count">+5 photos</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Teaching Experience -->
+                    <div class="adventure-box misc-item" data-category="teaching">
+                        <div class="adventure-header">
+                            <h3>👨‍🏫 Teaching Experience - 6.67/7</h3>
+                            <div class="adventure-meta">
+                                <span class="adventure-date">Fall 2024</span>
+                                <span class="adventure-location">📍 Introduction to Visualization</span>
+                            </div>
+                        </div>
+                        <div class="adventure-content">
+                            <div class="adventure-text">
+                                <p><strong>Grateful to my advisor <a href="https://alvitta.com/" target="_blank">Dr. Alvitta Ottley</a> for this incredible teaching experience!</strong> I scored 6.67/7 (Department Average: 6.11/7, School Average: 6.18/7) for co-instructing "Introduction to Visualization."</p>
+                                
+                                <p>My teaching journey started during undergrad with several TA experiences in Computer Science, Physics, and Mathematics courses. I genuinely love helping students - often extending sessions when needed and learning alongside them. Students have been an incredible source of learning and guidance for me.</p>
+                                
+                                <p>This time, I created course materials, facilitated interactive sessions, and taught data visualization including <mark class="highlight-topic">data wrangling</mark>, <mark class="highlight-topic">D3.js</mark>, <mark class="highlight-topic">design guidelines</mark>, what makes <mark class="highlight-topic">good vs. bad & ugly visualizations</mark>, <mark class="highlight-topic">perception</mark>, <mark class="highlight-topic">prototyping</mark>, and helped students complete final projects creating interactive visualization dashboards for <mark class="highlight-topic">social good</mark> 🌍💧🏭.</p>
+                                
+                                <p>I'm always looking to improve my teaching and make myself available anytime (sometimes even at midnight!) to help students succeed. The best moment was when I was waiting for chai ☕️ at a campus cafe, and a student approached me to thank me for the course - they said it was their favorite and even helped them land an internship using their final project! ✨</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Image Gallery Modal -->
+    <div id="gallery-modal" class="gallery-modal" onclick="closeGallery(event)">
+        <div class="gallery-content">
+            <button class="gallery-close" onclick="closeGallery()">&times;</button>
+            <button class="gallery-nav prev" onclick="changeImage(-1)">❮</button>
+            <img id="gallery-image" src="" alt="">
+            <button class="gallery-nav next" onclick="changeImage(1)">❯</button>
+            <div class="gallery-counter">
+                <span id="gallery-current">1</span> / <span id="gallery-total">1</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Gallery functionality
+        const galleries = {
+            skydiving: [
+                'SkyDiving/GX019926_5165160_1754700111.jpg',
+                'SkyDiving/GX019927_1201200_1754700117.jpg',
+                'SkyDiving/GX019928_4204200_1754700121.jpg'
+            ],
+            rainier: [
+                'Mt_Rainier/IMG_9852.PNG',
+                'Mt_Rainier/IMG_9858.PNG',
+                'Mt_Rainier/IMG_9860.PNG',
+                'Mt_Rainier/IMG_9861.PNG',
+                'Mt_Rainier/PXL_20250802_175147031.MP.jpg'
+            ]
+        };
+
+        let currentGallery = '';
+        let currentImage = 0;
+
+        function openGallery(galleryName, imageIndex = 0) {
+            currentGallery = galleryName;
+            currentImage = imageIndex;
+            const modal = document.getElementById('gallery-modal');
+            const image = document.getElementById('gallery-image');
+            const current = document.getElementById('gallery-current');
+            const total = document.getElementById('gallery-total');
+            
+            image.src = galleries[galleryName][imageIndex];
+            current.textContent = imageIndex + 1;
+            total.textContent = galleries[galleryName].length;
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeGallery(event) {
+            if (event && event.target !== event.currentTarget) return;
+            const modal = document.getElementById('gallery-modal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function changeImage(direction) {
+            const images = galleries[currentGallery];
+            currentImage += direction;
+            
+            if (currentImage >= images.length) currentImage = 0;
+            if (currentImage < 0) currentImage = images.length - 1;
+            
+            const image = document.getElementById('gallery-image');
+            const current = document.getElementById('gallery-current');
+            
+            image.src = images[currentImage];
+            current.textContent = currentImage + 1;
+        }
+
+        // Misc page filtering functionality
+        const miscFilterButtons = document.querySelectorAll('.misc-filter-btn');
+        const miscItems = document.querySelectorAll('.misc-item');
+
+        miscFilterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const filter = button.getAttribute('data-filter');
+                
+                // Toggle active class on buttons
+                miscFilterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                
+                // Show/hide misc items based on filter
+                miscItems.forEach(item => {
+                    const category = item.getAttribute('data-category');
+                    if (filter === 'all' || category === filter) {
+                        item.style.display = 'block';
+                        // Add fade-in animation
+                        item.style.opacity = '0';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                        }, 100);
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Security measures
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener('keydown', function(e) {
+            // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+            if (e.keyCode == 123 || 
+                (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 74)) ||
+                (e.ctrlKey && e.keyCode == 85)) {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            const galleryModal = document.getElementById('gallery-modal');
+            
+            if (galleryModal.style.display === 'flex') {
+                if (e.key === 'Escape') closeGallery();
+                if (e.key === 'ArrowLeft') changeImage(-1);
+                if (e.key === 'ArrowRight') changeImage(1);
+            }
+        });
+    </script>
+</body>
+</html>

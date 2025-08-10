@@ -3,244 +3,254 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saugat Pandey - Portfolio</title>
-      <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TVKHK7VV3Q"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-TVKHK7VV3Q');
-</script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Saugat</title>
+    <!-- Favicon: mango emoji -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='50%25' x='50%25' dominant-baseline='middle' text-anchor='middle' font-size='52'%3E%F0%9F%A5%AD%3C/text%3E%3C/svg%3E">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TVKHK7VV3Q"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);} 
+        gtag('js', new Date());
+        gtag('config', 'G-TVKHK7VV3Q');
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="bg-canvas" aria-hidden="true">
+        <img src="ai.png" alt="" class="bg-icon icon-ai" data-depth="0.20"/>
+        <img src="brain.png" alt="" class="bg-icon icon-brain" data-depth="0.12"/>
+        <img src="chart.png" alt="" class="bg-icon icon-chart" data-depth="0.16"/>
+        <img src="eyes.png" alt="" class="bg-icon icon-eyes" data-depth="0.10"/>
+        <img src="human.png" alt="" class="bg-icon icon-human" data-depth="0.08"/>
+    </div>
+
+    <!-- Removed full-width header; integrating header into main content -->
     <div class="container">
-        <aside class="sidebar">
-            <img src="P1010570.JPG" alt="Saugat Pandey" class="profile-pic">
-            <h1>Hi, I'm Saugat Pandey </h1>
-            <!-- <span class="pronunciation-icon">🔊</span> -->
-            <!-- <p>Saugat Pandey 🔊</p> -->
-            <p>सौगात पाण्डे <span class="pronunciation-icon">🔊</span> </p>       
-            <p>p.saugat@wustl.edu</p>     
-            <div class="social-links">
-                <a href="mailto:p.saugat@wustl.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                <a href="SaugatCV.pdf" aria-label="CV"><i class="fas fa-file-alt"></i></a>
-                <a href="https://twitter.com/iamsaugatpandey" aria-label="Twitter profile"><i class="fab fa-twitter"></i></a>
-                <a href="https://github.com/iamsaugatpandey" aria-label="GitHub profile"><i class="fab fa-github"></i></a>
-                <a href="https://scholar.google.com/citations?user=RCC_DfYAAAAJ&hl=en" aria-label="Google Scholar profile"><i class="fas fa-graduation-cap"></i></a>            </div>
-            <nav>
-                <ul>
-                    <li><a href="#about">About Me</a></li>
-                    <!-- <li><a href="#research">Research</a></li> -->
-                    <li><a href="#news">News</a></li>
-                    <li><a href="#publications">Publications</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </aside>
-        <main class="content">
-            <div id="about" class="section">
-                <h2>About Me</h2>
-                <p>I am in my final year as a Ph.D. student in the Department of Computer Science at Washington University in St. Louis. As a graduate research assistant at the <a href='http://visualdata.wustl.edu/'>Visual Interface and Behavior Exploration Lab (VIBE)</a>, I investigate the interplay of information visualization and visual analytics under the supervision of <a href="https://scholar.google.com/citations?user=yepPD_cAAAAJ&hl=en">Alvitta Ottley</a>.</p>
-                
-                <div class="research-interests">
-                    <h3>Research Interests</h3>
-                    <p>My research focuses on several interconnected areas that aim to make data visualization more effective and trustworthy:</p>
-                    <div class="research-grid">
-                        <div class="research-item" data-topic="visualization-literacy">
-                            <div class="research-icon">
-                                <i class="fas fa-chart-bar"></i>
-                            </div>
-                            <h4>Visualization Literacy</h4>
-                            <div class="research-description">
-                                Understanding how people read and interpret visualizations across different cultural contexts
-                            </div>
-                        </div>
-                        <div class="research-item" data-topic="trust">
-                            <div class="research-icon">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
-                            <h4>Trust in Visualization</h4>
-                            <div class="research-description">
-                                Investigating factors that influence user trust in data visualizations
-                            </div>
-                        </div>
-                        <div class="research-item" data-topic="misinformation">
-                            <div class="research-icon">
-                                <i class="fas fa-exclamation-triangle"></i>
-                            </div>
-                            <h4>Misinformation in Visualizations</h4>
-                            <div class="research-description">
-                                Detecting and preventing misleading visual representations of data
-                            </div>
-                        </div>
-                        <div class="research-item" data-topic="ai-vision">
-                            <div class="research-icon">
-                                <i class="fas fa-brain"></i>
-                            </div>
-                            <h4>Computer Vision & AI for Visualization</h4>
-                            <div class="research-description">
-                                Applying state-of-the-art vision models and multi-agentic LLMs to enhance visualization communication and understanding
-                            </div>
-                        </div>
-                    </div>
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="inline-header">
+                <div class="header-left">
+                    <h1 class="name-main" id="name-display">Saugat</h1>
+                    <span class="name-hindi">सौगात</span>
+                    <span class="mango-emoji" id="mango-hover">🥭</span>
                 </div>
-            
-                <div class="current-projects">
-                    <h3>Recent Projects</h3>
-                    <ul>
-                        <li>Benchmarking visual language models on standardized visualization literacy assessments</li>
-                        <li>Developing multi-dimensional frameworks for measuring trust in data visualizations</li>
-                        <li>Creating AI-powered tools that help users perceive and interpret visualizations more effectively</li>
-                        <li>Investigating cross-cultural differences in visualization comprehension and design preferences</li>
-                    </ul>
-                </div>
-
-                <div class="research-ecosystem">
-                    <h3>Research Ecosystem</h3>
-                    <p>My work sits at the intersection of human cognition, artificial intelligence, and data visualization:</p>
-                    <div class="ecosystem-diagram">
-                        <div class="ecosystem-node central-node" data-node="researcher">
-                            <i class="fas fa-user-graduate"></i>
-                            <span>Saugat's Research</span>
-                        </div>
-                        
-                        <div class="ecosystem-node" data-node="human-vision">
-                            <i class="fas fa-eye"></i>
-                            <span>Human Vision & Cognition</span>
-                        </div>
-                        
-                        <div class="ecosystem-node" data-node="ai-models">
-                            <i class="fas fa-robot"></i>
-                            <span>AI & Vision Models</span>
-                        </div>
-                        
-                        <div class="ecosystem-node" data-node="visualizations">
-                            <i class="fas fa-chart-line"></i>
-                            <span>Data Visualizations</span>
-                        </div>
-                        
-                        <div class="ecosystem-node" data-node="culture">
-                            <i class="fas fa-globe"></i>
-                            <span>Culture & Context</span>
-                        </div>
-                        
-                        <div class="ecosystem-node" data-node="literacy">
-                            <i class="fas fa-book-open"></i>
-                            <span>Visualization Literacy</span>
-                        </div>
-                        
-                        <div class="ecosystem-node" data-node="trust">
-                            <i class="fas fa-handshake"></i>
-                            <span>Trust & Understanding</span>
-                        </div>
-                        
-                        <!-- Connection lines -->
-                        <svg class="connection-lines" viewBox="0 0 400 300">
-                            <line class="connection-line" x1="200" y1="150" x2="200" y2="50"></line>
-                            <line class="connection-line" x1="200" y1="150" x2="350" y2="100"></line>
-                            <line class="connection-line" x1="200" y1="150" x2="350" y2="200"></line>
-                            <line class="connection-line" x1="200" y1="150" x2="200" y2="250"></line>
-                            <line class="connection-line" x1="200" y1="150" x2="50" y2="200"></line>
-                            <line class="connection-line" x1="200" y1="150" x2="50" y2="100"></line>
-                            
-                            <!-- Inter-node connections -->
-                            <line class="connection-line secondary" x1="200" y1="50" x2="350" y2="100"></line>
-                            <line class="connection-line secondary" x1="350" y1="100" x2="350" y2="200"></line>
-                            <line class="connection-line secondary" x1="350" y1="200" x2="200" y2="250"></line>
-                            <line class="connection-line secondary" x1="200" y1="250" x2="50" y2="200"></line>
-                            <line class="connection-line secondary" x1="50" y1="200" x2="50" y2="100"></line>
-                            <line class="connection-line secondary" x1="50" y1="100" x2="200" y2="50"></line>
-                        </svg>
-                    </div>
-                    <p class="ecosystem-description" id="ecosystem-description">
-                        My research explores diverse applications of machine learning, artificial intelligence (including large language models), and computer vision in the context of data visualization. I'm particularly interested in developing AI-powered tools that help users perceive, understand, and effectively interpret visualizations across different cultural contexts. Central to my work is measuring visualization literacy and trust in visualization, ensuring that data representations are not only technically sound but also accessible and meaningful to diverse global populations.
-                    </p>
-                </div>
-
-                <div class="job-market-notice">
-                    <h3>🚀 Currently on the Job Market</h3>
-                    <p>I am actively seeking diverse opportunities where I can apply cutting-edge technologies—including computer vision, large language models, and AI techniques—to help users better understand and interact with data. Whether in industry research, academia, or interdisciplinary roles, I'm excited to contribute to making data visualization more accessible, trustworthy, and effective for everyone.</p>
-                </div>
-            
-                <p>Beyond research, I am an avid sports enthusiast with a particular passion for badminton and cricket. My journey into visualization began with discovering <a href="https://arjun010.github.io/static/posters/CricVis-poster-writeup.pdf">CricVis</a>, an interactive visual exploration tool for cricket matches, which sparked my fascination with how visualizations can make complex data accessible and engaging.</p>
+                <nav class="header-nav">
+                    <a href="cv.html" class="nav-link">CV</a>
+                    <a href="#publications" class="nav-link">Publications</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="#updates" class="nav-link">Updates</a>
+                    <a href="misc.html" class="nav-link">Misc</a>
+                </nav>
             </div>
-            <!-- <section id="research">
-                <h2>Research Areas</h2>
-                <p>I'm interested in Visualization Literacy, Visualization in Healthcare, and Computer Vision.</p>
-            </section> -->
-            <div id="news" class="section">
-                <h2>Recent News</h2>
-                <div class="news-box">
-                    <ul class="news-list">
-                        <li><b>May, 2025 - </b>Attending EuroVIS in Luxembourg City, Luxembourg from May 31 - June 6 to present my work on benchmarking language models in the context of visualization</li>
-                        <li><b>May, 2025 - </b>Moved to Seattle for Summer 2025 to start working at Adobe as an Research Scientist Intern</li>
-                        <li><b>May, 2025 - </b>I passed my dissertation proposal!!!</li>
-                        <li><b>March, 2025 - </b>Paper titled "Benchmarking Visual Language Models on Standardized Visualization Literact Tests" accepted at EuroVIS 2025 (Computer Graphics forum)</li>
-                        <li><b>January, 2025 - </b>I will be joining Adobe as Research Scientist Intern for Summer 2025</li>
-                        <li><b>January, 2025 - </b>Paper titled "Trustworthy by Design: The Viewer's Perspective on Trust in Data Visualization" accepted at ACM CHI 2025 (Yokohama, Japan)</li>
-                        <li><b>December, 2024 - </b>I finished co-instructing the course "Introduction to Visualization" with an average rating of 6.67/7 (Department avg: 6.11, School avg: 6.18)</li>
-                        <li><b>July, 2024 - </b>Paper titled "Building and Eroding: Exogenous and Endogenous Factors that Influence Subjective Trust in Visualization" accepted at IEEE Visualization 2024</li>
-                        <li><b>June 3, 2024 - </b>I will be starting as a Doctoral Research Student Intern at American Institutes for Research for Summer 2024</li>
-                        <li><b>June 16, 2023 - </b>Paper titled "Do You Trust What You See? Toward A Multidimensional Measure of Trust in Visualization" accepted at IEEE Visualization 2023 (Melbourne, Australia)</li>
-                        <li><b>March 30, 2023 - </b>Paper titled "Mini-VLAT: A Short and Effective Measure of Visualization Literacy" awarded <i>Best Paper Award</i> at EuroVIS (2023)</li>
-                        <li><b>February 27, 2023 - </b>Paper titled "Mini-VLAT: A Short and Effective Measure of Visualization Literacy" accepted at EuroVis 2023 (Acceptance Rate = 27%)</li>
-                    </ul>
-                </div>
-            </div>
-            <section id="publications">
-                <h2>Recent Works</h2>
-                <div id="publication-filters">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="vislit">Visualization Literacy</button>
-                    <button class="filter-btn" data-filter="socialmedia">Social Media</button>
-                    <button class="filter-btn" data-filter="trust">Trust in Visualization</button>
-                    <button class="filter-btn" data-filter="llm">Language Models</button>
-                </div>
-                <div id="publications-list">
-                    <div class="publication" data-categories="selected llm vislit">
-                        <h3>Benchmarking Visual Language Models on Standardized Visualization Literacy Tests</h3>
-                        <p><b>Saugat Pandey</b>, Alvitta Ottley</p>
-                        <p>Computer Graphics Forum, In Proceedings of the 27th EG Conference <br> on Visualization (EuroVis) 2025  · <a href="https://www.researchgate.net/profile/Saugat-Pandey-4/publication/390032508_Benchmarking_Visual_Language_Models_on_Standardized_Visualization_Literacy_Tests/links/67dc79d2e2c0ea36cd872066/Benchmarking-Visual-Language-Models-on-Standardized-Visualization-Literacy-Tests.pdf">paper</a></p>
+
+            <!-- About Section with Photo -->
+            <section class="about-section">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>About Me</h2>
+                        <p>I am in my final year as a Ph.D. student in the Department of Computer Science at Washington University in St. Louis. As a graduate research assistant at the <a href='http://visualdata.wustl.edu/'>Visual Interface and Behavior Exploration Lab (VIBE)</a>, I am interested in investigating visualization literacy, understanding perceived trust in data visualizations, and leveraging AI/ML techniques to help users understand data and data visualizations.</p>
                     </div>
-                    <div class="publication" data-categories="selected trust">
-                        <h3>Trustworthy by Design: The Viewer's Perspective on Trust in Data Visualization</h3>
-                        <p>Oen G. McKinley, <b>Saugat Pandey</b>, Alvitta Ottley</p>
-                        <p>ACM CHI 2025 · <a href="https://arxiv.org/pdf/2503.10892">paper</a></p>
+                    <div class="photo-section">
+                        <img src="P1010570.JPG" alt="Saugat Pandey" class="profile-photo">
+                        <div class="social-icons">
+                            <a href="https://scholar.google.com/citations?user=RCC_DfYAAAAJ&hl=en" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                            <a href="https://twitter.com/iamsaugatpandey" aria-label="Twitter"><img src="x.png" alt="X" style="width: 16px; height: 16px;"></a>
+                            <a href="cv.html" aria-label="CV"><i class="fas fa-file-alt"></i></a>
+                            <a href="mailto:p.saugat@wustl.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        </div>
                     </div>
-                    <div class="publication" data-categories="selected trust">
-                        <h3>Building and Eroding: Exogenous and Endogenous Factors that Influence Subjective Trust in Visualization</h3>
-                        <p>R. Jordan Crouser, Syrine Matoussi, Lan Kung, <b>Saugat Pandey</b>, Oen G. McKinley, Alvitta Ottley</p>
-                        <p>IEEE VIS 2024 · <a href="https://arxiv.org/pdf/2408.03800">paper</a></p>
-                    </div>
-                    <div class="publication" data-categories="trust">
-                        <h3>Do You Trust What You See? Towards A Multidimensional Measure of Trust in Visualization</h3>
-                        <p><b>Saugat Pandey</b>, Oen G. McKinley, R. Jordan Crouser, Alvitta Ottley</p>
-                        <p>IEEE VIS 2023 · <a href="https://arxiv.org/pdf/2308.04727">paper</a></p>
-                    </div>
-                    <div class="publication" data-categories="vislit">
-                        <h3>Mini-VLAT: A Short and Effective Measure of Visualization Literacy</h3>
-                        <p><b>Saugat Pandey</b>, Alvitta Ottley</p>
-                        <p>Computer Graphics Forum, In Proceedings of the 25th EG Conference <br> on Visualization (EuroVis) 2023 · <a href="https://arxiv.org/pdf/2304.07905">paper</a> · Best Paper Award <span class="trophy">🏆</span></p>
-                    </div>
-                    <div class="publication" data-categories="socialmedia">
-                        <h3>User Engagement with COVID-19 Visualizations on Twitter</h3>
-                        <p>Robert Kasumba, <b>Saugat Pandey</b>, Vishesh Patel, Micah Wolfson, Alvitta Ottley</p>
-                        <p>IEEE VIS Workshop 2023 <a href="https://www.viscomm.io/">(VisComm)</a> · <a href="https://osf.io/es6ua/download">paper</a> </p>
-                    </div>
-                    <!-- Add more publication divs here -->
                 </div>
             </section>
 
-            <div id="contact" class="section">
+            <!-- Job Market Notice -->
+            <div class="job-market-notice">
+                <h3>Job Seeking 🥭</h3>
+                <p>I am actively seeking diverse opportunities where I can apply cutting-edge technologies—including computer vision, language models, and AI techniques—to help users better understand and interact with data.</p>
+            </div>
+
+            <!-- Research Interests -->
+            <div class="research-interests">
+                <h3>Research Interests</h3>
+                <ul>
+                    <li>Multi-agentic frameworks to help users create effective visualizations</li>
+                    <li>Understanding visualization literacy from the multicultural lens</li>
+                    <li>Evaluating language models for visualization understanding</li>
+                    <li>Trust in Data Visualization across different contexts</li>
+                    <li>AI-powered Visualization Understanding and Enhancement</li>
+                    <li>Cross-cultural Visualization Design and Interpretation</li>
+                </ul>
+            </div>
+
+            <!-- Updates Section -->
+            <section id="updates" class="updates-section">
+                <h2>Recent Updates</h2>
+                <div class="updates-container">
+                    <div class="update-item">
+                        <span class="update-date">May 2025</span>
+                        <p>Attending EuroVIS in Luxembourg City, Luxembourg from May 31 - June 6 to present my work on benchmarking language models</p>
+                    </div>
+                    <div class="update-item">
+                        <span class="update-date">May 2025</span>
+                        <p>Moved to Seattle for Summer 2025 to start working at Adobe as Research Scientist Intern</p>
+                    </div>
+                    <div class="update-item">
+                        <span class="update-date">May 2025</span>
+                        <p>I passed my dissertation proposal!!!</p>
+                    </div>
+                    <div class="update-item">
+                        <span class="update-date">March 2025</span>
+                        <p>Paper titled "Benchmarking Visual Language Models on Standardized Visualization Literacy Tests" accepted at EuroVIS 2025</p>
+                    </div>
+                    <div class="update-item">
+                        <span class="update-date">January 2025</span>
+                        <p>I will be joining Adobe as Research Scientist Intern for Summer 2025</p>
+                    </div>
+                    <div class="update-item">
+                        <span class="update-date">January 2025</span>
+                        <p>Paper titled "Trustworthy by Design: The Viewer's Perspective on Trust in Data Visualization" accepted at ACM CHI 2025</p>
+                    </div>
+                    <div class="update-item">
+                        <span class="update-date">December 2024</span>
+                        <p>I finished co-instructing "Introduction to Visualization" with an average rating of 6.67/7</p>
+                    </div>
+                    <div class="update-item">
+                        <span class="update-date">July 2024</span>
+                        <p>Paper on trust factors accepted at IEEE Visualization 2024</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Research Areas Filter -->
+            <section class="research-filter-section">
+                <h2>Research Areas</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="vislit">Visualization Literacy</button>
+                    <button class="filter-btn" data-filter="trust">Trust in Visualization</button>
+                    <button class="filter-btn" data-filter="llm">Language Models</button>
+                    <button class="filter-btn" data-filter="socialmedia">Social Media</button>
+                </div>
+            </section>
+
+            <!-- Publications Section -->
+            <section id="publications" class="publications-section">
+                <h2>Recent Works</h2>
+                <div class="publications-list">
+                    <div class="publication-item" data-categories="vislit llm">
+                        <div class="pub-image">
+                            <img src="LLM.png" alt="LLM Visualization Literacy">
+                        </div>
+                        <div class="pub-details">
+                            <h3>Benchmarking Visual Language Models on Standardized Visualization Literacy Tests</h3>
+                            <p class="authors"><strong>Saugat Pandey</strong>, Alvitta Ottley</p>
+                            <p class="venue">Computer Graphics Forum, EuroVis 2025</p>
+                            <div class="pub-links">
+                                <a href="https://www.researchgate.net/profile/Saugat-Pandey-4/publication/390032508_Benchmarking_Visual_Language_Models_on_Standardized_Visualization_Literacy_Tests/links/67dc79d2e2c0ea36cd872066/Benchmarking-Visual-Language-Models-on-Standardized-Visualization-Literacy-Tests.pdf">Paper</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="publication-item best-paper" data-categories="vislit">
+                        <div class="pub-image">
+                            <img src="MiniVLAT.png" alt="Mini-VLAT">
+                        </div>
+                        <div class="pub-details">
+                            <h3>Mini-VLAT: A Short and Effective Measure of Visualization Literacy <span class="trophy">🏆</span></h3>
+                            <p class="authors"><strong>Saugat Pandey</strong>, Alvitta Ottley</p>
+                            <p class="venue">Computer Graphics Forum, EuroVis 2023 • Best Paper Award</p>
+                            <div class="pub-links">
+                                <a href="https://arxiv.org/pdf/2304.07905">Paper</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="publication-item" data-categories="trust">
+                        <div class="pub-image">
+                            <img src="Trust_3.png" alt="Trustworthy by Design">
+                        </div>
+                        <div class="pub-details">
+                            <h3>Trustworthy by Design: The Viewer's Perspective on Trust in Data Visualization</h3>
+                            <p class="authors">Oen G. McKinley, <strong>Saugat Pandey</strong>, Alvitta Ottley</p>
+                            <p class="venue">ACM CHI 2025</p>
+                            <div class="pub-links">
+                                <a href="https://arxiv.org/pdf/2503.10892">Paper</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="publication-item" data-categories="trust">
+                        <div class="pub-image">
+                            <img src="Trust_2.png" alt="Building and Eroding Trust">
+                        </div>
+                        <div class="pub-details">
+                            <h3>Building and Eroding: Exogenous and Endogenous Factors that Influence Subjective Trust in Visualization</h3>
+                            <p class="authors">R. Jordan Crouser, Syrine Matoussi, Lan Kung, <strong>Saugat Pandey</strong>, Oen G. McKinley, Alvitta Ottley</p>
+                            <p class="venue">IEEE VIS 2024</p>
+                            <div class="pub-links">
+                                <a href="https://arxiv.org/pdf/2408.03800">Paper</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="publication-item" data-categories="trust">
+                        <div class="pub-image">
+                            <img src="Trust.png" alt="Trust in Visualization">
+                        </div>
+                        <div class="pub-details">
+                            <h3>Do You Trust What You See? Towards A Multidimensional Measure of Trust in Visualization</h3>
+                            <p class="authors"><strong>Saugat Pandey</strong>, Oen G. McKinley, R. Jordan Crouser, Alvitta Ottley</p>
+                            <p class="venue">IEEE VIS 2023</p>
+                            <div class="pub-links">
+                                <a href="https://arxiv.org/pdf/2308.04727">Paper</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="publication-item" data-categories="socialmedia">
+                        <div class="pub-image">
+                            <img src="SocialMedia.png" alt="Social Media Visualization">
+                        </div>
+                        <div class="pub-details">
+                            <h3>User Engagement with COVID-19 Visualizations on Twitter</h3>
+                            <p class="authors">Robert Kasumba, <strong>Saugat Pandey</strong>, Vishesh Patel, Micah Wolfson, Alvitta Ottley</p>
+                            <p class="venue">IEEE VIS Workshop 2023 (VisComm)</p>
+                            <div class="pub-links">
+                                <a href="https://osf.io/es6ua/download">Paper</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="contact-section">
                 <h2>Contact</h2>
                 <p>You can always reach out to me via email <a href="mailto:p.saugat@wustl.edu">p.saugat@wustl.edu</a> if you want to discuss Visualization, LLMs, Vision, or ML/AI in general in the context of visualizations. I'm always excited to engage in conversations about these topics!</p>
-            </div>
+            </section>
         </main>
     </div>
+
     <script src="script.js"></script>
+    <script>
+        // Security measures
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener('keydown', function(e) {
+            // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+            if (e.keyCode == 123 || 
+                (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 74)) ||
+                (e.ctrlKey && e.keyCode == 85)) {
+                e.preventDefault();
+                return false;
+            }
+        });
+    </script>
 </body>
 </html>
