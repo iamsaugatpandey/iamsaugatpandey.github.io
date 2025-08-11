@@ -54,9 +54,46 @@
                         <div class="misc-filter-buttons">
                             <button class="misc-filter-btn active" data-filter="all">All</button>
                             <button class="misc-filter-btn" data-filter="adventure">Adventure</button>
+                            <button class="misc-filter-btn" data-filter="internship">Internship</button>
                             <button class="misc-filter-btn" data-filter="teaching">Teaching</button>
                             <button class="misc-filter-btn" data-filter="research">Research</button>
                             <button class="misc-filter-btn" data-filter="phd">PhD</button>
+                        </div>
+                    </div>
+
+                    <!-- Adobe Internship Experience -->
+                    <div class="adventure-box misc-item" data-category="internship">
+                        <div class="adventure-header">
+                            <h3>🔬 Adobe Research Scientist Intern</h3>
+                            <div class="adventure-meta">
+                                <span class="adventure-date">Summer 2025</span>
+                                <span class="adventure-location">📍 Seattle, WA</span>
+                                <button class="expand-btn" onclick="toggleExpand(this)" aria-label="Expand details">+</button>
+                            </div>
+                        </div>
+                        <div class="adventure-content">
+                            <div class="adventure-text">
+                                <p><strong>An incredible foundational experience!</strong> Currently working as a Research Scientist/Engineer Intern in Seattle, WA with my amazing mentor <a href="https://jhoffswell.github.io/#About" target="_blank">Jane Hoffswell</a>. I'm developing a multi-agent LLM framework to help practitioners create effective visualizations.</p>
+                                
+                                <div class="expandable-content" style="display: none;">
+                                    <p>This experience has been the main reason behind my interest in leveraging multi-agent systems for user tasks and helping users perceive data or enhance storytelling through data visualization.</p>
+                                    
+                                    <p><strong>Community Intern Captain Highlight:</strong> One of my proudest achievements was serving as the Community Intern Captain alongside two other incredible interns for the Seattle Office. We organized multiple outdoor events including:</p>
+                                    <ul>
+                                        <li>⚾ Baseball game experiences</li>
+                                        <li>🏔️ Hiking adventures at Mount Rainier</li>
+                                        <li>🏞️ Picnic at the Park gatherings</li>
+                                    </ul>
+                                    
+                                    <p>This leadership role helped me connect with people from different research areas, discover synergies, and brainstorm how we can leverage vision and AI tasks in the context of visualization.</p>
+                                    
+                                    <p><strong>How I got it:</strong> I reached out to Jane in early November when I was working on my thesis and brainstorming project ideas. During our conversation, I pitched my research interests and discovered they were exploring something similar! This is a perfect example of how cold emailing and clearly explaining your research interests can lead to amazing opportunities. 🚀</p>
+                                </div>
+                            </div>
+                            <div class="adventure-images">
+                                <img src="Adobe/IMG_8801.JPG" alt="Adobe Internship Experience" class="adventure-thumb" onclick="openGallery('adobe', 0)">
+                                <span class="image-count">+3 photos</span>
+                            </div>
                         </div>
                     </div>
 
@@ -76,7 +113,7 @@
                             </div>
                             <div class="adventure-images">
                                 <img src="SkyDiving/GX019926_5165160_1754700111.jpg" alt="Skydiving Experience" class="adventure-thumb" onclick="openGallery('skydiving', 0)">
-                                <span class="image-count">+3 photos</span>
+                                <span class="image-count">+2 photos</span>
                             </div>
                         </div>
                     </div>
@@ -123,6 +160,44 @@
                             </div>
                         </div>
                     </div>
+
+                                        <!-- AIR Internship Experience -->
+                    <div class="adventure-box misc-item" data-category="internship">
+                        <div class="adventure-header">
+                            <h3>📊 American Institutes for Research (AIR) Intern</h3>
+                            <div class="adventure-meta">
+                                <span class="adventure-date">Summer 2024</span>
+                                <span class="adventure-location">📍 Remote/Washington, DC</span>
+                                <button class="expand-btn" onclick="toggleExpand(this)" aria-label="Expand details">+</button>
+                            </div>
+                        </div>
+                        <div class="adventure-content">
+                            <div class="adventure-text">
+                                <p><strong>A transformative research experience!</strong> Although it was a remote internship, I was grateful to be in Washington, DC for a week for orientation. I worked with amazing mentors Brittany Boyd and Cadelle Hemphill (both are wonderful and sweet people) on creating interactive tools to help Grade-8 teachers investigate student performance on Math scores.</p>
+                                <div class="expandable-content" style="display: none;">
+                                    <p><strong>Primary Project:</strong> I performed comprehensive statistical analysis across different factors including race, access to internet, access to technology both at school and home, and other social and demographic factors. This work directly connected to my research interests in understanding how different populations interact with and interpret data visualizations.</p>
+                                    
+                                    <p><strong>Secondary Environmental Project:</strong> I got involved in an amazing secondary project with <a href="https://scholar.google.com/citations?user=7csg1XYAAAAJ&hl=en" target="_blank">Rachel Carroll</a>, who became a great mentor (she even extended my internship!). We investigated environmental factors on student performance, where I helped perform ML and regression models on environmental factors to predict air pollution in regions across North Carolina.</p>
+                                    
+                                    <p><strong>Technical Contributions:</strong></p>
+                                    <ul>
+                                        <li>🔍 Pulled data from Purple Air using the Purple API across different locations in North Carolina</li>
+                                        <li>📊 Worked with EPA data for comprehensive environmental analysis</li>
+                                        <li>🗺️ Explored kriging methods and clustering techniques to predict air pollutant levels</li>
+                                        <li>📈 Investigated relationships between environmental factors and student performance</li>
+                                    </ul>
+                                    
+                                    <p><em>This work is currently under submission at Nature Scientific Reports!</em> 🚀</p>
+                                    
+                                    <p><strong>How I got it:</strong> I was particularly interested in working at an organization that investigates student performance on assessments, especially given my work on visualization literacy - exploring whether people can read and interpret data visualizations. I looked around for such organizations and found out there are many organizations, particularly in the Washington DC area, working with the Department of Education or other agencies to investigate student performance on National Assessment of Educational Progress (NAEP) assessments. The connection between assessment performance and data interpretation abilities made this opportunity perfect for my research interests!</p>
+                                </div>
+                            </div>
+                            <div class="adventure-images">
+                                <img src="AIR/1.jpg" alt="AIR Internship Experience" class="adventure-thumb" onclick="openGallery('air', 0)">
+                                <span class="image-count">+3 photos</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
@@ -145,6 +220,16 @@
     <script>
         // Gallery functionality
         const galleries = {
+            adobe: [
+                'Adobe/IMG_8801.JPG',
+                'Adobe/IMG_8803.JPG',
+                'Adobe/IMG_9164.jpg'
+            ],
+            air: [
+                'AIR/1.jpg',
+                'AIR/IMG_3912.JPG',
+                'AIR/IMG_7625.heic'
+            ],
             skydiving: [
                 'SkyDiving/GX019926_5165160_1754700111.jpg',
                 'SkyDiving/GX019927_1201200_1754700117.jpg',
@@ -252,6 +337,27 @@
                 if (e.key === 'ArrowRight') changeImage(1);
             }
         });
+
+        // Expand/Collapse functionality
+        function toggleExpand(button) {
+            const adventureBox = button.closest('.adventure-box');
+            const expandableContent = adventureBox.querySelector('.expandable-content');
+            
+            if (expandableContent.style.display === 'none' || expandableContent.style.display === '') {
+                expandableContent.style.display = 'block';
+                button.textContent = '−';
+                button.setAttribute('aria-label', 'Collapse details');
+                // Smooth expand animation
+                expandableContent.style.opacity = '0';
+                setTimeout(() => {
+                    expandableContent.style.opacity = '1';
+                }, 10);
+            } else {
+                expandableContent.style.display = 'none';
+                button.textContent = '+';
+                button.setAttribute('aria-label', 'Expand details');
+            }
+        }
     </script>
 </body>
 </html>
