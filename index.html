@@ -29,6 +29,27 @@
         <img src="human.png" alt="" class="bg-icon icon-human" data-depth="0.08"/>
     </div>
 
+    <!-- Background Theme Selector -->
+    <div class="bg-theme-selector">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Change background theme">
+            <i class="fas fa-palette"></i>
+        </button>
+        <div class="theme-options" id="theme-options">
+            <button class="theme-option active" data-theme="research" aria-label="Research theme">
+                <i class="fas fa-brain"></i>
+                <span>Research</span>
+            </button>
+            <button class="theme-option" data-theme="mango" aria-label="Mango theme">
+                <i class="fas fa-seedling"></i>
+                <span>Mango</span>
+            </button>
+            <button class="theme-option" data-theme="adventure" aria-label="Adventure theme">
+                <i class="fas fa-mountain"></i>
+                <span>Adventure</span>
+            </button>
+        </div>
+    </div>
+
     <!-- Removed full-width header; integrating header into main content -->
     <div class="container">
         <!-- Main Content -->
@@ -241,6 +262,112 @@
 
     <script src="script.js"></script>
     <script>
+        // Background Theme Functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeOptions = document.getElementById('theme-options');
+        const themeButtons = document.querySelectorAll('.theme-option');
+        let isThemeMenuOpen = false;
+
+        // Toggle theme menu
+        themeToggle.addEventListener('click', () => {
+            isThemeMenuOpen = !isThemeMenuOpen;
+            if (isThemeMenuOpen) {
+                themeOptions.classList.add('show');
+            } else {
+                themeOptions.classList.remove('show');
+            }
+        });
+
+        // Close theme menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.bg-theme-selector')) {
+                themeOptions.classList.remove('show');
+                isThemeMenuOpen = false;
+            }
+        });
+
+        // Theme switching functionality
+        themeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const theme = button.dataset.theme;
+                
+                // Update active state
+                themeButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                
+                // Apply theme to body
+                document.body.setAttribute('data-theme', theme);
+                
+                // Update background icons based on theme
+                updateBackgroundIcons(theme);
+                
+                // Save theme preference
+                localStorage.setItem('selectedTheme', theme);
+                
+                // Close menu
+                themeOptions.classList.remove('show');
+                isThemeMenuOpen = false;
+            });
+        });
+
+        // Function to update background icons based on theme
+        function updateBackgroundIcons(theme) {
+            const bgCanvas = document.querySelector('.bg-canvas');
+            
+            if (theme === 'mango') {
+                // Create mango-themed icons
+                bgCanvas.innerHTML = `
+                    <div class="mango-icon" style="position: absolute; top: 15%; left: 10%; font-size: 4rem; opacity: 0.2;">🥭</div>
+                    <div class="mango-icon" style="position: absolute; top: 30%; right: 15%; font-size: 3rem; opacity: 0.25;">🌱</div>
+                    <div class="mango-icon" style="position: absolute; bottom: 25%; left: 20%; font-size: 3.5rem; opacity: 0.22;">🌿</div>
+                    <div class="mango-icon" style="position: absolute; bottom: 40%; right: 10%; font-size: 4.5rem; opacity: 0.18;">🥭</div>
+                    <div class="mango-icon" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 5rem; opacity: 0.12;">🌳</div>
+                    <div class="mango-icon" style="position: absolute; top: 25%; left: 60%; font-size: 2.5rem; opacity: 0.3;">🍃</div>
+                    <div class="mango-icon" style="position: absolute; bottom: 60%; right: 30%; font-size: 3rem; opacity: 0.2;">�</div>
+                `;
+            } else if (theme === 'adventure') {
+                // Create adventure-themed icons with larger mountains and outdoor elements
+                bgCanvas.innerHTML = `
+                    <div class="adventure-icon" style="position: absolute; top: 5%; left: 5%; font-size: 6rem; opacity: 0.2;">🏔️</div>
+                    <div class="adventure-icon" style="position: absolute; top: 15%; right: 8%; font-size: 4rem; opacity: 0.25;">🪂</div>
+                    <div class="adventure-icon" style="position: absolute; bottom: 25%; left: 10%; font-size: 5rem; opacity: 0.18;">⛰️</div>
+                    <div class="adventure-icon" style="position: absolute; bottom: 10%; right: 15%; font-size: 4.5rem; opacity: 0.15;">🏕️</div>
+                    <div class="adventure-icon" style="position: absolute; top: 40%; left: 70%; font-size: 3rem; opacity: 0.3;">🧗</div>
+                    <div class="adventure-icon" style="position: absolute; top: 60%; left: 25%; font-size: 7rem; opacity: 0.1;">🏔️</div>
+                    <div class="adventure-icon" style="position: absolute; bottom: 45%; right: 40%; font-size: 3.5rem; opacity: 0.22;">🥾</div>
+                    <div class="adventure-icon" style="position: absolute; top: 25%; left: 35%; font-size: 2.8rem; opacity: 0.28;">🌲</div>
+                    <div class="adventure-icon" style="position: absolute; bottom: 70%; right: 60%; font-size: 4rem; opacity: 0.16;">🗻</div>
+                `;
+            } else {
+                // Reset to default research icons
+                bgCanvas.innerHTML = `
+                    <img src="ai.png" alt="" class="bg-icon icon-ai" data-depth="0.20"/>
+                    <img src="brain.png" alt="" class="bg-icon icon-brain" data-depth="0.12"/>
+                    <img src="chart.png" alt="" class="bg-icon icon-chart" data-depth="0.16"/>
+                    <img src="eyes.png" alt="" class="bg-icon icon-eyes" data-depth="0.10"/>
+                    <img src="human.png" alt="" class="bg-icon icon-human" data-depth="0.08"/>
+                `;
+                
+                // Restart the icon animation for research theme
+                if (typeof animateBackgroundIcons === 'function') {
+                    animateBackgroundIcons();
+                }
+            }
+        }
+
+        // Load saved theme on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('selectedTheme') || 'research';
+            const savedThemeButton = document.querySelector(`[data-theme="${savedTheme}"]`);
+            
+            if (savedThemeButton) {
+                themeButtons.forEach(btn => btn.classList.remove('active'));
+                savedThemeButton.classList.add('active');
+                document.body.setAttribute('data-theme', savedTheme);
+                updateBackgroundIcons(savedTheme);
+            }
+        });
+
         // Profile picture hover effect
         const profilePhoto = document.getElementById('profile-photo');
         const profileImages = ['Self/Me5.JPG', 'Self/Me3.JPG', 'Self/Me4.JPG'];
