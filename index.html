@@ -56,7 +56,7 @@
                         <p>I am in my final year as a Ph.D. student in the Department of Computer Science at Washington University in St. Louis. As a graduate research assistant at the <a href='http://visualdata.wustl.edu/'>Visual Interface and Behavior Exploration Lab (VIBE)</a>, I am interested in investigating visualization literacy, understanding perceived trust in data visualizations, and leveraging AI/ML techniques to help users understand data and data visualizations.</p>
                     </div>
                     <div class="photo-section">
-                        <img src="P1010570.JPG" alt="Saugat Pandey" class="profile-photo">
+                        <img src="Self/Me3.JPG" alt="Saugat Pandey" class="profile-photo" id="profile-photo">
                         <div class="social-icons">
                             <a href="https://scholar.google.com/citations?user=RCC_DfYAAAAJ&hl=en" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
                             <a href="https://www.linkedin.com/in/iamsaugatpandey/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -241,6 +241,28 @@
 
     <script src="script.js"></script>
     <script>
+        // Profile picture hover effect
+        const profilePhoto = document.getElementById('profile-photo');
+        const profileImages = ['Self/Me5.JPG', 'Self/Me3.JPG', 'Self/Me4.JPG'];
+        let currentImageIndex = 1; // Start with Me3.JPG (index 1)
+        let hoverInterval;
+
+        if (profilePhoto) {
+            profilePhoto.addEventListener('mouseenter', function() {
+                hoverInterval = setInterval(() => {
+                    currentImageIndex = (currentImageIndex + 1) % profileImages.length;
+                    profilePhoto.src = profileImages[currentImageIndex];
+                }, 500); // Change image every 500ms
+            });
+
+            profilePhoto.addEventListener('mouseleave', function() {
+                clearInterval(hoverInterval);
+                // Reset to default image (Me3.JPG)
+                currentImageIndex = 1;
+                profilePhoto.src = profileImages[currentImageIndex];
+            });
+        }
+
         // Security measures
         document.addEventListener('contextmenu', function(e) {
             e.preventDefault();
