@@ -3,425 +3,401 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saugat</title>
+    <title>Saugat Pandey — Assistant Professor, Furman University</title>
+    <meta name="description" content="Saugat Pandey is an Assistant Professor of Computer Science at Furman University working on data visualization, perception, AI, and data science.">
     <!-- Favicon: mango emoji -->
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='50%25' x='50%25' dominant-baseline='middle' text-anchor='middle' font-size='52'%3E%F0%9F%A5%AD%3C/text%3E%3C/svg%3E">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TVKHK7VV3Q"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);} 
+        function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-TVKHK7VV3Q');
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="bg-canvas" aria-hidden="true">
-        <img src="ai.png" alt="" class="bg-icon icon-ai" data-depth="0.20"/>
-        <img src="brain.png" alt="" class="bg-icon icon-brain" data-depth="0.12"/>
-        <img src="chart.png" alt="" class="bg-icon icon-chart" data-depth="0.16"/>
-        <img src="eyes.png" alt="" class="bg-icon icon-eyes" data-depth="0.10"/>
-        <img src="human.png" alt="" class="bg-icon icon-human" data-depth="0.08"/>
-    </div>
 
-    <!-- Background Theme Selector -->
-    <div class="bg-theme-selector">
-        <button class="theme-toggle" id="theme-toggle" aria-label="Change background theme">
-            <i class="fas fa-palette"></i>
-        </button>
-        <div class="theme-options" id="theme-options">
-            <button class="theme-option active" data-theme="research" aria-label="Research theme">
-                <i class="fas fa-brain"></i>
-                <span>Research</span>
-            </button>
-            <button class="theme-option" data-theme="mango" aria-label="Mango theme">
-                <i class="fas fa-seedling"></i>
-                <span>Mango</span>
-            </button>
-            <button class="theme-option" data-theme="adventure" aria-label="Adventure theme">
-                <i class="fas fa-mountain"></i>
-                <span>Adventure</span>
-            </button>
+    <!-- Announcement Banner -->
+    <div class="announce-bar" id="announce-bar">
+        <div class="announce-inner">
+            <span>🌱 More to come — this site is actively growing.</span>
+            <span>Always happy to hear from prospective <strong>students &amp; collaborators</strong>.</span>
+            <a href="#contact">Get in touch →</a>
         </div>
+        <button class="announce-close" id="announce-close" aria-label="Dismiss announcement">&times;</button>
     </div>
 
-    <!-- Removed full-width header; integrating header into main content -->
-    <div class="container">
-        <!-- Main Content -->
-        <main class="main-content">
-            <div class="inline-header">
-                <div class="header-left">
-                    <h1 class="name-main" id="name-display">Saugat</h1>
-                    <span class="name-hindi">सौगात</span>
-                    <span class="mango-emoji" id="mango-hover">🥭</span>
-                </div>
-                <nav class="header-nav">
-                    <a href="cv.html" class="nav-link">CV</a>
-                    <a href="#publications" class="nav-link">Publications</a>
-                    <a href="#contact" class="nav-link">Contact</a>
-                    <a href="#updates" class="nav-link">Updates</a>
-                    <a href="misc.html" class="nav-link">Misc</a>
-                </nav>
-            </div>
+    <!-- Site Header -->
+    <header class="site-header">
+        <div class="header-inner" id="header-inner">
+            <a href="index.html" class="brand">
+                <span class="brand-name" id="name-display">Saugat Pandey</span>
+                <span class="brand-hindi">सौगात</span>
+            </a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="site-nav" id="site-nav">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#publications" class="nav-link">Publications</a>
+                <a href="#updates" class="nav-link">Updates</a>
+                <a href="misc.html" class="nav-link">Misc</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="cv.html" class="nav-link nav-cv">CV</a>
+            </nav>
+        </div>
+    </header>
 
-            <!-- About Section with Photo -->
-            <section class="about-section">
-                <div class="about-content">
-                    <div class="about-text">
-                        <h2>About Me</h2>
-                        <p>I am in my final year as a Ph.D. student in the Department of Computer Science at Washington University in St. Louis. As a graduate research assistant at the <a href='http://visualdata.wustl.edu/'>Visual Interface and Behavior Exploration Lab (VIBE)</a>, I am interested in investigating visualization literacy, understanding perceived trust in data visualizations, and leveraging AI/ML techniques to help users understand data and data visualizations.</p>
-                    </div>
-                    <div class="photo-section">
-                        <img src="Self/Me3.JPG" alt="Saugat Pandey" class="profile-photo" id="profile-photo">
-                        <div class="social-icons">
-                            <a href="https://scholar.google.com/citations?user=RCC_DfYAAAAJ&hl=en" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-                            <a href="https://www.linkedin.com/in/iamsaugatpandey/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                            <a href="https://twitter.com/iamsaugatpandey" aria-label="Twitter"><img src="x.png" alt="X" style="width: 16px; height: 16px;"></a>
-                            <a href="cv.html" aria-label="CV"><i class="fas fa-file-alt"></i></a>
-                            <a href="mailto:p.saugat@wustl.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
+    <!-- Scrollytelling side rail -->
+    <nav class="scrolly-rail" aria-label="Section navigation">
+        <svg class="rail-curve" viewBox="0 0 20 400" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M10 0 C 2 60, 18 100, 10 160 C 3 210, 17 230, 10 280 C 4 320, 16 340, 10 400" />
+        </svg>
+        <ol class="rail-dots">
+            <li data-target="home"><a href="#home"><span class="rail-dot"></span><span class="rail-label">Home</span></a></li>
+            <li data-target="publications"><a href="#publications"><span class="rail-dot"></span><span class="rail-label">Publications</span></a></li>
+            <li data-target="updates"><a href="#updates"><span class="rail-dot"></span><span class="rail-label">Updates</span></a></li>
+            <li data-target="misc"><a href="misc.html"><span class="rail-dot"></span><span class="rail-label">Misc</span></a></li>
+        </ol>
+    </nav>
+
+    <main>
+        <!-- ================= HOME / ABOUT ================= -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-text reveal">
+                        <span class="eyebrow"><i class="fas fa-location-dot"></i> Greenville, SC · <a href="https://www.furman.edu/" target="_blank" rel="noopener">Furman University</a></span>
+                        <h1>Saugat Pandey<span class="name-pronunciation">(Saw-gaat Paan-day)</span></h1>
+                        <p class="hero-role">Assistant Professor, Computer Science <span class="divider">·</span> Furman University</p>
+                        <p class="lede">I recently completed my PhD in Computer Science &amp; Engineering at Washington University in St. Louis, where I was a graduate research assistant in the <a href="http://visualdata.wustl.edu/" target="_blank" rel="noopener">Visual Interface and Behavior Exploration Lab (VIBE)</a>. My research sits at the intersection of <strong>data visualization</strong>, <strong>human perception</strong>, and <strong>AI</strong>. I study how people read, trust, and reason with visual data, and how AI/ML systems can make that easier.</p>
+
+                        <div class="hero-actions">
+                            <a href="cv.html" class="btn btn-primary"><i class="fas fa-file-alt"></i> View CV</a>
+                            <a href="#contact" class="btn btn-ghost"><i class="fas fa-handshake"></i> Collaborate with me</a>
+                        </div>
+
+                        <div class="social-row">
+                            <a href="https://scholar.google.com/citations?user=RCC_DfYAAAAJ&hl=en" aria-label="Google Scholar" target="_blank" rel="noopener"><i class="fas fa-graduation-cap"></i></a>
+                            <a href="https://www.linkedin.com/in/iamsaugatpandey/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://orcid.org/0000-0002-7429-6575" aria-label="ORCID" target="_blank" rel="noopener"><i class="fab fa-orcid"></i></a>
+                            <a href="https://www.instagram.com/peakpandey/" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                            <a href="mailto:spandey2@furman.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
                         </div>
                     </div>
+
+                    <div class="hero-photo-wrap reveal">
+                        <img src="Self/Me3.JPG" alt="Saugat Pandey" class="hero-photo" id="profile-photo">
+                    </div>
                 </div>
-            </section>
 
-            <!-- Job Market Notice -->
-            <!-- <div class="job-market-notice">
-                <h3>Job Seeking 🥭</h3>
-                <p>I am actively seeking diverse opportunities in both industry research and academic positions where I can leverage state-of-the-art models—including computer vision, language models, and AI techniques—to help users better understand and interact with data. I am also interested in investigating how these techniques can support users who are generally left behind in science, such as blind and low vision communities.</p>
-            </div> -->
+                <div class="news-strip reveal">
+                    <span class="pulse" aria-hidden="true"></span>
+                    <p><strong>New:</strong> I've started as an Assistant Professor in the Department of Computer Science at <a href="https://www.furman.edu/" target="_blank" rel="noopener">Furman University</a> in Greenville, SC — building a lab around visualization, perception, and AI. Prospective students and collaborators, <a href="#contact">say hello</a>.</p>
+                </div>
 
-            <!-- Research Interests -->
-            <div class="research-interests">
-                <h3>Research Interests</h3>
-                <ul>
-                    <li>Multi-agentic frameworks to help users create effective visualizations</li>
-                    <li>Understanding visualization literacy from the multicultural lens</li>
-                    <li>Evaluating language models for visualization understanding</li>
-                    <li>Trust in Data Visualization across different contexts</li>
-                    <li>AI-powered Visualization Understanding and Enhancement</li>
-                    <li>Cross-cultural Visualization Design and Interpretation</li>
-                </ul>
+                <div class="reveal" style="margin-top: 2.5rem;">
+                    <span class="section-kicker">Research Interests</span>
+                    <div class="interests-row">
+                        <span class="chip"><span class="dot"></span>Data Visualization</span>
+                        <span class="chip"><span class="dot"></span>Visual Perception</span>
+                        <span class="chip"><span class="dot"></span>AI &amp; Machine Learning</span>
+                        <span class="chip"><span class="dot"></span>Data Science</span>
+                        <span class="chip"><span class="dot"></span>Trust in Visualization</span>
+                        <span class="chip"><span class="dot"></span>Visualization Literacy</span>
+                        <span class="chip"><span class="dot"></span>Human-Computer Interaction</span>
+                        <span class="chip"><span class="dot"></span>Multi-Agent LLM Systems</span>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <!-- Updates Section -->
-            <section id="updates" class="updates-section">
-                <h2>Recent Updates</h2>
-                <div class="updates-container">
-                    <div class="update-item">
-                        <span class="update-date">August 2025</span>
-                        <p>Paper titled "Visualization Literacy or Skillset? Beyond the Analogy to Textual Literacy" accepted at IEEE VIS Workshop 2025 (VisComm)</p>
-                    </div>
-                    <div class="update-item">
-                        <span class="update-date">May 2025</span>
-                        <p>Attending EuroVIS in Luxembourg City, Luxembourg from May 31 - June 6 to present my work on benchmarking language models</p>
-                    </div>
-                    <div class="update-item">
-                        <span class="update-date">May 2025</span>
-                        <p>Moved to Seattle for Summer 2025 to start working at Adobe as Research Scientist Intern</p>
-                    </div>
-                    <div class="update-item">
-                        <span class="update-date">May 2025</span>
-                        <p>I passed my dissertation proposal!!!</p>
-                    </div>
-                    <div class="update-item">
-                        <span class="update-date">March 2025</span>
-                        <p>Paper titled "Benchmarking Visual Language Models on Standardized Visualization Literacy Tests" accepted at EuroVIS 2025</p>
-                    </div>
-                    <div class="update-item">
-                        <span class="update-date">January 2025</span>
-                        <p>I will be joining Adobe as Research Scientist Intern for Summer 2025</p>
-                    </div>
-                    <div class="update-item">
-                        <span class="update-date">January 2025</span>
-                        <p>Paper titled "Trustworthy by Design: The Viewer's Perspective on Trust in Data Visualization" accepted at ACM CHI 2025</p>
-                    </div>
-                    <div class="update-item">
-                        <span class="update-date">December 2024</span>
-                        <p>I finished co-instructing "Introduction to Visualization" with an average rating of 6.67/7</p>
-                    </div>
-                    <div class="update-item">
-                        <span class="update-date">July 2024</span>
-                        <p>Paper on trust factors accepted at IEEE Visualization 2024</p>
+        <!-- ================= PUBLICATIONS ================= -->
+        <section id="publications">
+            <div class="container">
+                <div class="section-head reveal">
+                    <div>
+                        <span class="section-kicker">Selected Works</span>
+                        <h2>Publications</h2>
                     </div>
                 </div>
-            </section>
 
-            <!-- Research Areas Filter -->
-            <section class="research-filter-section">
-                <h2>Research Areas</h2>
-                <div class="filter-buttons">
+                <div class="filter-tabs reveal">
                     <button class="filter-btn active" data-filter="all">All</button>
                     <button class="filter-btn" data-filter="vislit">Visualization Literacy</button>
-                    <button class="filter-btn" data-filter="trust">Trust in Visualization</button>
+                    <button class="filter-btn" data-filter="trust">Trust</button>
                     <button class="filter-btn" data-filter="llm">Language Models</button>
                     <button class="filter-btn" data-filter="socialmedia">Social Media</button>
+                    <button class="filter-btn" data-filter="environment">Environment x Data Science</button>
                 </div>
-            </section>
 
-            <!-- Publications Section -->
-            <section id="publications" class="publications-section">
-                <h2>Recent Works</h2>
                 <div class="publications-list">
-                    <!-- 2025 Publications -->
-                    <div class="publication-item" data-categories="vislit llm">
-                        <div class="pub-image">
-                            <img src="VisLit2025.png" alt="Visualization Literacy">
+                    <div class="publication-item reveal" data-categories="environment">
+                        <div class="pub-image"><img src="PM25.png" alt="Estimating PM2.5 concentrations at public schools in North Carolina"></div>
+                        <div class="pub-details">
+                            <h3>Estimating PM2.5 Concentrations at Public Schools in North Carolina Using Multiple Data Sources and Interpolation Methods</h3>
+                            <p class="authors">Rachel Carroll, Paul Bailey, <strong>Saugat Pandey</strong>, Dana McCalla, Thomas Snyder</p>
+                            <p class="venue">Nature Scientific Reports</p>
+                            <div class="pub-tags">
+                                <span class="pub-tag environment">Environment x Data Science</span>
+                            </div>
+                            <div class="pub-links">
+                                <a href="https://www.nature.com/articles/s41598-025-26539-3" target="_blank" rel="noopener">Paper →</a>
+                            </div>
                         </div>
+                    </div>
+
+                    <div class="publication-item reveal" data-categories="vislit llm">
+                        <div class="pub-image"><img src="VisLit2025.png" alt="Visualization Literacy"></div>
                         <div class="pub-details">
                             <h3>Visualization Literacy or Skillset? Beyond the Analogy to Textual Literacy</h3>
                             <p class="authors">Mara Solen, <strong>Saugat Pandey</strong>, Firas Moosvi, Alvitta Ottley, Tamara Munzner</p>
-                            <p class="venue">To appear @ IEEE VIS Workshop 2025 (VisComm)</p>
-                            <!-- <div class="pub-links">
-                                <a href="https://www.researchgate.net/profile/Saugat-Pandey-4/publication/390032508_Benchmarking_Visual_Language_Models_on_Standardized_Visualization_Literacy_Tests/links/67dc79d2e2c0ea36cd872066/Benchmarking-Visual-Language-Models-on-Standardized-Visualization-Literacy-Tests.pdf">Paper</a>
-                            </div> -->
+                            <p class="venue">IEEE VIS Workshop 2025 (VisComm)</p>
+                            <div class="pub-tags">
+                                <span class="pub-tag vislit">Vis Literacy</span>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="publication-item" data-categories="vislit llm">
-                        <div class="pub-image">
-                            <img src="LLM.png" alt="LLM Visualization Literacy">
-                        </div>
+                    <div class="publication-item reveal" data-categories="vislit llm">
+                        <div class="pub-image"><img src="LLM.png" alt="LLM Visualization Literacy"></div>
                         <div class="pub-details">
                             <h3>Benchmarking Visual Language Models on Standardized Visualization Literacy Tests</h3>
                             <p class="authors"><strong>Saugat Pandey</strong>, Alvitta Ottley</p>
                             <p class="venue">Computer Graphics Forum, EuroVis 2025</p>
+                            <div class="pub-tags">
+                                <span class="pub-tag vislit">Vis Literacy</span>
+                                <span class="pub-tag llm">LLMs</span>
+                            </div>
                             <div class="pub-links">
-                                <a href="https://www.researchgate.net/profile/Saugat-Pandey-4/publication/390032508_Benchmarking_Visual_Language_Models_on_Standardized_Visualization_Literacy_Tests/links/67dc79d2e2c0ea36cd872066/Benchmarking-Visual-Language-Models-on-Standardized-Visualization-Literacy-Tests.pdf">Paper</a>
+                                <a href="https://www.researchgate.net/profile/Saugat-Pandey-4/publication/390032508_Benchmarking_Visual_Language_Models_on_Standardized_Visualization_Literacy_Tests/links/67dc79d2e2c0ea36cd872066/Benchmarking-Visual-Language-Models-on-Standardized-Visualization-Literacy-Tests.pdf" target="_blank" rel="noopener">Paper →</a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="publication-item" data-categories="trust">
-                        <div class="pub-image">
-                            <img src="Trust_3.png" alt="Trustworthy by Design">
-                        </div>
+                    <div class="publication-item reveal" data-categories="trust">
+                        <div class="pub-image"><img src="Trust_3.png" alt="Trustworthy by Design"></div>
                         <div class="pub-details">
                             <h3>Trustworthy by Design: The Viewer's Perspective on Trust in Data Visualization</h3>
                             <p class="authors">Oen G. McKinley, <strong>Saugat Pandey</strong>, Alvitta Ottley</p>
                             <p class="venue">ACM CHI 2025</p>
+                            <div class="pub-tags"><span class="pub-tag trust">Trust</span></div>
                             <div class="pub-links">
-                                <a href="https://arxiv.org/pdf/2503.10892">Paper</a>
+                                <a href="https://arxiv.org/pdf/2503.10892" target="_blank" rel="noopener">Paper →</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- 2024 Publications -->
-                    <div class="publication-item" data-categories="trust">
-                        <div class="pub-image">
-                            <img src="Trust_2.png" alt="Building and Eroding Trust">
-                        </div>
+                    <div class="publication-item reveal" data-categories="trust">
+                        <div class="pub-image"><img src="Trust_2.png" alt="Building and Eroding Trust"></div>
                         <div class="pub-details">
                             <h3>Building and Eroding: Exogenous and Endogenous Factors that Influence Subjective Trust in Visualization</h3>
                             <p class="authors">R. Jordan Crouser, Syrine Matoussi, Lan Kung, <strong>Saugat Pandey</strong>, Oen G. McKinley, Alvitta Ottley</p>
                             <p class="venue">IEEE VIS 2024</p>
+                            <div class="pub-tags"><span class="pub-tag trust">Trust</span></div>
                             <div class="pub-links">
-                                <a href="https://arxiv.org/pdf/2408.03800">Paper</a>
+                                <a href="https://arxiv.org/pdf/2408.03800" target="_blank" rel="noopener">Paper →</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- 2023 Publications -->
-                    <div class="publication-item best-paper" data-categories="vislit">
-                        <div class="pub-image">
-                            <img src="MiniVLAT.png" alt="Mini-VLAT">
-                        </div>
+                    <div class="publication-item best-paper reveal" data-categories="vislit">
+                        <div class="pub-image"><img src="MiniVLAT.png" alt="Mini-VLAT"></div>
                         <div class="pub-details">
                             <h3>Mini-VLAT: A Short and Effective Measure of Visualization Literacy <span class="trophy">🏆</span></h3>
                             <p class="authors"><strong>Saugat Pandey</strong>, Alvitta Ottley</p>
                             <p class="venue">Computer Graphics Forum, EuroVis 2023 • Best Paper Award</p>
+                            <div class="pub-tags"><span class="pub-tag vislit">Vis Literacy</span></div>
                             <div class="pub-links">
-                                <a href="https://arxiv.org/pdf/2304.07905">Paper</a>
+                                <a href="https://arxiv.org/pdf/2304.07905" target="_blank" rel="noopener">Paper →</a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="publication-item" data-categories="trust">
-                        <div class="pub-image">
-                            <img src="Trust.png" alt="Trust in Visualization">
-                        </div>
+                    <div class="publication-item reveal" data-categories="trust">
+                        <div class="pub-image"><img src="Trust.png" alt="Trust in Visualization"></div>
                         <div class="pub-details">
                             <h3>Do You Trust What You See? Towards A Multidimensional Measure of Trust in Visualization</h3>
                             <p class="authors"><strong>Saugat Pandey</strong>, Oen G. McKinley, R. Jordan Crouser, Alvitta Ottley</p>
                             <p class="venue">IEEE VIS 2023</p>
+                            <div class="pub-tags"><span class="pub-tag trust">Trust</span></div>
                             <div class="pub-links">
-                                <a href="https://arxiv.org/pdf/2308.04727">Paper</a>
+                                <a href="https://arxiv.org/pdf/2308.04727" target="_blank" rel="noopener">Paper →</a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="publication-item" data-categories="socialmedia">
-                        <div class="pub-image">
-                            <img src="SocialMedia.png" alt="Social Media Visualization">
-                        </div>
+                    <div class="publication-item reveal" data-categories="socialmedia">
+                        <div class="pub-image"><img src="SocialMedia.png" alt="Social Media Visualization"></div>
                         <div class="pub-details">
                             <h3>User Engagement with COVID-19 Visualizations on Twitter</h3>
                             <p class="authors">Robert Kasumba, <strong>Saugat Pandey</strong>, Vishesh Patel, Micah Wolfson, Alvitta Ottley</p>
                             <p class="venue">IEEE VIS Workshop 2023 (VisComm)</p>
+                            <div class="pub-tags"><span class="pub-tag socialmedia">Social Media</span></div>
                             <div class="pub-links">
-                                <a href="https://osf.io/es6ua/download">Paper</a>
+                                <a href="https://osf.io/es6ua/download" target="_blank" rel="noopener">Paper →</a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- Contact Section -->
-            <section id="contact" class="contact-section">
-                <h2>Contact</h2>
-                <p>You can always reach out to me via email <a href="mailto:p.saugat@wustl.edu">p.saugat@wustl.edu</a> if you want to discuss Visualization, LLMs, Vision, or ML/AI in general in the context of visualizations. I'm always excited to engage in conversations about these topics!</p>
-            </section>
-        </main>
-    </div>
+        <!-- ================= UPDATES ================= -->
+        <section id="updates">
+            <div class="container">
+                <div class="section-head reveal">
+                    <div>
+                        <span class="section-kicker">Latest</span>
+                        <h2>Updates</h2>
+                    </div>
+                </div>
+
+                <div class="timeline reveal">
+                    <div class="timeline-item is-featured">
+                        <span class="timeline-date">August 2026</span>
+                        <p>Started as an Assistant Professor in the Department of Computer Science at Furman University, Greenville, SC! 🎉</p>
+                    </div>
+                    <div class="timeline-item is-featured">
+                        <span class="timeline-date">May 2026</span>
+                        <p>Successfully defended my PhD dissertation at Washington University in St. Louis.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-date">November 2025</span>
+                        <p>Paper titled "Estimating PM2.5 Concentrations at Public Schools in North Carolina Using Multiple Data Sources and Interpolation Methods" published in <a href="https://www.nature.com/articles/s41598-025-26539-3" target="_blank" rel="noopener">Nature Scientific Reports</a>.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-date">August 2025</span>
+                        <p>Paper titled "Visualization Literacy or Skillset? Beyond the Analogy to Textual Literacy" accepted at IEEE VIS Workshop 2025 (VisComm).</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-date">May 2025</span>
+                        <p>Attended EuroVIS in Luxembourg City, Luxembourg from May 31 – June 6 to present my work on benchmarking language models.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-date">May 2025</span>
+                        <p>Moved to Seattle for Summer 2025 to work at Adobe as a Research Scientist Intern.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-date">May 2025</span>
+                        <p>Passed my dissertation proposal.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-date">March 2025</span>
+                        <p>Paper titled "Benchmarking Visual Language Models on Standardized Visualization Literacy Tests" accepted at EuroVIS 2025.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-date">January 2025</span>
+                        <p>Joined Adobe as a Research Scientist Intern for Summer 2025.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-date">January 2025</span>
+                        <p>Paper titled "Trustworthy by Design: The Viewer's Perspective on Trust in Data Visualization" accepted at ACM CHI 2025.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-date">December 2024</span>
+                        <p>Finished co-instructing "Introduction to Visualization" with an average rating of 6.67/7.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-date">July 2024</span>
+                        <p>Paper on trust factors accepted at IEEE Visualization 2024.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= BEYOND RESEARCH / MISC TEASER ================= -->
+        <section id="misc-teaser">
+            <div class="container">
+                <div class="section-head reveal">
+                    <div>
+                        <span class="section-kicker">Beyond the Lab</span>
+                        <h2>Misc</h2>
+                    </div>
+                </div>
+                <p class="reveal" style="color: var(--muted); max-width: 60ch; margin-bottom: 0.5rem;">Teaching, internships, and a few adventures along the way.</p>
+                <div class="misc-teaser reveal">
+                    <a href="misc.html#" class="misc-teaser-card">
+                        <span class="emoji">👨‍🏫</span>
+                        <h4>Teaching</h4>
+                        <p>Co-instructing Introduction to Visualization at WashU.</p>
+                    </a>
+                    <a href="misc.html#" class="misc-teaser-card">
+                        <span class="emoji">🔬</span>
+                        <h4>Internships</h4>
+                        <p>Adobe Research and American Institutes for Research.</p>
+                    </a>
+                    <a href="misc.html#" class="misc-teaser-card">
+                        <span class="emoji">🏔️</span>
+                        <h4>Adventures</h4>
+                        <p>Skydiving, Mt. Rainier, and other stories.</p>
+                    </a>
+                </div>
+                <div class="misc-cta reveal">
+                    <a href="misc.html" class="btn btn-ghost">See all of Misc →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CONTACT / COLLABORATE ================= -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-head reveal">
+                    <div>
+                        <span class="section-kicker">Let's Talk</span>
+                        <h2>Collaborate</h2>
+                    </div>
+                </div>
+                <p class="contact-lede reveal">I'm always excited to hear from prospective students, collaborators, and anyone interested in visualization, perception, AI, or data science. Tell me a bit about yourself and what you're interested in, and I'll get back to you — or email me directly at <a href="mailto:spandey2@furman.edu">spandey2@furman.edu</a>.</p>
+
+                <form class="contact-grid reveal" id="contact-form" action="https://formspree.io/f/xojgovpz" method="POST">
+                    <div class="form-row">
+                        <div class="field">
+                            <label for="cf-name">Name</label>
+                            <input type="text" id="cf-name" name="name" placeholder="Your name" required>
+                        </div>
+                        <div class="field">
+                            <label for="cf-email">Email</label>
+                            <input type="email" id="cf-email" name="email" placeholder="you@example.com" required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="cf-interest">What are you interested in?</label>
+                        <input type="text" id="cf-interest" name="interest" placeholder="e.g. PhD advising, research collaboration, guest talk...">
+                    </div>
+                    <div class="field">
+                        <label for="cf-message">Message</label>
+                        <textarea id="cf-message" name="message" placeholder="Tell me a bit about yourself and what you'd like to discuss." required></textarea>
+                    </div>
+                    <input type="hidden" name="_subject" value="New message from iamsaugatpandey.github.io">
+                    <div class="form-footer">
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Send message</button>
+                        <span class="form-status" id="form-status"></span>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; <span id="year"></span> Saugat Pandey · Assistant Professor, Furman University</p>
+            <div class="social-row">
+                <a href="https://scholar.google.com/citations?user=RCC_DfYAAAAJ&hl=en" aria-label="Google Scholar" target="_blank" rel="noopener"><i class="fas fa-graduation-cap"></i></a>
+                <a href="https://www.linkedin.com/in/iamsaugatpandey/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://orcid.org/0000-0002-7429-6575" aria-label="ORCID" target="_blank" rel="noopener"><i class="fab fa-orcid"></i></a>
+                <a href="https://www.instagram.com/peakpandey/" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:spandey2@furman.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
-    <script>
-        // Background Theme Functionality
-        const themeToggle = document.getElementById('theme-toggle');
-        const themeOptions = document.getElementById('theme-options');
-        const themeButtons = document.querySelectorAll('.theme-option');
-        let isThemeMenuOpen = false;
-
-        // Toggle theme menu
-        themeToggle.addEventListener('click', () => {
-            isThemeMenuOpen = !isThemeMenuOpen;
-            if (isThemeMenuOpen) {
-                themeOptions.classList.add('show');
-            } else {
-                themeOptions.classList.remove('show');
-            }
-        });
-
-        // Close theme menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!e.target.closest('.bg-theme-selector')) {
-                themeOptions.classList.remove('show');
-                isThemeMenuOpen = false;
-            }
-        });
-
-        // Theme switching functionality
-        themeButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const theme = button.dataset.theme;
-                
-                // Update active state
-                themeButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-                
-                // Apply theme to body
-                document.body.setAttribute('data-theme', theme);
-                
-                // Update background icons based on theme
-                updateBackgroundIcons(theme);
-                
-                // Save theme preference
-                localStorage.setItem('selectedTheme', theme);
-                
-                // Close menu
-                themeOptions.classList.remove('show');
-                isThemeMenuOpen = false;
-            });
-        });
-
-        // Function to update background icons based on theme
-        function updateBackgroundIcons(theme) {
-            const bgCanvas = document.querySelector('.bg-canvas');
-            
-            if (theme === 'mango') {
-                // Create mango-themed icons
-                bgCanvas.innerHTML = `
-                    <div class="mango-icon" style="position: absolute; top: 15%; left: 10%; font-size: 4rem; opacity: 0.2;">🥭</div>
-                    <div class="mango-icon" style="position: absolute; top: 30%; right: 15%; font-size: 3rem; opacity: 0.25;">🌱</div>
-                    <div class="mango-icon" style="position: absolute; bottom: 25%; left: 20%; font-size: 3.5rem; opacity: 0.22;">🌿</div>
-                    <div class="mango-icon" style="position: absolute; bottom: 40%; right: 10%; font-size: 4.5rem; opacity: 0.18;">🥭</div>
-                    <div class="mango-icon" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 5rem; opacity: 0.12;">🌳</div>
-                    <div class="mango-icon" style="position: absolute; top: 25%; left: 60%; font-size: 2.5rem; opacity: 0.3;">🍃</div>
-                    <div class="mango-icon" style="position: absolute; bottom: 60%; right: 30%; font-size: 3rem; opacity: 0.2;">�</div>
-                `;
-            } else if (theme === 'adventure') {
-                // Create adventure-themed icons with larger mountains and outdoor elements
-                bgCanvas.innerHTML = `
-                    <div class="adventure-icon" style="position: absolute; top: 5%; left: 5%; font-size: 6rem; opacity: 0.2;">🏔️</div>
-                    <div class="adventure-icon" style="position: absolute; top: 15%; right: 8%; font-size: 4rem; opacity: 0.25;">🪂</div>
-                    <div class="adventure-icon" style="position: absolute; bottom: 25%; left: 10%; font-size: 5rem; opacity: 0.18;">⛰️</div>
-                    <div class="adventure-icon" style="position: absolute; bottom: 10%; right: 15%; font-size: 4.5rem; opacity: 0.15;">🏕️</div>
-                    <div class="adventure-icon" style="position: absolute; top: 40%; left: 70%; font-size: 3rem; opacity: 0.3;">🧗</div>
-                    <div class="adventure-icon" style="position: absolute; top: 60%; left: 25%; font-size: 7rem; opacity: 0.1;">🏔️</div>
-                    <div class="adventure-icon" style="position: absolute; bottom: 45%; right: 40%; font-size: 3.5rem; opacity: 0.22;">🥾</div>
-                    <div class="adventure-icon" style="position: absolute; top: 25%; left: 35%; font-size: 2.8rem; opacity: 0.28;">🌲</div>
-                    <div class="adventure-icon" style="position: absolute; bottom: 70%; right: 60%; font-size: 4rem; opacity: 0.16;">🗻</div>
-                `;
-            } else {
-                // Reset to default research icons
-                bgCanvas.innerHTML = `
-                    <img src="ai.png" alt="" class="bg-icon icon-ai" data-depth="0.20"/>
-                    <img src="brain.png" alt="" class="bg-icon icon-brain" data-depth="0.12"/>
-                    <img src="chart.png" alt="" class="bg-icon icon-chart" data-depth="0.16"/>
-                    <img src="eyes.png" alt="" class="bg-icon icon-eyes" data-depth="0.10"/>
-                    <img src="human.png" alt="" class="bg-icon icon-human" data-depth="0.08"/>
-                `;
-                
-                // Restart the icon animation for research theme
-                if (typeof animateBackgroundIcons === 'function') {
-                    animateBackgroundIcons();
-                }
-            }
-        }
-
-        // Load saved theme on page load
-        document.addEventListener('DOMContentLoaded', () => {
-            const savedTheme = localStorage.getItem('selectedTheme') || 'research';
-            const savedThemeButton = document.querySelector(`[data-theme="${savedTheme}"]`);
-            
-            if (savedThemeButton) {
-                themeButtons.forEach(btn => btn.classList.remove('active'));
-                savedThemeButton.classList.add('active');
-                document.body.setAttribute('data-theme', savedTheme);
-                updateBackgroundIcons(savedTheme);
-            }
-        });
-
-        // Profile picture hover effect
-        const profilePhoto = document.getElementById('profile-photo');
-        const profileImages = ['Self/Me5.JPG', 'Self/Me3.JPG', 'Self/Me4.JPG'];
-        let currentImageIndex = 1; // Start with Me3.JPG (index 1)
-        let hoverInterval;
-
-        if (profilePhoto) {
-            profilePhoto.addEventListener('mouseenter', function() {
-                hoverInterval = setInterval(() => {
-                    currentImageIndex = (currentImageIndex + 1) % profileImages.length;
-                    profilePhoto.src = profileImages[currentImageIndex];
-                }, 500); // Change image every 500ms
-            });
-
-            profilePhoto.addEventListener('mouseleave', function() {
-                clearInterval(hoverInterval);
-                // Reset to default image (Me3.JPG)
-                currentImageIndex = 1;
-                profilePhoto.src = profileImages[currentImageIndex];
-            });
-        }
-
-        // Security measures
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-        });
-
-        document.addEventListener('keydown', function(e) {
-            // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
-            if (e.keyCode == 123 || 
-                (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 74)) ||
-                (e.ctrlKey && e.keyCode == 85)) {
-                e.preventDefault();
-                return false;
-            }
-        });
-    </script>
 </body>
 </html>
