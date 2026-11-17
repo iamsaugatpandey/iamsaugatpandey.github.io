@@ -1,383 +1,256 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Misc — Saugat Pandey</title>
-    <meta name="description" content="Teaching, internships, and adventures — the story behind the research.">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='50%25' x='50%25' dominant-baseline='middle' text-anchor='middle' font-size='52'%3E%F0%9F%A5%AD%3C/text%3E%3C/svg%3E">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TVKHK7VV3Q"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-TVKHK7VV3Q');
-    </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Misc · Saugat Pandey</title>
+<meta name="description" content="Teaching, internships, media, and a few adventures: the stories behind Saugat Pandey's research.">
+<link rel="canonical" href="https://iamsaugatpandey.github.io/misc.html">
+<meta name="theme-color" content="#FAF8F4">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='50%25' x='50%25' dominant-baseline='middle' text-anchor='middle' font-size='52'%3E%F0%9F%A5%AD%3C/text%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TVKHK7VV3Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TVKHK7VV3Q');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&amp;family=Instrument+Sans:wght@400..700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
-    <div class="announce-bar" id="announce-bar">
-        <div class="announce-inner">
-            <span>🌱 More to come — this site is actively growing.</span>
-            <span>Always happy to hear from prospective <strong>students &amp; collaborators</strong>.</span>
-            <a href="index.html#contact">Get in touch →</a>
-        </div>
-        <button class="announce-close" id="announce-close" aria-label="Dismiss announcement">&times;</button>
-    </div>
-
-    <header class="site-header">
-        <div class="header-inner" id="header-inner">
-            <a href="index.html" class="brand">
-                <span class="brand-name" id="name-display">Saugat Pandey</span>
-                <span class="brand-hindi">सौगात</span>
-            </a>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav class="site-nav" id="site-nav">
-                <a href="index.html#home" class="nav-link">Home</a>
-                <a href="index.html#publications" class="nav-link">Publications</a>
-                <a href="index.html#updates" class="nav-link">Updates</a>
-                <a href="misc.html" class="nav-link active">Misc</a>
-                <a href="index.html#contact" class="nav-link">Contact</a>
-                <a href="cv.html" class="nav-link nav-cv">CV</a>
-            </nav>
-        </div>
-    </header>
-
-    <nav class="scrolly-rail" aria-label="Section navigation">
-        <svg class="rail-curve" viewBox="0 0 20 400" preserveAspectRatio="none" aria-hidden="true">
-            <path d="M10 0 C 2 60, 18 100, 10 160 C 3 210, 17 230, 10 280 C 4 320, 16 340, 10 400" />
-        </svg>
-        <ol class="rail-dots">
-            <li data-target="home"><a href="index.html#home"><span class="rail-dot"></span><span class="rail-label">Home</span></a></li>
-            <li data-target="publications"><a href="index.html#publications"><span class="rail-dot"></span><span class="rail-label">Publications</span></a></li>
-            <li data-target="updates"><a href="index.html#updates"><span class="rail-dot"></span><span class="rail-label">Updates</span></a></li>
-            <li class="is-active" data-target="misc"><a href="misc.html"><span class="rail-dot"></span><span class="rail-label">Misc</span></a></li>
-        </ol>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Saugat Pandey, home">
+      <span class="brand__name">Saugat Pandey</span>
+      <span class="brand__dev" lang="ne" aria-hidden="true">सौगात</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="site-nav" aria-label="Primary">
+      <a href="index.html#research">Research</a>
+      <a href="index.html#publications">Publications</a>
+      <a href="index.html#open-source">Open source</a>
+      <a href="index.html#news">News</a>
+      <a href="misc.html" aria-current="page">Misc</a>
+      <a href="index.html#contact">Contact</a>
+      <a class="nav__cv" href="cv.html">CV</a>
     </nav>
+  </div>
+</header>
 
-    <main>
-        <div class="container">
-            <section class="misc-section" style="padding-top: 3rem;">
-                <div class="section-head reveal">
-                    <div>
-                        <span class="section-kicker">Beyond the Lab</span>
-                        <h2>Misc</h2>
-                    </div>
-                </div>
+<main id="main">
+  <header class="page-head">
+    <div class="wrap">
+      <p class="kicker">Misc</p>
+      <h1>The stories behind the papers</h1>
+      <p>Teaching, internships, a few minutes on local TV, and the occasional jump out of a plane.</p>
+    </div>
+  </header>
 
-                <div class="construction-notice reveal">
-                    <i class="fas fa-seedling" aria-hidden="true"></i>
-                    <h3>More coming soon</h3>
-                    <p>I'm slowly adding more here: my experience on the PhD job market, current research interests, thoughts on state-of-the-art models, teaching, and a few adventures along the way.</p>
-                    <p>Check back soon for updates.</p>
-                </div>
-
-                <div class="misc-filter-buttons reveal">
-                    <button class="misc-filter-btn active" data-filter="all">All</button>
-                    <button class="misc-filter-btn" data-filter="adventure">Adventure</button>
-                    <button class="misc-filter-btn" data-filter="internship">Internship</button>
-                    <button class="misc-filter-btn" data-filter="teaching">Teaching</button>
-                    <button class="misc-filter-btn" data-filter="research">Research</button>
-                    <button class="misc-filter-btn" data-filter="phd">PhD</button>
-                    <button class="misc-filter-btn" data-filter="media">Media</button>
-                </div>
-
-                <!-- WSPA 7News feature -->
-                <div class="adventure-box misc-item reveal" data-category="media">
-                    <div class="adventure-header">
-                        <h3>📺 On WSPA 7News: AI Agents &amp; Privacy</h3>
-                        <div class="adventure-meta">
-                            <span class="adventure-date">Nov 2026</span>
-                            <span class="adventure-location">📍 Greenville / Spartanburg, SC</span>
-                        </div>
-                    </div>
-                    <div class="adventure-content">
-                        <div class="adventure-text">
-                            <p><strong>Talking AI on local TV.</strong> WSPA 7News interviewed me for their consumer segment <em>“AI agent at your service: Is this new tech right for you?”</em> We talked about the new wave of consumer AI agents that act on your behalf, and what to think about before you hand one access to your accounts and personal data.</p>
-                            <p>My advice: limit how much independence you give these agents, take the companies’ own warnings that they make mistakes seriously, and watch out for <mark class="highlight-topic">prompt injection</mark>, where hidden instructions can hijack an agent into doing things you never asked for.</p>
-                            <p><a href="https://www.wspa.com/news/consumer/ai-agent-at-your-service-is-this-new-tech-right-for-you/" target="_blank" rel="noopener">Read the story on WSPA →</a> &nbsp;·&nbsp; <a href="https://www.youtube.com/watch?v=P7-hsIM-CiY" target="_blank" rel="noopener">Watch the segment on YouTube →</a></p>
-                        </div>
-                        <div class="adventure-images">
-                            <a href="https://www.youtube.com/watch?v=P7-hsIM-CiY" target="_blank" rel="noopener" aria-label="Watch the WSPA 7News segment on YouTube">
-                                <img src="https://i.ytimg.com/vi/P7-hsIM-CiY/hqdefault.jpg" alt="WSPA 7News segment on AI agents" class="adventure-thumb" loading="lazy">
-                            </a>
-                            <span class="image-count">▶ Watch video</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Adobe Internship Experience -->
-                <div class="adventure-box misc-item reveal" data-category="internship">
-                    <div class="adventure-header">
-                        <h3>🔬 Adobe Research Scientist Intern</h3>
-                        <div class="adventure-meta">
-                            <span class="adventure-date">Summer 2025</span>
-                            <span class="adventure-location">📍 Seattle, WA</span>
-                            <button class="expand-btn" onclick="toggleExpand(this)" aria-label="Expand details">+</button>
-                        </div>
-                    </div>
-                    <div class="adventure-content">
-                        <div class="adventure-text">
-                            <p><strong>An incredible foundational experience!</strong> I worked as a Research Scientist/Engineer Intern in Seattle, WA with my amazing mentor <a href="https://jhoffswell.github.io/#About" target="_blank">Jane Hoffswell</a>, developing a multi-agent LLM framework to help practitioners create effective visualizations.</p>
-                            <div class="expandable-content" style="display: none;">
-                                <p>This experience is a big part of why I'm now interested in leveraging multi-agent systems for user tasks and helping users perceive data or enhance storytelling through data visualization.</p>
-                                <p><strong>Community Intern Captain Highlight:</strong> One of my proudest achievements was serving as the Community Intern Captain alongside two other incredible interns for the Seattle Office. We organized multiple outdoor events including:</p>
-                                <ul>
-                                    <li>⚾ Baseball game experiences</li>
-                                    <li>🏔️ Hiking adventures at Mount Rainier</li>
-                                    <li>🏞️ Picnic at the Park gatherings</li>
-                                </ul>
-                                <p>This leadership role helped me connect with people from different research areas, discover synergies, and brainstorm how we can leverage vision and AI tasks in the context of visualization.</p>
-                                <p><strong>How I got it:</strong> I reached out to Jane in early November when I was working on my thesis and brainstorming project ideas. During our conversation, I pitched my research interests and discovered they were exploring something similar — a good reminder that a clear, well-targeted cold email can lead to great opportunities. 🚀</p>
-                            </div>
-                        </div>
-                        <div class="adventure-images">
-                            <img src="Adobe/IMG_8801.JPG" alt="Adobe Internship Experience" class="adventure-thumb" onclick="openGallery('adobe', 0)">
-                            <span class="image-count">+3 photos</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Skydiving Adventure -->
-                <div class="adventure-box misc-item reveal" data-category="adventure">
-                    <div class="adventure-header">
-                        <h3>🪂 Skydiving Journey</h3>
-                        <div class="adventure-meta">
-                            <span class="adventure-date">Aug 2025</span>
-                            <span class="adventure-location">📍 Snohomish, WA</span>
-                        </div>
-                    </div>
-                    <div class="adventure-content">
-                        <div class="adventure-text">
-                            <p><strong>The highlight of my year!</strong> This was a long-time dream and a true bucket list item. After paragliding and bungee jumping, I finally took the leap from 13,500 ft. I like challenging myself with adventurous sports every once in a while.</p>
-                            <p>Highly recommend the jump if you're interested — the folks at <a href="https://www.skydivesnohomish.com/" target="_blank">Skydive Snohomish</a> are the best: highly trained, professional, and genuinely great people. 🙌</p>
-                        </div>
-                        <div class="adventure-images">
-                            <img src="SkyDiving/GX019926_5165160_1754700111.jpg" alt="Skydiving Experience" class="adventure-thumb" onclick="openGallery('skydiving', 0)">
-                            <span class="image-count">+2 photos</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Mt. Rainier Adventure -->
-                <div class="adventure-box misc-item reveal" data-category="adventure">
-                    <div class="adventure-header">
-                        <h3>🏔️ Mt. Rainier Adventure</h3>
-                        <div class="adventure-meta">
-                            <span class="adventure-date">July 2025</span>
-                            <span class="adventure-location">📍 Mt. Rainier, WA</span>
-                        </div>
-                    </div>
-                    <div class="adventure-content">
-                        <div class="adventure-text">
-                            <p>As Community Intern Captain at Adobe, I had the chance to take our interns on an unforgettable trip to Mt. Rainier. We hiked the Skyline Trail — the longest trail there — all the way to the top.</p>
-                            <p>It was incredible to share this experience with such a talented group of people and watch everyone push their limits together. 🚀</p>
-                        </div>
-                        <div class="adventure-images">
-                            <img src="Mt_Rainier/IMG_9852.PNG" alt="Mt. Rainier Trip" class="adventure-thumb" onclick="openGallery('rainier', 0)">
-                            <span class="image-count">+5 photos</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Teaching Experience -->
-                <div class="adventure-box misc-item reveal" data-category="teaching">
-                    <div class="adventure-header">
-                        <h3>👨‍🏫 Teaching Experience — 6.67/7</h3>
-                        <div class="adventure-meta">
-                            <span class="adventure-date">Fall 2024</span>
-                            <span class="adventure-location">📍 Introduction to Visualization</span>
-                        </div>
-                    </div>
-                    <div class="adventure-content">
-                        <div class="adventure-text">
-                            <p><strong>Grateful to my advisor <a href="https://alvitta.com/" target="_blank">Dr. Alvitta Ottley</a> for this experience.</strong> I scored 6.67/7 (Department Average: 6.11/7, School Average: 6.18/7) for co-instructing "Introduction to Visualization."</p>
-                            <p>My teaching journey started during undergrad, TAing Computer Science, Physics, and Mathematics courses. I genuinely enjoy helping students — often extending sessions when needed and learning alongside them.</p>
-                            <p>I taught data visualization including <mark class="highlight-topic">data wrangling</mark>, <mark class="highlight-topic">D3.js</mark>, <mark class="highlight-topic">design guidelines</mark>, what makes <mark class="highlight-topic">good vs. bad visualizations</mark>, <mark class="highlight-topic">perception</mark>, and <mark class="highlight-topic">prototyping</mark>, and helped students build final dashboards for <mark class="highlight-topic">social good</mark>.</p>
-                            <p>The best moment was when a student approached me at a campus cafe to say the course was their favorite, and that their final project even helped them land an internship. ✨</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- AIR Internship Experience -->
-                <div class="adventure-box misc-item reveal" data-category="internship">
-                    <div class="adventure-header">
-                        <h3>📊 American Institutes for Research (AIR) Doctoral Student Intern</h3>
-                        <div class="adventure-meta">
-                            <span class="adventure-date">Summer 2024</span>
-                            <span class="adventure-location">📍 Remote / Washington, DC</span>
-                            <button class="expand-btn" onclick="toggleExpand(this)" aria-label="Expand details">+</button>
-                        </div>
-                    </div>
-                    <div class="adventure-content">
-                        <div class="adventure-text">
-                            <p><strong>A transformative research experience.</strong> Though the internship was remote, I spent a week in Washington, DC for orientation. I worked with mentors Brittany Boyd and Cadelle Hemphill on interactive tools to help Grade-8 teachers investigate student performance on Math scores.</p>
-                            <div class="expandable-content" style="display: none;">
-                                <p><strong>Primary Project:</strong> I performed comprehensive statistical analysis across factors including race, internet access, and access to technology at school and home. This work connects directly to my research on how different populations interact with and interpret data visualizations.</p>
-                                <p><strong>Secondary Environmental Project:</strong> I also worked with <a href="https://scholar.google.com/citations?user=7csg1XYAAAAJ&hl=en" target="_blank">Rachel Carroll</a>, who became a great mentor (she even extended my internship). We investigated environmental factors on student performance using ML and regression models to predict air pollution across North Carolina. I got to work with an amazing group of folks at AIR on this — Rachel Carroll, Paul Bailey, Dana McCalla, and Thomas Snyder.</p>
-                                <p><strong>Technical Contributions:</strong></p>
-                                <ul>
-                                    <li>🔍 Pulled data from PurpleAir across locations in North Carolina</li>
-                                    <li>📊 Worked with EPA data for environmental analysis</li>
-                                    <li>🗺️ Explored kriging and clustering methods to predict pollutant levels</li>
-                                    <li>📈 Investigated relationships between environmental factors and student performance</li>
-                                </ul>
-                                <p><em>This work was published as <a href="https://www.nature.com/articles/s41598-025-26539-3" target="_blank">"Estimating PM2.5 Concentrations at Public Schools in North Carolina Using Multiple Data Sources and Interpolation Methods"</a> in Nature Scientific Reports.</em> 🚀</p>
-                            </div>
-                        </div>
-                        <div class="adventure-images">
-                            <img src="AIR/1.jpg" alt="AIR Internship Experience" class="adventure-thumb" onclick="openGallery('air', 0)">
-                            <span class="image-count">+3 photos</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- How I Got Into Visualization Research -->
-                <div class="adventure-box misc-item reveal" data-category="research">
-                    <div class="adventure-header">
-                        <h3>🔬 How I Got Into Visualization Research</h3>
-                        <div class="adventure-meta">
-                            <span class="adventure-date">August 2021</span>
-                            <span class="adventure-location">📍 WashU Beginning</span>
-                            <button class="expand-btn" onclick="toggleExpand(this)" aria-label="Expand details">+</button>
-                        </div>
-                    </div>
-                    <div class="adventure-content">
-                        <div class="adventure-text">
-                            <p><strong>The beginning of my PhD journey.</strong> In my final year at Beloit College, I had both industry offers and graduate school acceptances, but I wanted a PhD regardless. As a first-generation college student, education was always a priority in my family.</p>
-                            <div class="expandable-content" style="display: none;">
-                                <p>I chose WashU. I'd always been intrigued by visualizations in sports (cricket, badminton, football) and noticed how poorly designed visualizations proliferate in news and social media — my dad would share charts without noticing something was off. That pushed me toward a PhD in visualization / HCI.</p>
-                                <p><strong>Finding My Mentor:</strong> <a href="https://alvitta.com/" target="_blank">Prof. Alvitta Ottley</a> was working on information visualization and communicating data to different stakeholders. While rotating with her, she gave me a project on measuring whether people can actually read data visualizations — exactly my interest.</p>
-                                <p><strong>The Mini-VLAT Project:</strong> I took it on without fully knowing what it would involve — literature review, user studies, iterating on experimental issues, writing it up, and eventually earning a first-author Best Paper Award at EuroVIS. 🏆</p>
-                                <p><strong>Germany & Conference Glory:</strong> Traveling to Germany to present, and being the first to present in front of the whole conference (best paper talks get the main stage instead of a small session), was incredible — and the real start of my PhD journey.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </main>
-
-    <div id="gallery-modal" class="gallery-modal" onclick="closeGallery(event)">
-        <div class="gallery-content">
-            <button class="gallery-close" onclick="closeGallery()">&times;</button>
-            <button class="gallery-nav prev" onclick="changeImage(-1)">❮</button>
-            <img id="gallery-image" src="" alt="">
-            <button class="gallery-nav next" onclick="changeImage(1)">❯</button>
-            <div class="gallery-counter">
-                <span id="gallery-current">1</span> / <span id="gallery-total">1</span>
-            </div>
-        </div>
+  <div class="wrap">
+    <div class="story-toolbar">
+      <div class="filters story-filters" role="group" aria-label="Filter stories">
+        <button type="button" class="chip" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" class="chip" data-filter="media" aria-pressed="false">Media</button>
+        <button type="button" class="chip" data-filter="internship" aria-pressed="false">Internships</button>
+        <button type="button" class="chip" data-filter="teaching" aria-pressed="false">Teaching</button>
+        <button type="button" class="chip" data-filter="adventure" aria-pressed="false">Adventures</button>
+        <button type="button" class="chip" data-filter="phd" aria-pressed="false">PhD</button>
+      </div>
     </div>
 
-    <footer class="site-footer">
-        <div class="container footer-inner">
-            <p>&copy; <span id="year"></span> Saugat Pandey · Assistant Professor, Furman University</p>
-            <div class="social-row">
-                <a href="https://scholar.google.com/citations?user=RCC_DfYAAAAJ&hl=en" aria-label="Google Scholar" target="_blank" rel="noopener"><i class="fas fa-graduation-cap"></i></a>
-                <a href="https://www.linkedin.com/in/iamsaugatpandey/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://www.instagram.com/peakpandey/" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
-                <a href="mailto:spandey2@furman.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
-            </div>
+    <ol class="stories">
+
+      <!-- WSPA -->
+      <li class="story" id="wspa" data-category="media">
+        <div class="story__side"><time datetime="2026-11">Nov 2026</time><br>Greenville / Spartanburg, SC<br><span class="tag">Media</span></div>
+        <div>
+          <h2>On WSPA 7News: AI agents and privacy</h2>
+          <div class="prose">
+            <p><strong>Talking AI on local TV.</strong> WSPA 7News interviewed me for their consumer segment <em>“AI agent at your service: Is this new tech right for you?”</em> We talked about the new wave of consumer AI agents that act on your behalf, and what to think about before you hand one access to your accounts and personal data.</p>
+            <p>My advice: limit how much independence you give these agents, take the companies' own warnings that they make mistakes seriously, and watch out for <mark class="hl">prompt injection</mark>, where hidden instructions can hijack an agent into doing things you never asked for.</p>
+            <p><a href="https://www.wspa.com/news/consumer/ai-agent-at-your-service-is-this-new-tech-right-for-you/">Read the story on WSPA</a> · <a href="https://www.youtube.com/watch?v=P7-hsIM-CiY">Watch the segment on YouTube</a></p>
+          </div>
         </div>
-    </footer>
+      </li>
 
-    <script src="script.js"></script>
-    <script>
-        // Gallery data + controls (misc.html only)
-        const galleries = {
-            adobe: ['Adobe/IMG_8801.JPG', 'Adobe/IMG_8803.JPG', 'Adobe/IMG_9164.jpg'],
-            air: ['AIR/1.jpg', 'AIR/IMG_3912.JPG'],
-            skydiving: [
-                'SkyDiving/GX019926_5165160_1754700111.jpg',
-                'SkyDiving/GX019927_1201200_1754700117.jpg',
-                'SkyDiving/GX019928_4204200_1754700121.jpg'
-            ],
-            rainier: [
-                'Mt_Rainier/IMG_9852.PNG',
-                'Mt_Rainier/IMG_9858.PNG',
-                'Mt_Rainier/IMG_9860.PNG',
-                'Mt_Rainier/IMG_9861.PNG',
-                'Mt_Rainier/PXL_20250802_175147031.MP.jpg'
-            ]
-        };
+      <!-- Adobe -->
+      <li class="story" id="adobe" data-category="internship">
+        <div class="story__side"><time datetime="2025">Summer 2025</time><br>Seattle, WA<br><span class="tag">Internship</span></div>
+        <div>
+          <h2>Research Scientist Intern, Adobe</h2>
+          <div class="prose">
+            <p><strong>An incredible foundational experience.</strong> I worked as a Research Scientist/Engineer Intern in Seattle with my amazing mentor <a href="https://jhoffswell.github.io/#About">Jane Hoffswell</a>, developing a multi-agent LLM framework to help practitioners create effective visualizations.</p>
+          </div>
+          <details>
+            <summary><span class="more">Read more</span><span class="less">Show less</span></summary>
+            <div class="prose">
+              <p>This experience is a big part of why I'm now interested in leveraging multi-agent systems for user tasks and helping people perceive data or tell stories through data visualization.</p>
+              <p><strong>Community Intern Captain.</strong> One of my proudest achievements was serving as Community Intern Captain for the Seattle office alongside two other incredible interns. We organized outdoor events including:</p>
+              <ul>
+                <li>Baseball game outings</li>
+                <li>A hike at Mount Rainier</li>
+                <li>Picnics in the park</li>
+              </ul>
+              <p>That role helped me connect with people from different research areas, find synergies, and brainstorm how vision and AI tasks fit into visualization.</p>
+              <p><strong>How I got it.</strong> I reached out to Jane in early November while I was working on my thesis and brainstorming project ideas. I pitched my research interests and discovered they were exploring something similar: a good reminder that a clear, well-targeted cold email can lead to great opportunities.</p>
+            </div>
+          </details>
+          <div class="photos" data-title="Adobe, Seattle">
+            <button type="button" data-full="assets/img/adobe-3.jpg"><img src="assets/img/adobe-3-thumb.jpg" alt="Lunch with fellow Adobe interns around a long table in the Seattle office." width="640" height="480" loading="lazy"></button>
+            <button type="button" data-full="assets/img/adobe-1.jpg"><img src="assets/img/adobe-1-thumb.jpg" alt="Poster at Adobe's Seattle office reading “Own the outcome” in ornate blue lettering." width="480" height="640" loading="lazy"></button>
+            <button type="button" data-full="assets/img/adobe-2.jpg"><img src="assets/img/adobe-2-thumb.jpg" alt="Poster at Adobe's Seattle office with black and white wave lines on a red border, captioned “Raise the bar.”" width="480" height="640" loading="lazy"></button>
+          </div>
+        </div>
+      </li>
 
-        let currentGallery = '';
-        let currentImage = 0;
+      <!-- Skydiving -->
+      <li class="story" id="skydiving" data-category="adventure">
+        <div class="story__side"><time datetime="2025-08">Aug 2025</time><br>Snohomish, WA<br><span class="tag">Adventure</span></div>
+        <div>
+          <h2>Skydiving from 13,500 feet</h2>
+          <div class="prose">
+            <p><strong>The highlight of my year.</strong> This was a long-time dream and a true bucket-list item. After paragliding and bungee jumping, I finally took the leap from 13,500 ft. I like challenging myself with adventurous sports every once in a while.</p>
+            <p>Highly recommend the jump if you're curious. The folks at <a href="https://www.skydivesnohomish.com/">Skydive Snohomish</a> are the best: highly trained, professional, and genuinely great people.</p>
+          </div>
+          <div class="photos" data-title="Skydiving, Snohomish">
+            <button type="button" data-full="assets/img/skydiving-1.jpg"><img src="assets/img/skydiving-1-thumb.jpg" alt="Saugat in free fall with his tandem instructor, making a hand sign at the camera." width="640" height="360" loading="lazy"></button>
+            <button type="button" data-full="assets/img/skydiving-2.jpg"><img src="assets/img/skydiving-2-thumb.jpg" alt="Tilted view of Saugat and his instructor in free fall above patchwork farmland." width="640" height="360" loading="lazy"></button>
+            <button type="button" data-full="assets/img/skydiving-3.jpg"><img src="assets/img/skydiving-3-thumb.jpg" alt="Saugat under canopy with his instructor, a river and fields far below." width="640" height="360" loading="lazy"></button>
+          </div>
+        </div>
+      </li>
 
-        function openGallery(galleryName, imageIndex = 0) {
-            currentGallery = galleryName;
-            currentImage = imageIndex;
-            const modal = document.getElementById('gallery-modal');
-            const image = document.getElementById('gallery-image');
-            document.getElementById('gallery-current').textContent = imageIndex + 1;
-            document.getElementById('gallery-total').textContent = galleries[galleryName].length;
-            image.src = galleries[galleryName][imageIndex];
-            modal.style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-        }
+      <!-- Rainier -->
+      <li class="story" id="rainier" data-category="adventure">
+        <div class="story__side"><time datetime="2025-07">July 2025</time><br>Mt. Rainier, WA<br><span class="tag">Adventure</span></div>
+        <div>
+          <h2>Up the Skyline Trail at Mt. Rainier</h2>
+          <div class="prose">
+            <p>As Community Intern Captain at Adobe, I got to take our interns on an unforgettable trip to Mt. Rainier. We hiked the Skyline Trail, the longest trail there, all the way to the top.</p>
+            <p>It was incredible to share that with such a talented group of people and watch everyone push their limits together.</p>
+          </div>
+          <div class="photos" data-title="Mt. Rainier">
+            <button type="button" data-full="assets/img/rainier-4.jpg"><img src="assets/img/rainier-4-thumb.jpg" alt="Saugat sitting cross-legged on a rock ledge, snowfields of Mt. Rainier behind him." width="482" height="640" loading="lazy"></button>
+            <button type="button" data-full="assets/img/rainier-1.jpg"><img src="assets/img/rainier-1-thumb.jpg" alt="Hikers on a rocky meadow trail with Mt. Rainier's glacier rising behind." width="482" height="640" loading="lazy"></button>
+            <button type="button" data-full="assets/img/rainier-3.jpg"><img src="assets/img/rainier-3-thumb.jpg" alt="Saugat seated on a flat boulder with patchy snow and rock behind him." width="482" height="640" loading="lazy"></button>
+            <button type="button" data-full="assets/img/rainier-5.jpg"><img src="assets/img/rainier-5-thumb.jpg" alt="Saugat from behind, hands on hips, looking out at clouds over the glacier." width="482" height="640" loading="lazy"></button>
+            <button type="button" data-full="assets/img/rainier-2.jpg"><img src="assets/img/rainier-2-thumb.jpg" alt="Saugat looking back over his shoulder with misty glaciers behind." width="482" height="640" loading="lazy"></button>
+          </div>
+        </div>
+      </li>
 
-        function closeGallery(event) {
-            if (event && event.target !== event.currentTarget) return;
-            document.getElementById('gallery-modal').style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
+      <!-- Teaching -->
+      <li class="story" id="teaching" data-category="teaching">
+        <div class="story__side"><time datetime="2024">Fall 2024</time><br>Washington University in St. Louis<br><span class="tag">Teaching</span></div>
+        <div>
+          <h2>Teaching Introduction to Visualization: 6.67 out of 7</h2>
+          <div class="prose">
+            <p><strong>Grateful to my advisor <a href="https://alvitta.com/">Dr. Alvitta Ottley</a> for this experience.</strong> I was rated 6.67/7 for co-instructing “Introduction to Visualization” (department average 6.11, school average 6.18).</p>
+            <p>My teaching started in undergrad, TAing Computer Science, Physics, and Mathematics courses. I genuinely enjoy helping students, often extending sessions when needed and learning alongside them.</p>
+            <p>I taught <mark class="hl">data wrangling</mark>, <mark class="hl">D3.js</mark>, <mark class="hl">design guidelines</mark>, what makes <mark class="hl">good and bad visualizations</mark>, <mark class="hl">perception</mark>, and <mark class="hl">prototyping</mark>, and helped students build final dashboards for social good.</p>
+            <p>The best moment was when a student stopped me at a campus cafe to say the course was their favorite, and that their final project helped them land an internship.</p>
+          </div>
+        </div>
+      </li>
 
-        function changeImage(direction) {
-            const images = galleries[currentGallery];
-            currentImage = (currentImage + direction + images.length) % images.length;
-            document.getElementById('gallery-image').src = images[currentImage];
-            document.getElementById('gallery-current').textContent = currentImage + 1;
-        }
+      <!-- AIR -->
+      <li class="story" id="air" data-category="internship">
+        <div class="story__side"><time datetime="2024">Summer 2024</time><br>Remote / Washington, DC<br><span class="tag">Internship</span></div>
+        <div>
+          <h2>Doctoral Student Intern, American Institutes for Research</h2>
+          <div class="prose">
+            <p><strong>A transformative research experience.</strong> The internship was remote, but I spent a week in Washington, DC for orientation. I worked with mentors Brittany Boyd and Cadelle Hemphill on interactive tools to help Grade 8 teachers investigate student performance in math.</p>
+          </div>
+          <details>
+            <summary><span class="more">Read more</span><span class="less">Show less</span></summary>
+            <div class="prose">
+              <p><strong>Primary project.</strong> I ran statistical analyses across factors including race, internet access, and access to technology at school and home. This connects directly to my research on how different populations interact with and interpret data visualizations.</p>
+              <p><strong>Environmental project.</strong> I also worked with <a href="https://scholar.google.com/citations?user=7csg1XYAAAAJ&amp;hl=en">Rachel Carroll</a>, who became a great mentor (she even extended my internship). We studied environmental factors in student performance, using ML and regression models to predict air pollution across North Carolina, with an amazing group at AIR: Rachel Carroll, Paul Bailey, Dana McCalla, and Thomas Snyder.</p>
+              <ul>
+                <li>Pulled PurpleAir sensor data from across North Carolina</li>
+                <li>Worked with EPA data for environmental analysis</li>
+                <li>Explored kriging and clustering methods to predict pollutant levels</li>
+                <li>Investigated relationships between environmental factors and student performance</li>
+              </ul>
+              <p>This work was published as <a href="https://www.nature.com/articles/s41598-025-26539-3">“Estimating PM2.5 Concentrations at Public Schools in North Carolina Using Multiple Data Sources and Interpolation Methods”</a> in Scientific Reports.</p>
+            </div>
+          </details>
+          <div class="photos" data-title="American Institutes for Research">
+            <button type="button" data-full="assets/img/air-1.jpg"><img src="assets/img/air-1-thumb.jpg" alt="Saugat standing with a colleague at the American Institutes for Research." width="640" height="631" loading="lazy"></button>
+            <button type="button" data-full="assets/img/air-2.jpg"><img src="assets/img/air-2-thumb.jpg" alt="Reception desk at the AIR office with the blue AIR logo on a wood wall." width="640" height="480" loading="lazy"></button>
+          </div>
+        </div>
+      </li>
 
-        document.addEventListener('keydown', function (e) {
-            const modal = document.getElementById('gallery-modal');
-            if (modal.style.display === 'flex') {
-                if (e.key === 'Escape') closeGallery();
-                if (e.key === 'ArrowLeft') changeImage(-1);
-                if (e.key === 'ArrowRight') changeImage(1);
-            }
-        });
+      <!-- PhD start -->
+      <li class="story" id="vis-research" data-category="phd">
+        <div class="story__side"><time datetime="2021-08">Aug 2021</time><br>WashU, the beginning<br><span class="tag">PhD</span></div>
+        <div>
+          <h2>How I got into visualization research</h2>
+          <div class="prose">
+            <p><strong>The beginning of my PhD journey.</strong> In my final year at Beloit College I had both industry offers and graduate school acceptances, but I wanted a PhD regardless. As a first-generation college student, education was always a priority in my family.</p>
+          </div>
+          <details>
+            <summary><span class="more">Read more</span><span class="less">Show less</span></summary>
+            <div class="prose">
+              <p>I chose WashU. I'd always been intrigued by visualizations in sports (cricket, badminton, football) and noticed how poorly designed charts spread through news and social media. My dad would share charts without noticing something was off. That pushed me toward a PhD in visualization and HCI.</p>
+              <p><strong>Finding my mentor.</strong> <a href="https://alvitta.com/">Prof. Alvitta Ottley</a> was working on information visualization and communicating data to different stakeholders. While I was rotating with her, she gave me a project on measuring whether people can actually read data visualizations, which was exactly my interest.</p>
+              <p><strong>The Mini-VLAT project.</strong> I took it on without fully knowing what it would involve: literature review, user studies, iterating on experimental issues, writing it up, and eventually a first-author Best Paper Award at EuroVis.</p>
+              <p><strong>Presenting in Germany.</strong> Traveling to Germany to present, and being the first talk in front of the whole conference (best-paper talks get the main stage), was incredible, and the real start of my PhD.</p>
+            </div>
+          </details>
+        </div>
+      </li>
+    </ol>
 
-        // Expand/collapse
-        function toggleExpand(button) {
-            const box = button.closest('.adventure-box');
-            const content = box.querySelector('.expandable-content');
-            const isHidden = content.style.display === 'none' || content.style.display === '';
-            content.style.display = isHidden ? 'block' : 'none';
-            button.textContent = isHidden ? '−' : '+';
-            button.setAttribute('aria-label', isHidden ? 'Collapse details' : 'Expand details');
-        }
+    <div class="coming">
+      <p><strong>Coming soon:</strong> notes on the PhD job market, current research interests, and thoughts on state-of-the-art models.</p>
+    </div>
+    <div style="height: clamp(48px, 8vw, 96px);"></div>
+  </div>
+</main>
 
-        // Misc filtering
-        const miscFilterButtons = document.querySelectorAll('.misc-filter-btn');
-        const miscItems = document.querySelectorAll('.misc-item');
+<dialog class="gallery" id="gallery" aria-labelledby="gallery-title">
+  <div class="gallery__inner">
+    <div class="gallery__top">
+      <span><span id="gallery-title">Photos</span> · <span id="gallery-count">1 of 1</span></span>
+      <button type="button" id="gallery-close" aria-label="Close photos"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </div>
+    <div class="gallery__stage">
+      <button type="button" class="gallery__prev" id="gallery-prev" aria-label="Previous photo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+      <img id="gallery-img" src="" alt="">
+      <button type="button" class="gallery__next" id="gallery-next" aria-label="Next photo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+    </div>
+    <div></div>
+  </div>
+</dialog>
 
-        miscFilterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const filter = button.getAttribute('data-filter');
-                miscFilterButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
+<footer class="site-footer on-night">
+  <div class="wrap">
+    <div>
+      <p class="footer__name">Saugat Pandey</p>
+      <p class="footer__line">Assistant Professor of Computer Science, Furman University</p>
+    </div>
+    <ul class="footer__links" aria-label="Elsewhere">
+      <li><a href="https://themochalab.github.io/">MOCHA Lab</a></li>
+      <li><a href="https://scholar.google.com/citations?user=RCC_DfYAAAAJ&amp;hl=en">Scholar</a></li>
+      <li><a href="https://github.com/iamsaugatpandey">GitHub</a></li>
+      <li><a href="https://orcid.org/0000-0002-7429-6575">ORCID</a></li>
+      <li><a href="https://www.linkedin.com/in/iamsaugatpandey/">LinkedIn</a></li>
+      <li><a href="https://www.instagram.com/peakpandey/">Instagram</a></li>
+      <li><a href="cv.html">CV</a></li>
+    </ul>
+    <p class="footer__copy">© <span id="year">2026</span> Saugat Pandey · Greenville, South Carolina</p>
+  </div>
+</footer>
 
-                miscItems.forEach(item => {
-                    const category = item.getAttribute('data-category');
-                    if (filter === 'all' || category === filter) {
-                        item.style.display = 'block';
-                        item.style.opacity = '0';
-                        requestAnimationFrame(() => { item.style.opacity = '1'; });
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            });
-        });
-    </script>
+<script src="script.js"></script>
 </body>
 </html>

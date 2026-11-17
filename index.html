@@ -1,442 +1,492 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saugat Pandey — Assistant Professor, Furman University</title>
-    <meta name="description" content="Saugat Pandey is an Assistant Professor of Computer Science at Furman University working on data visualization, perception, AI, and data science.">
-    <!-- Favicon: mango emoji -->
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='50%25' x='50%25' dominant-baseline='middle' text-anchor='middle' font-size='52'%3E%F0%9F%A5%AD%3C/text%3E%3C/svg%3E">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TVKHK7VV3Q"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-TVKHK7VV3Q');
-    </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saugat Pandey · Assistant Professor, Furman University</title>
+<meta name="description" content="Saugat Pandey is an Assistant Professor of Computer Science at Furman University and directs the MOCHA Lab. He studies how people read, trust, and reason with visual data, and how AI changes that.">
+<link rel="canonical" href="https://iamsaugatpandey.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Saugat Pandey">
+<meta property="og:description" content="Visualization, perception, and AI. Assistant Professor of Computer Science at Furman University.">
+<meta property="og:url" content="https://iamsaugatpandey.github.io/">
+<meta property="og:image" content="https://iamsaugatpandey.github.io/assets/img/portrait.jpg">
+<meta name="theme-color" content="#FAF8F4">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='50%25' x='50%25' dominant-baseline='middle' text-anchor='middle' font-size='52'%3E%F0%9F%A5%AD%3C/text%3E%3C/svg%3E">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TVKHK7VV3Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TVKHK7VV3Q');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&amp;family=Instrument+Sans:wght@400..700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Announcement Banner -->
-    <div class="announce-bar" id="announce-bar">
-        <div class="announce-inner">
-            <span>🌱 More to come — this site is actively growing.</span>
-            <span>Always happy to hear from prospective <strong>students &amp; collaborators</strong>.</span>
-            <a href="#contact">Get in touch →</a>
-        </div>
-        <button class="announce-close" id="announce-close" aria-label="Dismiss announcement">&times;</button>
-    </div>
-
-    <!-- Site Header -->
-    <header class="site-header">
-        <div class="header-inner" id="header-inner">
-            <a href="index.html" class="brand">
-                <span class="brand-name" id="name-display">Saugat Pandey</span>
-                <span class="brand-hindi">सौगात</span>
-            </a>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav class="site-nav" id="site-nav">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#publications" class="nav-link">Publications</a>
-                <a href="#updates" class="nav-link">Updates</a>
-                <a href="misc.html" class="nav-link">Misc</a>
-                <a href="#contact" class="nav-link">Contact</a>
-                <a href="cv.html" class="nav-link nav-cv">CV</a>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Scrollytelling side rail -->
-    <nav class="scrolly-rail" aria-label="Section navigation">
-        <svg class="rail-curve" viewBox="0 0 20 400" preserveAspectRatio="none" aria-hidden="true">
-            <path d="M10 0 C 2 60, 18 100, 10 160 C 3 210, 17 230, 10 280 C 4 320, 16 340, 10 400" />
-        </svg>
-        <ol class="rail-dots">
-            <li data-target="home"><a href="#home"><span class="rail-dot"></span><span class="rail-label">Home</span></a></li>
-            <li data-target="publications"><a href="#publications"><span class="rail-dot"></span><span class="rail-label">Publications</span></a></li>
-            <li data-target="updates"><a href="#updates"><span class="rail-dot"></span><span class="rail-label">Updates</span></a></li>
-            <li data-target="misc"><a href="misc.html"><span class="rail-dot"></span><span class="rail-label">Misc</span></a></li>
-        </ol>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Saugat Pandey, home">
+      <span class="brand__name">Saugat Pandey</span>
+      <span class="brand__dev" lang="ne" aria-hidden="true">सौगात</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="site-nav" aria-label="Primary">
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#open-source">Open source</a>
+      <a href="#news">News</a>
+      <a href="misc.html">Misc</a>
+      <a href="#contact">Contact</a>
+      <a class="nav__cv" href="cv.html">CV</a>
     </nav>
+  </div>
+</header>
 
-    <main>
-        <!-- ================= HOME / ABOUT ================= -->
-        <section id="home" class="hero">
-            <div class="container">
-                <div class="hero-grid">
-                    <div class="hero-text reveal">
-                        <span class="eyebrow"><i class="fas fa-location-dot"></i> Greenville, SC · <a href="https://www.furman.edu/" target="_blank" rel="noopener">Furman University</a></span>
-                        <h1>Saugat Pandey<span class="name-pronunciation">(Saw-gaat Paan-day)</span></h1>
-                        <p class="hero-role">Assistant Professor, Computer Science <span class="divider">·</span> Furman University</p>
-                        <p class="lede">I recently completed my PhD in Computer Science &amp; Engineering at Washington University in St. Louis, where I was a graduate research assistant in the <a href="http://visualdata.wustl.edu/" target="_blank" rel="noopener">Visual Interface and Behavior Exploration Lab (VIBE)</a>. My research sits at the intersection of <strong>data visualization</strong>, <strong>human perception</strong>, and <strong>AI</strong>. I study how people read, trust, and reason with visual data, and how AI/ML systems can make that easier.</p>
+<main id="main">
 
-                        <div class="hero-actions">
-                            <a href="cv.html" class="btn btn-primary"><i class="fas fa-file-alt"></i> View CV</a>
-                            <a href="#contact" class="btn btn-ghost"><i class="fas fa-handshake"></i> Collaborate with me</a>
-                        </div>
+  <!-- ================= HERO ================= -->
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="wrap">
+      <div class="hero__grid">
+        <div>
+          <p class="kicker">Computer Science · Furman University</p>
+          <h1 id="hero-h">Saugat Pandey</h1>
+          <p class="say">Pronounced <span>Saw-gaat Paan-day</span></p>
 
-                        <div class="social-row">
-                            <a href="https://scholar.google.com/citations?user=RCC_DfYAAAAJ&hl=en" aria-label="Google Scholar" target="_blank" rel="noopener"><i class="fas fa-graduation-cap"></i></a>
-                            <a href="https://www.linkedin.com/in/iamsaugatpandey/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="https://orcid.org/0000-0002-7429-6575" aria-label="ORCID" target="_blank" rel="noopener"><i class="fab fa-orcid"></i></a>
-                            <a href="https://www.instagram.com/peakpandey/" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
-                            <a href="mailto:spandey2@furman.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
+          <p class="hero__role">Assistant Professor of Computer Science <span><span class="sep" aria-hidden="true">· </span>Director, <a class="link" href="https://themochalab.github.io/">MOCHA Lab</a></span></p>
+          <p class="hero__lede">I study how people read, trust, and reason with visual data, and what changes when AI is in the loop. I earned my PhD in Computer Science &amp; Engineering at Washington University in St. Louis, in the <a class="link" href="http://visualdata.wustl.edu/">VIBE Lab</a> with <a class="link" href="https://alvitta.com/">Alvitta Ottley</a>.</p>
 
-                    <div class="hero-photo-wrap reveal">
-                        <img src="Self/Me3.JPG" alt="Saugat Pandey" class="hero-photo" id="profile-photo">
-                    </div>
-                </div>
-
-                <div class="news-strip reveal">
-                    <span class="pulse" aria-hidden="true"></span>
-                    <p><strong>In the news:</strong> I spoke with <a href="https://www.wspa.com/news/consumer/ai-agent-at-your-service-is-this-new-tech-right-for-you/" target="_blank" rel="noopener">WSPA 7News</a> about consumer AI agents and privacy (<a href="https://www.youtube.com/watch?v=P7-hsIM-CiY" target="_blank" rel="noopener">watch</a>). <strong>Also new:</strong> my lab website is live! Visit <a href="https://themochalab.github.io/" target="_blank" rel="noopener">The Mocha Lab</a> to learn more about our research in visualization, perception, and AI at <a href="https://www.furman.edu/" target="_blank" rel="noopener">Furman University</a>. Prospective students and collaborators, <a href="#contact">say hello</a>.</p>
-                </div>
-
-                <div class="reveal" style="margin-top: 2.5rem;">
-                    <span class="section-kicker">Research Interests</span>
-                    <div class="interests-row">
-                        <span class="chip"><span class="dot"></span>Data Visualization</span>
-                        <span class="chip"><span class="dot"></span>Visual Perception</span>
-                        <span class="chip"><span class="dot"></span>AI &amp; Machine Learning</span>
-                        <span class="chip"><span class="dot"></span>Data Science</span>
-                        <span class="chip"><span class="dot"></span>Trust in Visualization</span>
-                        <span class="chip"><span class="dot"></span>Visualization Literacy</span>
-                        <span class="chip"><span class="dot"></span>Human-Computer Interaction</span>
-                        <span class="chip"><span class="dot"></span>Multi-Agent LLM Systems</span>
-                        <span class="chip"><span class="dot"></span>AI-Generated Image Detection</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================= PUBLICATIONS ================= -->
-        <section id="publications">
-            <div class="container">
-                <div class="section-head reveal">
-                    <div>
-                        <span class="section-kicker">Selected Works</span>
-                        <h2>Publications</h2>
-                    </div>
-                </div>
-
-                <div class="filter-tabs reveal">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="vislit">Visualization Literacy</button>
-                    <button class="filter-btn" data-filter="trust">Trust</button>
-                    <button class="filter-btn" data-filter="llm">Language Models</button>
-                    <button class="filter-btn" data-filter="socialmedia">Social Media</button>
-                    <button class="filter-btn" data-filter="environment">Environment x Data Science</button>
-                    <button class="filter-btn" data-filter="genai">Generative AI</button>
-                </div>
-
-                <div class="publications-list">
-                    <!-- Under review (double-anonymized): title + "Under review" only. Do not name the venue or link a preprint here until a decision. -->
-                    <div class="publication-item reveal" data-categories="genai">
-                        <div class="pub-image pub-image--icon" aria-hidden="true"><i class="fas fa-fingerprint"></i></div>
-                        <div class="pub-details">
-                            <h3>Déjà VAE: When Do Autoencoder Traces Reveal Generated Images?</h3>
-                            <p class="authors"><strong>Saugat Pandey</strong></p>
-                            <p class="venue"><span class="pub-status">Under review</span> 2026</p>
-                            <div class="pub-tags">
-                                <span class="pub-tag ai">Generative AI Detection</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="publication-item reveal" data-categories="genai">
-                        <div class="pub-image pub-image--icon" aria-hidden="true"><i class="fas fa-x-ray"></i></div>
-                        <div class="pub-details">
-                            <h3>False-Positive Rates of Detectors of AI-generated Chest Radiographs across Held-out Public Datasets</h3>
-                            <p class="authors"><strong>Saugat Pandey</strong></p>
-                            <p class="venue"><span class="pub-status">Under review</span> 2026</p>
-                            <div class="pub-tags">
-                                <span class="pub-tag ai">Generative AI Detection</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="publication-item reveal" data-categories="environment">
-                        <div class="pub-image"><img src="PM25.png" alt="Estimating PM2.5 concentrations at public schools in North Carolina"></div>
-                        <div class="pub-details">
-                            <h3>Estimating PM2.5 Concentrations at Public Schools in North Carolina Using Multiple Data Sources and Interpolation Methods</h3>
-                            <p class="authors">Rachel Carroll, Paul Bailey, <strong>Saugat Pandey</strong>, Dana McCalla, Thomas Snyder</p>
-                            <p class="venue">Nature Scientific Reports</p>
-                            <div class="pub-tags">
-                                <span class="pub-tag environment">Environment x Data Science</span>
-                            </div>
-                            <div class="pub-links">
-                                <a href="https://www.nature.com/articles/s41598-025-26539-3" target="_blank" rel="noopener">Paper →</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="publication-item reveal" data-categories="vislit llm">
-                        <div class="pub-image"><img src="VisLit2025.png" alt="Visualization Literacy"></div>
-                        <div class="pub-details">
-                            <h3>Visualization Literacy or Skillset? Beyond the Analogy to Textual Literacy</h3>
-                            <p class="authors">Mara Solen, <strong>Saugat Pandey</strong>, Firas Moosvi, Alvitta Ottley, Tamara Munzner</p>
-                            <p class="venue">IEEE VIS Workshop 2025 (VisComm)</p>
-                            <div class="pub-tags">
-                                <span class="pub-tag vislit">Vis Literacy</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="publication-item reveal" data-categories="vislit llm">
-                        <div class="pub-image"><img src="LLM.png" alt="LLM Visualization Literacy"></div>
-                        <div class="pub-details">
-                            <h3>Benchmarking Visual Language Models on Standardized Visualization Literacy Tests</h3>
-                            <p class="authors"><strong>Saugat Pandey</strong>, Alvitta Ottley</p>
-                            <p class="venue">Computer Graphics Forum, EuroVis 2025</p>
-                            <div class="pub-tags">
-                                <span class="pub-tag vislit">Vis Literacy</span>
-                                <span class="pub-tag llm">LLMs</span>
-                            </div>
-                            <div class="pub-links">
-                                <a href="https://www.researchgate.net/profile/Saugat-Pandey-4/publication/390032508_Benchmarking_Visual_Language_Models_on_Standardized_Visualization_Literacy_Tests/links/67dc79d2e2c0ea36cd872066/Benchmarking-Visual-Language-Models-on-Standardized-Visualization-Literacy-Tests.pdf" target="_blank" rel="noopener">Paper →</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="publication-item reveal" data-categories="trust">
-                        <div class="pub-image"><img src="Trust_3.png" alt="Trustworthy by Design"></div>
-                        <div class="pub-details">
-                            <h3>Trustworthy by Design: The Viewer's Perspective on Trust in Data Visualization</h3>
-                            <p class="authors">Oen G. McKinley, <strong>Saugat Pandey</strong>, Alvitta Ottley</p>
-                            <p class="venue">ACM CHI 2025</p>
-                            <div class="pub-tags"><span class="pub-tag trust">Trust</span></div>
-                            <div class="pub-links">
-                                <a href="https://arxiv.org/pdf/2503.10892" target="_blank" rel="noopener">Paper →</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="publication-item reveal" data-categories="trust">
-                        <div class="pub-image"><img src="Trust_2.png" alt="Building and Eroding Trust"></div>
-                        <div class="pub-details">
-                            <h3>Building and Eroding: Exogenous and Endogenous Factors that Influence Subjective Trust in Visualization</h3>
-                            <p class="authors">R. Jordan Crouser, Syrine Matoussi, Lan Kung, <strong>Saugat Pandey</strong>, Oen G. McKinley, Alvitta Ottley</p>
-                            <p class="venue">IEEE VIS 2024</p>
-                            <div class="pub-tags"><span class="pub-tag trust">Trust</span></div>
-                            <div class="pub-links">
-                                <a href="https://arxiv.org/pdf/2408.03800" target="_blank" rel="noopener">Paper →</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="publication-item best-paper reveal" data-categories="vislit">
-                        <div class="pub-image"><img src="MiniVLAT.png" alt="Mini-VLAT"></div>
-                        <div class="pub-details">
-                            <h3>Mini-VLAT: A Short and Effective Measure of Visualization Literacy <span class="trophy">🏆</span></h3>
-                            <p class="authors"><strong>Saugat Pandey</strong>, Alvitta Ottley</p>
-                            <p class="venue">Computer Graphics Forum, EuroVis 2023 • Best Paper Award</p>
-                            <div class="pub-tags"><span class="pub-tag vislit">Vis Literacy</span></div>
-                            <div class="pub-links">
-                                <a href="https://arxiv.org/pdf/2304.07905" target="_blank" rel="noopener">Paper →</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="publication-item reveal" data-categories="trust">
-                        <div class="pub-image"><img src="Trust.png" alt="Trust in Visualization"></div>
-                        <div class="pub-details">
-                            <h3>Do You Trust What You See? Towards A Multidimensional Measure of Trust in Visualization</h3>
-                            <p class="authors"><strong>Saugat Pandey</strong>, Oen G. McKinley, R. Jordan Crouser, Alvitta Ottley</p>
-                            <p class="venue">IEEE VIS 2023</p>
-                            <div class="pub-tags"><span class="pub-tag trust">Trust</span></div>
-                            <div class="pub-links">
-                                <a href="https://arxiv.org/pdf/2308.04727" target="_blank" rel="noopener">Paper →</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="publication-item reveal" data-categories="socialmedia">
-                        <div class="pub-image"><img src="SocialMedia.png" alt="Social Media Visualization"></div>
-                        <div class="pub-details">
-                            <h3>User Engagement with COVID-19 Visualizations on Twitter</h3>
-                            <p class="authors">Robert Kasumba, <strong>Saugat Pandey</strong>, Vishesh Patel, Micah Wolfson, Alvitta Ottley</p>
-                            <p class="venue">IEEE VIS Workshop 2023 (VisComm)</p>
-                            <div class="pub-tags"><span class="pub-tag socialmedia">Social Media</span></div>
-                            <div class="pub-links">
-                                <a href="https://osf.io/es6ua/download" target="_blank" rel="noopener">Paper →</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================= UPDATES ================= -->
-        <section id="updates">
-            <div class="container">
-                <div class="section-head reveal">
-                    <div>
-                        <span class="section-kicker">Latest</span>
-                        <h2>Updates</h2>
-                    </div>
-                </div>
-
-                <div class="timeline reveal">
-                    <div class="timeline-item is-featured">
-                        <span class="timeline-date">November 2026</span>
-                        <p>Featured on WSPA 7News in “AI agent at your service: Is this new tech right for you?”, talking about consumer AI agents, privacy, and risks like prompt injection. <a href="https://www.wspa.com/news/consumer/ai-agent-at-your-service-is-this-new-tech-right-for-you/" target="_blank" rel="noopener">Read the story</a> · <a href="https://www.youtube.com/watch?v=P7-hsIM-CiY" target="_blank" rel="noopener">Watch on YouTube</a></p>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-date">November 2026</span>
-                        <p>Submitted two papers on detecting AI-generated images: “Déjà VAE: When Do Autoencoder Traces Reveal Generated Images?” and “False-Positive Rates of Detectors of AI-generated Chest Radiographs across Held-out Public Datasets.” Both are now under review.</p>
-                    </div>
-                    <div class="timeline-item is-featured">
-                        <span class="timeline-date">August 2026</span>
-                        <p>Launched <a href="https://themochalab.github.io/" target="_blank" rel="noopener">The Mocha Lab</a> website — my research lab at Furman University focused on visualization, perception, and AI.</p>
-                    </div>
-                    <div class="timeline-item is-featured">
-                        <span class="timeline-date">August 2026</span>
-                        <p>Started as an Assistant Professor in the Department of Computer Science at Furman University, Greenville, SC! 🎉</p>
-                    </div>
-                    <div class="timeline-item is-featured">
-                        <span class="timeline-date">May 2026</span>
-                        <p>Successfully defended my PhD dissertation at Washington University in St. Louis.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-date">November 2025</span>
-                        <p>Paper titled "Estimating PM2.5 Concentrations at Public Schools in North Carolina Using Multiple Data Sources and Interpolation Methods" published in <a href="https://www.nature.com/articles/s41598-025-26539-3" target="_blank" rel="noopener">Nature Scientific Reports</a>.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-date">August 2025</span>
-                        <p>Paper titled "Visualization Literacy or Skillset? Beyond the Analogy to Textual Literacy" accepted at IEEE VIS Workshop 2025 (VisComm).</p>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-date">May 2025</span>
-                        <p>Attended EuroVIS in Luxembourg City, Luxembourg from May 31 – June 6 to present my work on benchmarking language models.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-date">May 2025</span>
-                        <p>Moved to Seattle for Summer 2025 to work at Adobe as a Research Scientist Intern.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-date">May 2025</span>
-                        <p>Passed my dissertation proposal.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-date">March 2025</span>
-                        <p>Paper titled "Benchmarking Visual Language Models on Standardized Visualization Literacy Tests" accepted at EuroVIS 2025.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-date">January 2025</span>
-                        <p>Joined Adobe as a Research Scientist Intern for Summer 2025.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-date">January 2025</span>
-                        <p>Paper titled "Trustworthy by Design: The Viewer's Perspective on Trust in Data Visualization" accepted at ACM CHI 2025.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-date">December 2024</span>
-                        <p>Finished co-instructing "Introduction to Visualization" with an average rating of 6.67/7.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-date">July 2024</span>
-                        <p>Paper on trust factors accepted at IEEE Visualization 2024.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================= BEYOND RESEARCH / MISC TEASER ================= -->
-        <section id="misc-teaser">
-            <div class="container">
-                <div class="section-head reveal">
-                    <div>
-                        <span class="section-kicker">Beyond the Lab</span>
-                        <h2>Misc</h2>
-                    </div>
-                </div>
-                <p class="reveal" style="color: var(--muted); max-width: 60ch; margin-bottom: 0.5rem;">Teaching, internships, and a few adventures along the way.</p>
-                <div class="misc-teaser reveal">
-                    <a href="misc.html#" class="misc-teaser-card">
-                        <span class="emoji">👨‍🏫</span>
-                        <h4>Teaching</h4>
-                        <p>Co-instructing Introduction to Visualization at WashU.</p>
-                    </a>
-                    <a href="misc.html#" class="misc-teaser-card">
-                        <span class="emoji">🔬</span>
-                        <h4>Internships</h4>
-                        <p>Adobe Research and American Institutes for Research.</p>
-                    </a>
-                    <a href="misc.html#" class="misc-teaser-card">
-                        <span class="emoji">🏔️</span>
-                        <h4>Adventures</h4>
-                        <p>Skydiving, Mt. Rainier, and other stories.</p>
-                    </a>
-                </div>
-                <div class="misc-cta reveal">
-                    <a href="misc.html" class="btn btn-ghost">See all of Misc →</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================= CONTACT / COLLABORATE ================= -->
-        <section id="contact" class="contact-section">
-            <div class="container">
-                <div class="section-head reveal">
-                    <div>
-                        <span class="section-kicker">Let's Talk</span>
-                        <h2>Collaborate</h2>
-                    </div>
-                </div>
-                <p class="contact-lede reveal">I'm always excited to hear from prospective students, collaborators, and anyone interested in visualization, perception, AI, or data science. Tell me a bit about yourself and what you're interested in, and I'll get back to you — or email me directly at <a href="mailto:spandey2@furman.edu">spandey2@furman.edu</a>.</p>
-
-                <form class="contact-grid reveal" id="contact-form" action="https://formspree.io/f/xojgovpz" method="POST">
-                    <div class="form-row">
-                        <div class="field">
-                            <label for="cf-name">Name</label>
-                            <input type="text" id="cf-name" name="name" placeholder="Your name" required>
-                        </div>
-                        <div class="field">
-                            <label for="cf-email">Email</label>
-                            <input type="email" id="cf-email" name="email" placeholder="you@example.com" required>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label for="cf-interest">What are you interested in?</label>
-                        <input type="text" id="cf-interest" name="interest" placeholder="e.g. PhD advising, research collaboration, guest talk...">
-                    </div>
-                    <div class="field">
-                        <label for="cf-message">Message</label>
-                        <textarea id="cf-message" name="message" placeholder="Tell me a bit about yourself and what you'd like to discuss." required></textarea>
-                    </div>
-                    <input type="hidden" name="_subject" value="New message from iamsaugatpandey.github.io">
-                    <div class="form-footer">
-                        <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Send message</button>
-                        <span class="form-status" id="form-status"></span>
-                    </div>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <div class="container footer-inner">
-            <p>&copy; <span id="year"></span> Saugat Pandey · Assistant Professor, Furman University</p>
-            <div class="social-row">
-                <a href="https://scholar.google.com/citations?user=RCC_DfYAAAAJ&hl=en" aria-label="Google Scholar" target="_blank" rel="noopener"><i class="fas fa-graduation-cap"></i></a>
-                <a href="https://www.linkedin.com/in/iamsaugatpandey/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://orcid.org/0000-0002-7429-6575" aria-label="ORCID" target="_blank" rel="noopener"><i class="fab fa-orcid"></i></a>
-                <a href="https://www.instagram.com/peakpandey/" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
-                <a href="mailto:spandey2@furman.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
-            </div>
+          <ul class="hero__links" aria-label="Profiles and links">
+            <li><a href="https://scholar.google.com/citations?user=RCC_DfYAAAAJ&amp;hl=en"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8 12 3l10 5-10 5L2 8Z"/><path d="M6 10.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-5.5M22 8v6"/></svg>Google Scholar</a></li>
+            <li><a href="https://github.com/iamsaugatpandey"><svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.19c0 4.49 2.87 8.3 6.84 9.65.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 2.5-.35c.85 0 1.71.12 2.5.35 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.48-.01 2.82 0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.19C22 6.58 17.52 2 12 2Z"/></svg>GitHub</a></li>
+            <li><a href="https://orcid.org/0000-0002-7429-6575"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9.5"/><path d="M8.5 10v6M8.5 7.6v.1M11.5 16v-6h2a3 3 0 0 1 0 6h-2Z" stroke-linecap="round" stroke-linejoin="round"/></svg>ORCID</a></li>
+            <li><a href="https://www.linkedin.com/in/iamsaugatpandey/"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7.5 10.5V17M7.5 7.2v.1M11 17v-6.5M11 13.5c0-1.7 1.2-3 2.8-3s2.7 1.1 2.7 3V17"/></svg>LinkedIn</a></li>
+            <li><a href="mailto:spandey2@furman.edu"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6 8.5 7 8.5-7"/></svg>spandey2@furman.edu</a></li>
+          </ul>
         </div>
-    </footer>
 
-    <script src="script.js"></script>
+        <figure class="portrait">
+          <div class="portrait__frame">
+            <img src="assets/img/portrait.jpg" alt="Saugat Pandey smiling over his shoulder, wearing a backpack, with snowfields and glaciers behind him." width="900" height="1195" fetchpriority="high">
+          </div>
+          <figcaption>Mt. Rainier, Washington</figcaption>
+        </figure>
+      </div>
+
+      <div class="now" aria-label="What's new">
+        <div class="now__item">
+          <p class="now__label">The lab</p>
+          <p>I direct the MOCHA Lab at Furman and am recruiting undergraduate researchers.</p>
+          <a class="arrow" href="https://themochalab.github.io/">Visit the lab <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <div class="now__item">
+          <p class="now__label">On air · Nov 2026</p>
+          <p>WSPA 7News asked me about consumer AI agents and the privacy risks that come with them.</p>
+          <a class="arrow" href="#news">Watch the segment <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <div class="now__item">
+          <p class="now__label">Open source · Nov 2026</p>
+          <p>Two of my patches were merged into CPython: one in <code>datetime</code>, one in <code>ctypes</code>.</p>
+          <a class="arrow" href="#open-source">Read about the fixes <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= RESEARCH ================= -->
+  <section class="section section--tint" id="research" aria-labelledby="research-h">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="kicker">Research</p>
+        <h2 id="research-h">Three questions I keep coming back to</h2>
+        <p>My work sits between data visualization, human perception, and AI. Each thread links to the papers behind it.</p>
+      </header>
+
+      <ol class="themes">
+        <li class="theme">
+          <div class="theme__fig" aria-hidden="true">
+            <svg viewBox="0 0 240 100"><line x1="20" x2="220" y1="64" y2="64" stroke="#1A1714"/><rect x="34" y="34" width="22" height="30" fill="#D9CFC0"/><rect x="66" y="18" width="22" height="46" fill="#D9CFC0"/><rect x="98" y="42" width="22" height="22" fill="#D9CFC0"/><rect x="130" y="10" width="22" height="54" fill="#E8962E"/><rect x="162" y="28" width="22" height="36" fill="#D9CFC0"/><g fill="#1A1714"><rect x="34" y="80" width="10" height="10"/><rect x="48" y="80" width="10" height="10"/><rect x="62" y="80" width="10" height="10"/><rect x="76" y="80" width="10" height="10"/><rect x="104" y="80" width="10" height="10"/><rect x="118" y="80" width="10" height="10"/><rect x="132" y="80" width="10" height="10"/><rect x="146" y="80" width="10" height="10"/><rect x="160" y="80" width="10" height="10"/><rect x="188" y="80" width="10" height="10"/></g><g fill="none" stroke="#9C8F7E"><rect x="90.5" y="80.5" width="9" height="9"/><rect x="174.5" y="80.5" width="9" height="9"/></g><text x="204" y="89" font-family="IBM Plex Mono, monospace" font-size="9" fill="#6A6158">10/12</text></svg>
+          </div>
+          <p class="theme__num">01</p>
+          <h3>Can people read this chart?</h3>
+          <p>Measuring visualization literacy quickly and reliably. Mini-VLAT, a 12-item test, won Best Paper at EuroVis 2023, and I've since used these tests to benchmark vision-language models.</p>
+          <button type="button" class="arrow" data-jump="vislit">See the papers <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </li>
+        <li class="theme">
+          <div class="theme__fig" aria-hidden="true">
+            <svg viewBox="0 0 240 100"><path d="M20 70 C 60 62, 80 30, 120 40 S 180 20, 220 26 L 220 52 C 180 46, 160 66, 120 64 S 60 86, 20 88 Z" fill="#FBEBD3"/><path d="M20 79 C 60 74, 80 48, 120 52 S 180 34, 220 39" fill="none" stroke="#1A1714" stroke-width="1.6"/><g stroke="#E4DDD1"><line x1="20" x2="220" y1="20" y2="20"/><line x1="20" x2="220" y1="50" y2="50"/></g><line x1="20" x2="220" y1="92" y2="92" stroke="#1A1714"/><circle cx="120" cy="52" r="4" fill="#E8962E"/><text x="128" y="16" font-family="IBM Plex Mono, monospace" font-size="9" fill="#6A6158">HOW SURE?</text></svg>
+          </div>
+          <p class="theme__num">02</p>
+          <h3>Do they trust what they see?</h3>
+          <p>What makes a visualization feel trustworthy, which factors build or erode that trust, and how to measure it as more than a single number, from the viewer's side of the chart.</p>
+          <button type="button" class="arrow" data-jump="trust">See the papers <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </li>
+        <li class="theme">
+          <div class="theme__fig" aria-hidden="true">
+            <svg viewBox="0 0 240 100"><g><rect x="30" y="14" width="70" height="62" fill="#D9CFC0"/><polyline points="36,68 56,44 68,56 80,40 94,68" fill="none" stroke="#FAF8F4" stroke-width="2" stroke-linejoin="round"/><circle cx="84" cy="28" r="5" fill="#FAF8F4"/></g><g><rect x="140" y="14" width="70" height="62" fill="#D9CFC0"/><polyline points="146,68 166,44 178,56 190,40 204,68" fill="none" stroke="#FAF8F4" stroke-width="2" stroke-linejoin="round"/><circle cx="194" cy="28" r="5" fill="#FAF8F4"/><rect x="135.5" y="9.5" width="79" height="71" fill="none" stroke="#E8962E" stroke-width="1.6" stroke-dasharray="4 3"/></g><text x="65" y="94" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9" fill="#6A6158">REAL</text><text x="175" y="94" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9" fill="#A3480C">GENERATED?</text><path d="M108 45h22M124 39l6 6-6 6" fill="none" stroke="#1A1714" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <p class="theme__num">03</p>
+          <h3>What happens when AI reads, and makes, images?</h3>
+          <p>Vision-language models on literacy tests, multi-agent LLM systems that help people design charts, and when detectors can (and can't) tell a generated image from a real one.</p>
+          <button type="button" class="arrow" data-jump="genai">See the papers <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ================= PUBLICATIONS ================= -->
+  <section class="section" id="publications" aria-labelledby="pubs-h">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="kicker">Publications</p>
+        <h2 id="pubs-h">Papers</h2>
+        <p>Newest first. For citation counts and the full list, see <a class="link" href="https://scholar.google.com/citations?user=RCC_DfYAAAAJ&amp;hl=en">Google Scholar</a>.</p>
+      </header>
+
+      <div class="pub-toolbar">
+        <div class="filters" role="group" aria-label="Filter papers by topic">
+          <button type="button" class="chip" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="chip" data-filter="vislit" aria-pressed="false">Visualization literacy</button>
+          <button type="button" class="chip" data-filter="trust" aria-pressed="false">Trust</button>
+          <button type="button" class="chip" data-filter="llm" aria-pressed="false">Language models</button>
+          <button type="button" class="chip" data-filter="genai" aria-pressed="false">Generative AI</button>
+          <button type="button" class="chip" data-filter="env" aria-pressed="false">Environment</button>
+          <button type="button" class="chip" data-filter="social" aria-pressed="false">Social media</button>
+        </div>
+        <p class="pub-count" id="pub-count" role="status" aria-live="polite"></p>
+      </div>
+
+      <!-- Under review (double-anonymized): title + "Under review" only. Do not name the venue or link a preprint until there is a decision. -->
+      <section class="pub-group" aria-labelledby="g-review">
+        <div class="pub-group__label"><h3 id="g-review">Under review <small>Titles only, during anonymous review</small></h3></div>
+        <ol class="pubs">
+          <li class="pub" data-topics="genai">
+            <div class="pub__thumb pub__thumb--pending" aria-hidden="true"><span>In review</span></div>
+            <div>
+              <h4>Déjà VAE: When Do Autoencoder Traces Reveal Generated Images?</h4>
+              <p class="pub__authors"><strong>Saugat Pandey</strong></p>
+              <p class="pub__venue">Under review · 2026</p>
+            </div>
+          </li>
+          <li class="pub" data-topics="genai">
+            <div class="pub__thumb pub__thumb--pending" aria-hidden="true"><span>In review</span></div>
+            <div>
+              <h4>False-Positive Rates of Detectors of AI-generated Chest Radiographs across Held-out Public Datasets</h4>
+              <p class="pub__authors"><strong>Saugat Pandey</strong></p>
+              <p class="pub__venue">Under review · 2026</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="pub-group" aria-labelledby="g-2025">
+        <div class="pub-group__label"><h3 id="g-2025">2025</h3></div>
+        <ol class="pubs">
+          <li class="pub" data-topics="env">
+            <div class="pub__thumb"><img src="assets/img/pub-pm25.jpg" alt="" width="500" height="305" loading="lazy"></div>
+            <div>
+              <h4>Estimating PM<sub>2.5</sub> Concentrations at Public Schools in North Carolina Using Multiple Data Sources and Interpolation Methods</h4>
+              <p class="pub__authors">Rachel Carroll, Paul Bailey, <strong>Saugat Pandey</strong>, Dana McCalla, Thomas Snyder</p>
+              <p class="pub__venue">Scientific Reports 15, 42600</p>
+              <div class="pub__meta"><div class="pub__links"><a href="https://www.nature.com/articles/s41598-025-26539-3">Paper<span class="sr-only">: Estimating PM2.5 Concentrations at Public Schools</span> ↗</a></div></div>
+            </div>
+          </li>
+          <li class="pub" data-topics="vislit">
+            <div class="pub__thumb"><img src="assets/img/pub-vislit.jpg" alt="" width="640" height="411" loading="lazy"></div>
+            <div>
+              <h4>Visualization Literacy or Skillset? Beyond the Analogy to Textual Literacy</h4>
+              <p class="pub__authors">Mara Solen, <strong>Saugat Pandey</strong>, Firas Moosvi, Alvitta Ottley, Tamara Munzner</p>
+              <p class="pub__venue">IEEE VIS Workshop on Visualization for Communication (VisComm)</p>
+              <div class="pub__meta"><div class="pub__links"><a href="https://doi.org/10.1109/viscomm69388.2025.00009">Paper<span class="sr-only">: Visualization Literacy or Skillset?</span> ↗</a><a href="https://doi.org/10.31219/osf.io/9rc45_v1">Preprint<span class="sr-only">: Visualization Literacy or Skillset?</span> ↗</a></div></div>
+            </div>
+          </li>
+          <li class="pub" data-topics="vislit llm">
+            <div class="pub__thumb"><img src="assets/img/pub-llm.jpg" alt="" width="640" height="208" loading="lazy"></div>
+            <div>
+              <h4>Benchmarking Visual Language Models on Standardized Visualization Literacy Tests</h4>
+              <p class="pub__authors"><strong>Saugat Pandey</strong>, Alvitta Ottley</p>
+              <p class="pub__venue">Computer Graphics Forum 44(3) · EuroVis 2025</p>
+              <div class="pub__meta"><div class="pub__links"><a href="https://doi.org/10.1111/cgf.70137">Paper<span class="sr-only">: Benchmarking Visual Language Models</span> ↗</a></div></div>
+            </div>
+          </li>
+          <li class="pub" data-topics="trust">
+            <div class="pub__thumb"><img src="assets/img/pub-trustworthy.jpg" alt="" width="640" height="227" loading="lazy"></div>
+            <div>
+              <h4>Trustworthy by Design: The Viewer's Perspective on Trust in Data Visualization</h4>
+              <p class="pub__authors">Oen G. McKinley, <strong>Saugat Pandey</strong>, Alvitta Ottley</p>
+              <p class="pub__venue">ACM CHI 2025</p>
+              <div class="pub__meta"><div class="pub__links"><a href="https://doi.org/10.1145/3706598.3713824">Paper<span class="sr-only">: Trustworthy by Design</span> ↗</a><a href="https://arxiv.org/pdf/2503.10892">arXiv<span class="sr-only">: Trustworthy by Design</span> ↗</a></div></div>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="pub-group" aria-labelledby="g-2024">
+        <div class="pub-group__label"><h3 id="g-2024">2024</h3></div>
+        <ol class="pubs">
+          <li class="pub" data-topics="trust">
+            <div class="pub__thumb"><img src="assets/img/pub-building-eroding.jpg" alt="" width="640" height="256" loading="lazy"></div>
+            <div>
+              <h4>Building and Eroding: Exogenous and Endogenous Factors that Influence Subjective Trust in Visualization</h4>
+              <p class="pub__authors">R. Jordan Crouser, Syrine Matoussi, Lan Kung, <strong>Saugat Pandey</strong>, Oen G. McKinley, Alvitta Ottley</p>
+              <p class="pub__venue">IEEE VIS 2024</p>
+              <div class="pub__meta"><div class="pub__links"><a href="https://doi.org/10.1109/vis55277.2024.00069">Paper<span class="sr-only">: Building and Eroding</span> ↗</a><a href="https://arxiv.org/pdf/2408.03800">arXiv<span class="sr-only">: Building and Eroding</span> ↗</a></div></div>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="pub-group" aria-labelledby="g-2023">
+        <div class="pub-group__label"><h3 id="g-2023">2023</h3></div>
+        <ol class="pubs">
+          <li class="pub" data-topics="vislit">
+            <div class="pub__thumb"><img src="assets/img/pub-minivlat.jpg" alt="" width="636" height="480" loading="lazy"></div>
+            <div>
+              <h4>Mini-VLAT: A Short and Effective Measure of Visualization Literacy</h4>
+              <p class="pub__authors"><strong>Saugat Pandey</strong>, Alvitta Ottley</p>
+              <p class="pub__venue">Computer Graphics Forum 42(3) · EuroVis 2023</p>
+              <div class="pub__meta">
+                <span class="award"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-1.5 8 5-3 5 3-1.5-8"/></svg>Best Paper Award</span>
+                <div class="pub__links"><a href="https://doi.org/10.1111/cgf.14809">Paper<span class="sr-only">: Mini-VLAT</span> ↗</a><a href="https://arxiv.org/pdf/2304.07905">arXiv<span class="sr-only">: Mini-VLAT</span> ↗</a></div>
+              </div>
+            </div>
+          </li>
+          <li class="pub" data-topics="trust">
+            <div class="pub__thumb"><img src="assets/img/pub-trust-measure.jpg" alt="" width="640" height="245" loading="lazy"></div>
+            <div>
+              <h4>Do You Trust What You See? Toward a Multidimensional Measure of Trust in Visualization</h4>
+              <p class="pub__authors"><strong>Saugat Pandey</strong>, Oen G. McKinley, R. Jordan Crouser, Alvitta Ottley</p>
+              <p class="pub__venue">IEEE VIS 2023</p>
+              <div class="pub__meta"><div class="pub__links"><a href="https://doi.org/10.1109/vis54172.2023.00014">Paper<span class="sr-only">: Do You Trust What You See?</span> ↗</a><a href="https://arxiv.org/pdf/2308.04727">arXiv<span class="sr-only">: Do You Trust What You See?</span> ↗</a></div></div>
+            </div>
+          </li>
+          <li class="pub" data-topics="social">
+            <div class="pub__thumb"><img src="assets/img/pub-covid-twitter.jpg" alt="" width="640" height="174" loading="lazy"></div>
+            <div>
+              <h4>User Engagement with COVID-19 Visualizations on Twitter</h4>
+              <p class="pub__authors">Robert Kasumba, <strong>Saugat Pandey</strong>, Vishesh Patel, Micah Wolfson, Alvitta Ottley</p>
+              <p class="pub__venue">IEEE VIS Workshop on Visualization for Communication (VisComm)</p>
+              <div class="pub__meta"><div class="pub__links"><a href="https://osf.io/es6ua/download">Preprint<span class="sr-only">: User Engagement with COVID-19 Visualizations</span> ↗</a></div></div>
+            </div>
+          </li>
+        </ol>
+      </section>
+    </div>
+  </section>
+
+  <!-- ================= OPEN SOURCE ================= -->
+  <section class="section on-night" id="open-source" aria-labelledby="oss-h">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="kicker">Open source</p>
+        <h2 id="oss-h">Two fixes in CPython</h2>
+        <p>CPython is the main implementation of Python, the one most people install. In November 2026, two of my patches were merged into it.</p>
+      </header>
+
+      <div class="oss">
+        <article class="oss__card" aria-labelledby="oss-datetime">
+          <p class="oss__meta">
+            <span class="merged"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.5"/><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="12" r="2.5"/><path d="M6 8.5v7M8 7.5c4 1 7.5 1.5 8 3"/></svg>Merged</span>
+            <span>Lib/datetime</span><span>·</span><time datetime="2026-11-06">Nov 6, 2026</time>
+          </p>
+          <h3 id="oss-datetime"><code>date.fromisoformat()</code> stopped ignoring trailing characters</h3>
+          <div class="repl" role="img" aria-label="Before the fix, date.fromisoformat of the string 2020010112 returned January 1, 2020, silently dropping the last two characters. After the fix, it raises ValueError: Invalid isoformat string.">
+            <div><span class="p">&gt;&gt;&gt;</span> date.fromisoformat(<b>'2020010112'</b>)</div>
+            <div class="was"><span class="c"># before</span> <del>datetime.date(2020, 1, 1)</del></div>
+            <div class="now-ok"><span class="c"># after</span>  ValueError: Invalid isoformat string</div>
+          </div>
+          <p>I came across this while working with Python's <code>datetime</code> module: a ten-character string like <code>'2020010112'</code> quietly turned into January 1, 2020, with the last two characters thrown away. I sent in a fix for both the C and pure-Python parsers, along with tests. <strong>It took a couple of weeks of patience (lol)</strong>, but it was approved and merged, then backported to Python 3.15 and 3.14. I did the 3.14 backport by hand after the automatic one hit a conflict.</p>
+          <div class="oss__links">
+            <a class="arrow" href="https://github.com/python/cpython/pull/160737">Pull request #160737 <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="arrow" href="https://github.com/python/cpython/commit/0baca623e642fad8d02c2a67c11d05e8ef7e9ccc">3.14 backport <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+
+        <article class="oss__card" aria-labelledby="oss-ctypes">
+          <p class="oss__meta">
+            <span class="merged"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.5"/><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="12" r="2.5"/><path d="M6 8.5v7M8 7.5c4 1 7.5 1.5 8 3"/></svg>Merged</span>
+            <span>Modules/_ctypes</span><span>·</span><time datetime="2026-11-04">Nov 4, 2026</time>
+          </p>
+          <h3 id="oss-ctypes">Resized <code>ctypes</code> objects no longer read or write out of bounds</h3>
+          <div class="repl" role="img" aria-label="After ctypes.resize enlarges an object's buffer, bool of that object used to read past the end of an internal 16-byte buffer. It now reads only the type's declared size.">
+            <div><span class="p">&gt;&gt;&gt;</span> ctypes.resize(obj, <b>64</b>)<span class="c">  # grow past its type</span></div>
+            <div class="was"><span class="c"># before</span> <del>bool(obj) read past a 16-byte buffer</del></div>
+            <div class="now-ok"><span class="c"># after</span>  bool(obj) reads only sizeof(type)</div>
+          </div>
+          <p>After <code>ctypes.resize()</code>, a simple object's buffer is larger than its type. <code>bool()</code> and passing the object to a C function still used the buffer's size, so <code>bool()</code> read past the end of an internal 16-byte buffer, and the call copied the whole buffer into a fixed-size slot, <strong>corrupting the heap</strong>. The fix uses the type's size instead, matching how the value getter already worked.</p>
+          <div class="oss__links">
+            <a class="arrow" href="https://github.com/python/cpython/pull/160720">Pull request #160720 <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="arrow" href="https://github.com/python/cpython/commit/44579b0da558b5a45b17358dffbc4a2ee947cdf7">Commit 44579b0 <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NEWS ================= -->
+  <section class="section" id="news" aria-labelledby="news-h">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="kicker">News</p>
+        <h2 id="news-h">In the news, and lately</h2>
+      </header>
+
+      <article class="feature" aria-labelledby="feature-h">
+        <a class="feature__media" href="https://www.youtube.com/watch?v=P7-hsIM-CiY">
+          <img src="assets/img/wspa-ai-agents.jpg" alt="" width="480" height="270" loading="lazy">
+          <span class="feature__play"><svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5L7 4.5Z"/></svg>Watch the segment<span class="sr-only"> on YouTube: AI agent at your service, WSPA 7News</span></span>
+        </a>
+        <div>
+          <p class="feature__meta">WSPA 7News · <time datetime="2026-11">November 2026</time></p>
+          <h3 id="feature-h">AI agent at your service: Is this new tech right for you?</h3>
+          <p>WSPA 7News interviewed me about AI agents built for everyday consumers. My advice: limit how much independence you give them, take the companies' own warnings that they make mistakes seriously, and watch out for prompt injection, where hidden instructions hijack an agent into doing things you never asked for.</p>
+          <div class="feature__links">
+            <a class="arrow" href="https://www.wspa.com/news/consumer/ai-agent-at-your-service-is-this-new-tech-right-for-you/">Read the story <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="arrow" href="https://www.youtube.com/watch?v=P7-hsIM-CiY">Watch on YouTube <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <h3 class="sr-only" id="updates-h">Updates</h3>
+      <ol class="updates" id="updates" aria-labelledby="updates-h" style="margin-top: clamp(48px, 6vw, 72px);">
+        <li class="update update--key"><time datetime="2026-11">Nov 2026</time><p>Two patches merged into CPython: <a class="link" href="#open-source"><code>date.fromisoformat()</code> and resized <code>ctypes</code> objects</a>.</p><span class="kind">Open source</span></li>
+        <li class="update update--key"><time datetime="2026-11">Nov 2026</time><p>Talked consumer AI agents, privacy, and prompt injection on <a class="link" href="https://www.wspa.com/news/consumer/ai-agent-at-your-service-is-this-new-tech-right-for-you/">WSPA 7News</a>.</p><span class="kind">Media</span></li>
+        <li class="update"><time datetime="2026-11">Nov 2026</time><p>Submitted two papers on detecting AI-generated images, “Déjà VAE” and a study of false-positive rates for chest-radiograph detectors. Both are under review.</p><span class="kind">Submitted</span></li>
+        <li class="update update--key"><time datetime="2026-08">Aug 2026</time><p>Launched <a class="link" href="https://themochalab.github.io/">The MOCHA Lab</a>, my research group at Furman.</p><span class="kind">Lab</span></li>
+        <li class="update update--key"><time datetime="2026-08">Aug 2026</time><p>Started as Assistant Professor of Computer Science at Furman University in Greenville, SC.</p><span class="kind">Career</span></li>
+        <li class="update update--key"><time datetime="2026-05">May 2026</time><p>Defended my PhD dissertation at Washington University in St. Louis.</p><span class="kind">Milestone</span></li>
+        <li class="update"><time datetime="2025-11">Nov 2025</time><p>PM<sub>2.5</sub> at North Carolina public schools, published in <a class="link" href="https://www.nature.com/articles/s41598-025-26539-3">Scientific Reports</a>.</p><span class="kind">Published</span></li>
+        <li class="update"><time datetime="2025-08">Aug 2025</time><p>“Visualization Literacy or Skillset?” accepted at the IEEE VIS Workshop on Visualization for Communication.</p><span class="kind">Accepted</span></li>
+        <li class="update"><time datetime="2025-05">May 2025</time><p>Presented my work benchmarking vision-language models at EuroVis in Luxembourg City.</p><span class="kind">Talk</span></li>
+        <li class="update"><time datetime="2025-05">May 2025</time><p>Moved to Seattle for the summer as a Research Scientist Intern at Adobe.</p><span class="kind">Internship</span></li>
+        <li class="update"><time datetime="2025-05">May 2025</time><p>Passed my dissertation proposal.</p><span class="kind">Milestone</span></li>
+        <li class="update"><time datetime="2025-03">Mar 2025</time><p>“Benchmarking Visual Language Models on Standardized Visualization Literacy Tests” accepted at EuroVis 2025.</p><span class="kind">Accepted</span></li>
+        <li class="update"><time datetime="2025-01">Jan 2025</time><p>“Trustworthy by Design” accepted at ACM CHI 2025.</p><span class="kind">Accepted</span></li>
+        <li class="update"><time datetime="2024-12">Dec 2024</time><p>Finished co-instructing Introduction to Visualization at WashU, rated 6.67 out of 7.</p><span class="kind">Teaching</span></li>
+        <li class="update"><time datetime="2024-07">Jul 2024</time><p>Paper on what builds and erodes trust in visualization accepted at IEEE VIS 2024.</p><span class="kind">Accepted</span></li>
+      </ol>
+      <div class="updates-more">
+        <button type="button" class="btn btn--line" id="updates-toggle" aria-controls="updates" aria-expanded="false" hidden>Show all updates</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BEYOND ================= -->
+  <section class="section section--tint" id="beyond" aria-labelledby="beyond-h">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="kicker">Beyond the papers</p>
+        <h2 id="beyond-h">Teaching, internships, and a few jumps</h2>
+        <p>The longer stories live on the <a class="link" href="misc.html">Misc page</a>.</p>
+      </header>
+      <div class="beyond">
+        <a class="tile" href="misc.html#teaching">
+          <div class="tile__img tile__img--stat" aria-hidden="true">
+            <span class="tile__stat">6.67<small> / 7</small></span>
+            <span class="tile__statlabel">Course rating · dept. avg 6.11</span>
+          </div>
+          <p class="tile__kicker">Teaching</p>
+          <h3>Introduction to Visualization</h3>
+          <p>Co-instructing D3, perception, and design at WashU.</p>
+        </a>
+        <a class="tile" href="misc.html#adobe">
+          <div class="tile__img"><img src="assets/img/adobe-3-thumb.jpg" alt="" width="640" height="480" loading="lazy"></div>
+          <p class="tile__kicker">Internship · 2025</p>
+          <h3>Adobe Research, Seattle</h3>
+          <p>A multi-agent LLM framework for making better charts.</p>
+        </a>
+        <a class="tile" href="misc.html#air">
+          <div class="tile__img"><img src="assets/img/air-1-thumb.jpg" alt="" width="640" height="631" loading="lazy"></div>
+          <p class="tile__kicker">Internship · 2024</p>
+          <h3>American Institutes for Research</h3>
+          <p>Student data, air quality, and a Scientific Reports paper.</p>
+        </a>
+        <a class="tile" href="misc.html#skydiving">
+          <div class="tile__img"><img src="assets/img/skydiving-1-thumb.jpg" alt="" width="640" height="360" loading="lazy"></div>
+          <p class="tile__kicker">Adventure · 2025</p>
+          <h3>13,500 feet over Snohomish</h3>
+          <p>A bucket-list skydive, plus Mt. Rainier with the Adobe interns.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="section" id="contact" aria-labelledby="contact-h">
+    <div class="wrap contact">
+      <div>
+        <p class="kicker">Contact</p>
+        <h2 id="contact-h" style="font-size: clamp(2rem, 4.2vw, 2.9rem);">Say hello</h2>
+        <p style="color: var(--ink-2); max-width: 46ch;">I'm always glad to hear from prospective students, collaborators, and anyone curious about visualization, perception, or AI. Tell me a little about yourself and I'll get back to you.</p>
+        <ul class="lines">
+          <li><span class="k">Email</span><a class="link" href="mailto:spandey2@furman.edu">spandey2@furman.edu</a></li>
+          <li><span class="k">Students</span><span>Furman undergraduates: see <a class="link" href="https://themochalab.github.io/#join">joining the MOCHA Lab</a>.</span></li>
+          <li><span class="k">Office</span><span>Department of Computer Science<br>Furman University, Greenville, SC</span></li>
+        </ul>
+      </div>
+
+      <form class="form" id="contact-form" action="https://formspree.io/f/xojgovpz" method="POST" novalidate>
+        <div class="field-row">
+          <div class="field">
+            <label for="cf-name">Name</label>
+            <input type="text" id="cf-name" name="name" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="cf-email">Email</label>
+            <input type="email" id="cf-email" name="email" autocomplete="email" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="cf-interest">What's it about? <span class="hint">(optional)</span></label>
+          <select id="cf-interest" name="interest">
+            <option>Research collaboration</option>
+            <option>Joining the lab</option>
+            <option>Talk or guest lecture</option>
+            <option>Media or press</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" required></textarea>
+        </div>
+        <input type="hidden" name="_subject" value="New message from iamsaugatpandey.github.io">
+        <div class="form__footer">
+          <button type="submit" class="btn btn--solid">Send message <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer on-night">
+  <div class="wrap">
+    <div>
+      <p class="footer__name">Saugat Pandey</p>
+      <p class="footer__line">Assistant Professor of Computer Science, Furman University</p>
+    </div>
+    <ul class="footer__links" aria-label="Elsewhere">
+      <li><a href="https://themochalab.github.io/">MOCHA Lab</a></li>
+      <li><a href="https://scholar.google.com/citations?user=RCC_DfYAAAAJ&amp;hl=en">Scholar</a></li>
+      <li><a href="https://github.com/iamsaugatpandey">GitHub</a></li>
+      <li><a href="https://orcid.org/0000-0002-7429-6575">ORCID</a></li>
+      <li><a href="https://www.linkedin.com/in/iamsaugatpandey/">LinkedIn</a></li>
+      <li><a href="https://www.instagram.com/peakpandey/">Instagram</a></li>
+      <li><a href="cv.html">CV</a></li>
+    </ul>
+    <p class="footer__copy">© <span id="year">2026</span> Saugat Pandey · Greenville, South Carolina</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

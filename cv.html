@@ -1,103 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV — Saugat Pandey</title>
-    <meta name="description" content="Curriculum vitae of Saugat Pandey, Assistant Professor of Computer Science at Furman University.">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='50%25' x='50%25' dominant-baseline='middle' text-anchor='middle' font-size='52'%3E%F0%9F%A5%AD%3C/text%3E%3C/svg%3E">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TVKHK7VV3Q"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-TVKHK7VV3Q');
-    </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV · Saugat Pandey</title>
+<meta name="description" content="Curriculum vitae of Saugat Pandey, Assistant Professor of Computer Science at Furman University.">
+<link rel="canonical" href="https://iamsaugatpandey.github.io/cv.html">
+<meta name="theme-color" content="#FAF8F4">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='50%25' x='50%25' dominant-baseline='middle' text-anchor='middle' font-size='52'%3E%F0%9F%A5%AD%3C/text%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TVKHK7VV3Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TVKHK7VV3Q');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&amp;family=Instrument+Sans:wght@400..700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
-    <div class="announce-bar" id="announce-bar">
-        <div class="announce-inner">
-            <span>🌱 More to come — this site is actively growing.</span>
-            <span>Always happy to hear from prospective <strong>students &amp; collaborators</strong>.</span>
-            <a href="index.html#contact">Get in touch →</a>
-        </div>
-        <button class="announce-close" id="announce-close" aria-label="Dismiss announcement">&times;</button>
-    </div>
-
-    <header class="site-header">
-        <div class="header-inner" id="header-inner">
-            <a href="index.html" class="brand">
-                <span class="brand-name" id="name-display">Saugat Pandey</span>
-                <span class="brand-hindi">सौगात</span>
-            </a>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav class="site-nav" id="site-nav">
-                <a href="index.html#home" class="nav-link">Home</a>
-                <a href="index.html#publications" class="nav-link">Publications</a>
-                <a href="index.html#updates" class="nav-link">Updates</a>
-                <a href="misc.html" class="nav-link">Misc</a>
-                <a href="index.html#contact" class="nav-link">Contact</a>
-                <a href="cv.html" class="nav-link nav-cv active">CV</a>
-            </nav>
-        </div>
-    </header>
-
-    <nav class="scrolly-rail" aria-label="Section navigation">
-        <svg class="rail-curve" viewBox="0 0 20 400" preserveAspectRatio="none" aria-hidden="true">
-            <path d="M10 0 C 2 60, 18 100, 10 160 C 3 210, 17 230, 10 280 C 4 320, 16 340, 10 400" />
-        </svg>
-        <ol class="rail-dots">
-            <li data-target="home"><a href="index.html#home"><span class="rail-dot"></span><span class="rail-label">Home</span></a></li>
-            <li data-target="publications"><a href="index.html#publications"><span class="rail-dot"></span><span class="rail-label">Publications</span></a></li>
-            <li data-target="updates"><a href="index.html#updates"><span class="rail-dot"></span><span class="rail-label">Updates</span></a></li>
-            <li data-target="misc"><a href="misc.html"><span class="rail-dot"></span><span class="rail-label">Misc</span></a></li>
-        </ol>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Saugat Pandey, home">
+      <span class="brand__name">Saugat Pandey</span>
+      <span class="brand__dev" lang="ne" aria-hidden="true">सौगात</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="site-nav" aria-label="Primary">
+      <a href="index.html#research">Research</a>
+      <a href="index.html#publications">Publications</a>
+      <a href="index.html#open-source">Open source</a>
+      <a href="index.html#news">News</a>
+      <a href="misc.html">Misc</a>
+      <a href="index.html#contact">Contact</a>
+      <a class="nav__cv" href="cv.html" aria-current="page">CV</a>
     </nav>
+  </div>
+</header>
 
-    <main>
-        <div class="container">
-            <section class="cv-section" style="padding-top: 3rem;">
-                <div class="cv-header reveal">
-                    <div>
-                        <span class="section-kicker">Curriculum Vitae</span>
-                        <h2>CV</h2>
-                    </div>
-                    <a href="SaugatCV.pdf" class="cv-download" target="_blank">
-                        <i class="fas fa-download"></i> Download PDF
-                    </a>
-                </div>
+<main id="main">
+  <header class="page-head">
+    <div class="wrap page-head__row">
+      <div>
+        <p class="kicker">Curriculum vitae</p>
+        <h1>CV</h1>
+        <p>Education, publications, teaching, and service.</p>
+      </div>
+      <a class="btn btn--solid" href="SaugatCV.pdf" download>Download PDF <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"/></svg></a>
+    </div>
+  </header>
 
-                <div class="cv-viewer reveal">
-                    <embed src="SaugatCV.pdf" width="100%" height="800px" type="application/pdf">
-                    <p style="text-align: center; margin-top: 1rem; color: var(--muted); font-size: 0.9rem;">
-                        If the PDF doesn't display, you can
-                        <a href="SaugatCV.pdf" target="_blank">download it directly</a>.
-                    </p>
-                </div>
-            </section>
-        </div>
-    </main>
+  <div class="wrap">
+    <div class="cv-frame">
+      <iframe src="SaugatCV.pdf" title="Saugat Pandey's CV (PDF)"></iframe>
+    </div>
+    <p class="cv-fallback">If the PDF doesn't display, <a class="link" href="SaugatCV.pdf">open it directly</a>.</p>
+    <div style="height: clamp(48px, 8vw, 96px);"></div>
+  </div>
+</main>
 
-    <footer class="site-footer">
-        <div class="container footer-inner">
-            <p>&copy; <span id="year"></span> Saugat Pandey · Assistant Professor, Furman University</p>
-            <div class="social-row">
-                <a href="https://scholar.google.com/citations?user=RCC_DfYAAAAJ&hl=en" aria-label="Google Scholar" target="_blank" rel="noopener"><i class="fas fa-graduation-cap"></i></a>
-                <a href="https://www.linkedin.com/in/iamsaugatpandey/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://www.instagram.com/peakpandey/" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
-                <a href="mailto:spandey2@furman.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
-    </footer>
+<footer class="site-footer on-night">
+  <div class="wrap">
+    <div>
+      <p class="footer__name">Saugat Pandey</p>
+      <p class="footer__line">Assistant Professor of Computer Science, Furman University</p>
+    </div>
+    <ul class="footer__links" aria-label="Elsewhere">
+      <li><a href="https://themochalab.github.io/">MOCHA Lab</a></li>
+      <li><a href="https://scholar.google.com/citations?user=RCC_DfYAAAAJ&amp;hl=en">Scholar</a></li>
+      <li><a href="https://github.com/iamsaugatpandey">GitHub</a></li>
+      <li><a href="https://orcid.org/0000-0002-7429-6575">ORCID</a></li>
+      <li><a href="https://www.linkedin.com/in/iamsaugatpandey/">LinkedIn</a></li>
+      <li><a href="https://www.instagram.com/peakpandey/">Instagram</a></li>
+    </ul>
+    <p class="footer__copy">© <span id="year">2026</span> Saugat Pandey · Greenville, South Carolina</p>
+  </div>
+</footer>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
